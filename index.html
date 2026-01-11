@@ -6,33 +6,35 @@
     <title>Tech House - Modern Appliances for Your Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cera+Pro:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
-            <div class="nav-top">
-                <a href="index.html" class="logo">Tech House</a>
-                <input type="checkbox" id="menu-checkbox">
-                <label for="menu-checkbox" class="menu-toggle"><i class="fas fa-bars"></i></label>
+            <a href="index.html" class="logo">
+                <i class="fas fa-home" style="color: #46A358; font-size: 28px;"></i>
+                <span>Tech House</span>
+            </a>
+
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="products.html" class="nav-link">Shop</a>
+                <a href="contact.html" class="nav-link">Contact</a>
             </div>
 
             <div class="nav-icons">
-                <a href="products.html" class="nav-icon">
-                    <i class="fas fa-box"></i>
-                    <span class="nav-icon-text">Products</span>
-                </a>
-                <a href="account.html" class="nav-icon">
-                    <i class="fas fa-user"></i>
-                    <span class="nav-icon-text">Account</span>
-                </a>
-                <a href="contact.html" class="nav-icon">
-                    <i class="fas fa-envelope"></i>
-                    <span class="nav-icon-text">Contact</span>
+                <a href="#" class="nav-icon">
+                    <i class="fas fa-search"></i>
                 </a>
                 <a href="cart.html" class="nav-icon">
                     <i class="fas fa-shopping-cart"></i>
-                    <span class="nav-icon-text">Cart</span>
                     <span class="cart-badge">3</span>
+                </a>
+                <a href="account.html" class="btn-login">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Login
                 </a>
             </div>
         </nav>
@@ -42,9 +44,10 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="hero-content">
-                <h1>Modern Appliances for Your Home</h1>
-                <p>Discover premium quality appliances that make your life easier</p>
-                <a href="products.html" class="btn"><i class="fas fa-shopping-bag"></i> Shop Now</a>
+                <p class="hero-subtitle">WELCOME TO TECH HOUSE</p>
+                <h1>LET'S MAKE A <span style="color: #46A358;">SMARTER HOME</span></h1>
+                <p class="hero-description">We are an online appliance shop offering a wide range of quality and modern appliances. Use our products to create a smart, efficient home. Order your favorite appliances!</p>
+                <a href="products.html" class="btn">SHOP NOW</a>
             </div>
             <div class="hero-image">
                 <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800&h=600&fit=crop" alt="Modern Kitchen">
@@ -126,33 +129,79 @@
         </section>
     </main>
 
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Would you like to join newsletters?</h2>
+            <div class="newsletter-form">
+                <input type="email" placeholder="enter your email address...">
+                <button class="btn">Join</button>
+            </div>
+            <p class="newsletter-text">We usually post offers and challenges in newsletter. We're your online appliance destination. We offer a wide range of appliances and accessories shipped directly from our warehouse to yours!</p>
+        </div>
+    </section>
+
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3><i class="fas fa-truck"></i> Delivery</h3>
-                <p>Standard Delivery: 3-5 business days</p>
-                <p>Express Delivery: 1-2 business days</p>
-                <p>Same-Day Delivery: Available in select areas</p>
-                <p>In-Store Pickup: Free</p>
+                <a href="index.html" class="logo">
+                    <i class="fas fa-home" style="color: #46A358; font-size: 28px;"></i>
+                    <span style="color: #fff;">Tech House</span>
+                </a>
+                <p style="margin-top: 20px;">
+                    <i class="fas fa-map-marker-alt"></i> 70 West Buckingham Ave.<br>
+                    Farmingdale, NY 11735
+                </p>
+                <p><i class="fas fa-envelope"></i> contact@techhouse.com</p>
+                <p><i class="fas fa-phone"></i> +88 01711 717 490</p>
             </div>
 
             <div class="footer-section">
-                <h3><i class="fas fa-file-alt"></i> Policies</h3>
-                <p><a href="#">Return Policy</a></p>
-                <p><a href="#">Warranty Information</a></p>
-                <p><a href="#">Privacy Policy</a></p>
-                <p><a href="#">Terms & Conditions</a></p>
+                <h3>My Account</h3>
+                <p><a href="account.html">My Account</a></p>
+                <p><a href="contact.html">Contact us</a></p>
+                <p><a href="cart.html">Shopping Cart</a></p>
+                <p><a href="#">Wishlist</a></p>
             </div>
 
             <div class="footer-section">
-                <h3><i class="fas fa-headset"></i> Customer Service</h3>
-                <p><i class="fas fa-phone"></i> 1-800-TECH-HOUSE</p>
-                <p><i class="fas fa-envelope"></i> support@techhouse.com</p>
-                <p><i class="fas fa-clock"></i> Mon-Fri 9AM-6PM</p>
+                <h3>Help & Guide</h3>
+                <p><a href="#">Help Center</a></p>
+                <p><a href="#">How to Buy</a></p>
+                <p><a href="#">Shipping & Delivery</a></p>
+                <p><a href="#">Product Policy</a></p>
+                <p><a href="#">How to Return</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <p><a href="products.html">Kitchen Appliances</a></p>
+                <p><a href="products.html">Cleaning Appliances</a></p>
+                <p><a href="products.html">Heating Appliances</a></p>
+                <p><a href="products.html">Personal Care</a></p>
+                <p><a href="products.html">Accessories</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Social Media</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <h3 style="margin-top: 30px;">We accept</h3>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-amex"></i>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Tech House. All rights reserved.</p>
+            <p>&copy; 2021 Tech House. All Rights Reserved.</p>
         </div>
     </footer>
 </body>
