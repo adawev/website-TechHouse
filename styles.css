@@ -642,6 +642,112 @@ footer {
     outline: 2px solid var(--primary-blue);
 }
 
+/* Radio button styling in forms */
+.form-group label:has(input[type="radio"]) {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.form-group label:has(input[type="radio"]):hover {
+    background-color: #E2E8F0;
+}
+
+.form-group input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+/* Order Success Page */
+.success-container {
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    min-height: calc(100vh - 400px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.success-card {
+    background-color: var(--white);
+    padding: 60px 40px;
+    border-radius: 16px;
+    text-align: center;
+    width: 100%;
+}
+
+.success-icon {
+    margin-bottom: 30px;
+}
+
+.success-icon i {
+    font-size: 80px;
+    color: #10B981;
+}
+
+.success-card h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--dark-blue);
+}
+
+.success-message {
+    font-size: 18px;
+    color: var(--primary-blue);
+    margin-bottom: 40px;
+}
+
+.order-confirmation {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+    padding: 30px;
+    background-color: var(--light-gray);
+    border-radius: 12px;
+}
+
+.confirmation-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+}
+
+.confirmation-item i {
+    font-size: 32px;
+    color: var(--primary-blue);
+}
+
+.confirmation-item strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark-blue);
+    margin-bottom: 5px;
+}
+
+.confirmation-item p {
+    font-size: 16px;
+    color: var(--primary-blue);
+    margin: 0;
+}
+
+.success-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
 /* Contact Page */
 .contact-container {
     padding: 40px;
