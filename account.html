@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - Tech House</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-top">
+                <a href="index.html" class="logo">Tech House</a>
+                <input type="checkbox" id="menu-checkbox">
+                <label for="menu-checkbox" class="menu-toggle"><i class="fas fa-bars"></i></label>
+            </div>
+
+            <div class="nav-icons">
+                <a href="products.html" class="nav-icon">
+                    <i class="fas fa-box"></i>
+                    <span class="nav-icon-text">Products</span>
+                </a>
+                <a href="account.html" class="nav-icon">
+                    <i class="fas fa-user"></i>
+                    <span class="nav-icon-text">Account</span>
+                </a>
+                <a href="cart.html" class="nav-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="nav-icon-text">Cart</span>
+                    <span class="cart-badge">3</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="account-page">
+            <h1><i class="fas fa-user-circle"></i> My Account</h1>
+
+            <div class="account-layout">
+                <!-- Account Sidebar -->
+                <aside class="account-sidebar">
+                    <div class="account-menu">
+                        <a href="#profile" class="account-menu-item active">
+                            <i class="fas fa-user"></i> Profile Information
+                        </a>
+                        <a href="#orders" class="account-menu-item">
+                            <i class="fas fa-shopping-bag"></i> My Orders
+                        </a>
+                        <a href="#addresses" class="account-menu-item">
+                            <i class="fas fa-map-marker-alt"></i> Addresses
+                        </a>
+                        <a href="#payment" class="account-menu-item">
+                            <i class="fas fa-credit-card"></i> Payment Methods
+                        </a>
+                        <a href="#membership" class="account-menu-item">
+                            <i class="fas fa-medal"></i> Membership
+                        </a>
+                        <a href="#settings" class="account-menu-item">
+                            <i class="fas fa-cog"></i> Settings
+                        </a>
+                        <a href="#" class="account-menu-item logout">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </a>
+                    </div>
+                </aside>
+
+                <!-- Account Content -->
+                <div class="account-content">
+                    <!-- Profile Section -->
+                    <div class="account-section">
+                        <h2><i class="fas fa-user"></i> Profile Information</h2>
+
+                        <div class="profile-info">
+                            <div class="profile-avatar">
+                                <i class="fas fa-user-circle" style="font-size: 80px; color: #1E3A8A;"></i>
+                            </div>
+
+                            <form class="profile-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="firstname"><i class="fas fa-user"></i> First Name</label>
+                                        <input type="text" id="firstname" name="firstname" value="John">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastname"><i class="fas fa-user"></i> Last Name</label>
+                                        <input type="text" id="lastname" name="lastname" value="Doe">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                                    <input type="email" id="email" name="email" value="john.doe@example.com">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone"><i class="fas fa-phone"></i> Phone</label>
+                                    <input type="tel" id="phone" name="phone" value="+1 (555) 123-4567">
+                                </div>
+
+                                <button type="submit" class="btn">
+                                    <i class="fas fa-save"></i> Save Changes
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Orders Section -->
+                    <div class="account-section" style="margin-top: 40px;">
+                        <h2><i class="fas fa-shopping-bag"></i> Recent Orders</h2>
+
+                        <div class="orders-list">
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div>
+                                        <h3>Order #12345</h3>
+                                        <p>Placed on January 5, 2026</p>
+                                    </div>
+                                    <span class="order-status delivered">Delivered</span>
+                                </div>
+                                <div class="order-items">
+                                    <div class="order-item">
+                                        <i class="fas fa-coffee" style="font-size: 32px; color: #1E3A8A;"></i>
+                                        <div>
+                                            <h4>Smart Coffee Maker Pro</h4>
+                                            <p>Quantity: 1</p>
+                                        </div>
+                                        <p class="order-price">$299.99</p>
+                                    </div>
+                                </div>
+                                <div class="order-footer">
+                                    <p class="order-total">Total: $299.99</p>
+                                    <a href="#" class="btn btn-secondary">View Details</a>
+                                </div>
+                            </div>
+
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div>
+                                        <h3>Order #12344</h3>
+                                        <p>Placed on December 28, 2025</p>
+                                    </div>
+                                    <span class="order-status shipped">Shipped</span>
+                                </div>
+                                <div class="order-items">
+                                    <div class="order-item">
+                                        <i class="fas fa-broom" style="font-size: 32px; color: #1E3A8A;"></i>
+                                        <div>
+                                            <h4>Robotic Vacuum Cleaner</h4>
+                                            <p>Quantity: 1</p>
+                                        </div>
+                                        <p class="order-price">$399.99</p>
+                                    </div>
+                                </div>
+                                <div class="order-footer">
+                                    <p class="order-total">Total: $399.99</p>
+                                    <a href="#" class="btn btn-secondary">Track Order</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Membership Section -->
+                    <div class="account-section" style="margin-top: 40px;">
+                        <h2><i class="fas fa-medal"></i> Membership Status</h2>
+
+                        <div class="membership-card">
+                            <div class="membership-header">
+                                <i class="fas fa-medal" style="font-size: 48px; color: #FFD700;"></i>
+                                <div>
+                                    <h3>Gold Member</h3>
+                                    <p>Member since January 2025</p>
+                                </div>
+                            </div>
+                            <div class="membership-benefits">
+                                <h4>Your Benefits:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> 15% discount on all purchases</li>
+                                    <li><i class="fas fa-check"></i> Free same-day delivery</li>
+                                    <li><i class="fas fa-check"></i> Extended 5-year warranty</li>
+                                    <li><i class="fas fa-check"></i> Dedicated account manager</li>
+                                    <li><i class="fas fa-check"></i> Exclusive early access to new products</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fas fa-truck"></i> Delivery</h3>
+                <p>Standard Delivery: 3-5 business days</p>
+                <p>Express Delivery: 1-2 business days</p>
+                <p>Same-Day Delivery: Available in select areas</p>
+                <p>In-Store Pickup: Free</p>
+            </div>
+
+            <div class="footer-section">
+                <h3><i class="fas fa-file-alt"></i> Policies</h3>
+                <p><a href="#">Return Policy</a></p>
+                <p><a href="#">Warranty Information</a></p>
+                <p><a href="#">Privacy Policy</a></p>
+                <p><a href="#">Terms & Conditions</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h3><i class="fas fa-headset"></i> Customer Service</h3>
+                <p><i class="fas fa-phone"></i> 1-800-TECH-HOUSE</p>
+                <p><i class="fas fa-envelope"></i> support@techhouse.com</p>
+                <p><i class="fas fa-clock"></i> Mon-Fri 9AM-6PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tech House. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

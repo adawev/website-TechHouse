@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Tech House</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-top">
+                <a href="index.html" class="logo">Tech House</a>
+                <input type="checkbox" id="menu-checkbox">
+                <label for="menu-checkbox" class="menu-toggle"><i class="fas fa-bars"></i></label>
+            </div>
+
+            <div class="nav-icons">
+                <a href="products.html" class="nav-icon">
+                    <i class="fas fa-box"></i>
+                    <span class="nav-icon-text">Products</span>
+                </a>
+                <a href="account.html" class="nav-icon">
+                    <i class="fas fa-user"></i>
+                    <span class="nav-icon-text">Account</span>
+                </a>
+                <a href="cart.html" class="nav-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="nav-icon-text">Cart</span>
+                    <span class="cart-badge">3</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="products-page">
+            <!-- Filters Sidebar (30%) -->
+            <aside class="filters-sidebar">
+                <h2><i class="fas fa-filter"></i> Filters</h2>
+
+                <!-- Category Filter -->
+                <div class="filter-section">
+                    <h3><i class="fas fa-list"></i> Categories</h3>
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="kitchen">
+                        Kitchen Appliances
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="cleaning">
+                        Cleaning Appliances
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="heating">
+                        Heating Appliances
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="personal">
+                        Personal Care
+                    </label>
+                </div>
+
+                <!-- Price Filter -->
+                <div class="filter-section">
+                    <h3><i class="fas fa-dollar-sign"></i> Price Range</h3>
+                    <label class="filter-option">
+                        <input type="checkbox" name="price" value="0-100">
+                        Under $100
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="price" value="100-200">
+                        $100 - $200
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="price" value="200-300">
+                        $200 - $300
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="price" value="300+">
+                        $300+
+                    </label>
+                </div>
+
+                <!-- Brand Filter -->
+                <div class="filter-section">
+                    <h3><i class="fas fa-tag"></i> Brand</h3>
+                    <label class="filter-option">
+                        <input type="checkbox" name="brand" value="techhouse">
+                        Tech House
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="brand" value="smartappliance">
+                        Smart Appliance
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="brand" value="hometech">
+                        Home Tech
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="brand" value="elitecare">
+                        Elite Care
+                    </label>
+                </div>
+
+                <!-- Rating Filter -->
+                <div class="filter-section">
+                    <h3><i class="fas fa-star"></i> Rating</h3>
+                    <label class="filter-option">
+                        <input type="checkbox" name="rating" value="5">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 5 Stars
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="rating" value="4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> 4+ Stars
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="rating" value="3">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i> 3+ Stars
+                    </label>
+                </div>
+
+                <!-- Reset Button -->
+                <button class="btn btn-secondary" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-redo"></i> Reset Filters
+                </button>
+            </aside>
+
+            <!-- Products Grid (70%) -->
+            <div class="products-content">
+                <div class="products-header">
+                    <h1><i class="fas fa-box-open"></i> All Products</h1>
+                    <div class="sort-options">
+                        <label for="sort">Sort by:</label>
+                        <select id="sort" class="sort-select">
+                            <option value="featured">Featured</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="newest">Newest First</option>
+                            <option value="rating">Highest Rated</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="products-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-coffee" style="font-size: 60px;"></i>
+                        </div>
+                        <h3>Smart Coffee Maker Pro</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(128)</span>
+                        </div>
+                        <p class="price">$299.99</p>
+                        <a href="product.html" class="btn">View Details</a>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-blender" style="font-size: 60px;"></i>
+                        </div>
+                        <h3>Professional Blender</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(95)</span>
+                        </div>
+                        <p class="price">$149.99</p>
+                        <a href="product.html" class="btn">View Details</a>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-broom" style="font-size: 60px;"></i>
+                        </div>
+                        <h3>Robotic Vacuum Cleaner</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(256)</span>
+                        </div>
+                        <p class="price">$399.99</p>
+                        <a href="product.html" class="btn">View Details</a>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-fire" style="font-size: 60px;"></i>
+                        </div>
+                        <h3>Smart Thermostat</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(187)</span>
+                        </div>
+                        <p class="price">$249.99</p>
+                        <a href="product.html" class="btn">View Details</a>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-utensils" style="font-size: 60px;"></i>
+                        </div>
+                        <h3>Air Fryer Deluxe</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(342)</span>
+                        </div>
+                        <p class="price">$179.99</p>
+                        <a href="product.html" class="btn">View Details</a>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-spa" style="font-size: 60px;"></i>
+                        </div>
+                        <h3>Hair Dryer Pro</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(76)</span>
+                        </div>
+                        <p class="price">$89.99</p>
+                        <a href="product.html" class="btn">View Details</a>
+                    </div>
+
+                    <!-- Product 7 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-microwave" style="font-size: 60px;"></i>
+                        </div>
+                        <h3>Smart Microwave</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(210)</span>
+                        </div>
+                        <p class="price">$199.99</p>
+                        <a href="product.html" class="btn">View Details</a>
+                    </div>
+
+                    <!-- Product 8 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-temperature-low" style="font-size: 60px;"></i>
+                        </div>
+                        <h3>Portable AC Unit</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(143)</span>
+                        </div>
+                        <p class="price">$349.99</p>
+                        <a href="product.html" class="btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fas fa-truck"></i> Delivery</h3>
+                <p>Standard Delivery: 3-5 business days</p>
+                <p>Express Delivery: 1-2 business days</p>
+                <p>Same-Day Delivery: Available in select areas</p>
+                <p>In-Store Pickup: Free</p>
+            </div>
+
+            <div class="footer-section">
+                <h3><i class="fas fa-file-alt"></i> Policies</h3>
+                <p><a href="#">Return Policy</a></p>
+                <p><a href="#">Warranty Information</a></p>
+                <p><a href="#">Privacy Policy</a></p>
+                <p><a href="#">Terms & Conditions</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h3><i class="fas fa-headset"></i> Customer Service</h3>
+                <p><i class="fas fa-phone"></i> 1-800-TECH-HOUSE</p>
+                <p><i class="fas fa-envelope"></i> support@techhouse.com</p>
+                <p><i class="fas fa-clock"></i> Mon-Fri 9AM-6PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tech House. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
