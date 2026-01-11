@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Tech House</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-top">
+                <a href="index.html" class="logo">Tech House</a>
+                <input type="checkbox" id="menu-checkbox">
+                <label for="menu-checkbox" class="menu-toggle">☰</label>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Search for appliances...">
+                <button>Search</button>
+            </div>
+
+            <div class="nav-icons">
+                <a href="#" class="nav-icon">
+                    <span>👤</span>
+                    <span class="nav-icon-text">Account</span>
+                </a>
+                <a href="cart.html" class="nav-icon">
+                    <span>🛒</span>
+                    <span class="nav-icon-text">Cart</span>
+                    <span class="cart-badge">3</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="cart-container">
+            <h1>Shopping Cart</h1>
+
+            <!-- Cart Items Table -->
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="cart-item-image">[Image]</div>
+                        </td>
+                        <td>Smart Coffee Maker Pro</td>
+                        <td>
+                            <input type="number" class="qty-input" value="1" min="1">
+                        </td>
+                        <td>$299.99</td>
+                        <td>
+                            <button class="remove-btn">✕</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cart-item-image">[Image]</div>
+                        </td>
+                        <td>Robotic Vacuum Cleaner</td>
+                        <td>
+                            <input type="number" class="qty-input" value="2" min="1">
+                        </td>
+                        <td>$399.98</td>
+                        <td>
+                            <button class="remove-btn">✕</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cart-item-image">[Image]</div>
+                        </td>
+                        <td>Smart Thermostat</td>
+                        <td>
+                            <input type="number" class="qty-input" value="1" min="1">
+                        </td>
+                        <td>$249.99</td>
+                        <td>
+                            <button class="remove-btn">✕</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Cart Summary -->
+            <div class="cart-summary">
+                <p class="subtotal">Subtotal: $949.96</p>
+            </div>
+
+            <!-- Delivery Options -->
+            <div class="delivery-options">
+                <h2>Delivery Method</h2>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="delivery" value="home" checked>
+                        Home Delivery - Standard (3-5 business days) - Free
+                    </label>
+                    <label>
+                        <input type="radio" name="delivery" value="express">
+                        Home Delivery - Express (1-2 business days) - $19.99
+                    </label>
+                    <label>
+                        <input type="radio" name="delivery" value="same-day">
+                        Home Delivery - Same Day - $39.99
+                    </label>
+                    <label>
+                        <input type="radio" name="delivery" value="pickup">
+                        In-Store Pickup - Free
+                    </label>
+                </div>
+            </div>
+
+            <!-- Checkout Button -->
+            <a href="checkout.html" class="btn">Proceed to Checkout</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Delivery</h3>
+                <p>Standard Delivery: 3-5 business days</p>
+                <p>Express Delivery: 1-2 business days</p>
+                <p>Same-Day Delivery: Available in select areas</p>
+                <p>In-Store Pickup: Free</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Policies</h3>
+                <p><a href="#">Return Policy</a></p>
+                <p><a href="#">Warranty Information</a></p>
+                <p><a href="#">Privacy Policy</a></p>
+                <p><a href="#">Terms & Conditions</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <p>Phone: 1-800-TECH-HOUSE</p>
+                <p>Email: support@techhouse.com</p>
+                <p>Hours: Mon-Fri 9AM-6PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tech House. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
