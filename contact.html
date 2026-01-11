@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Tech House</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,21 +13,16 @@
             <div class="nav-top">
                 <a href="index.html" class="logo">Tech House</a>
                 <input type="checkbox" id="menu-checkbox">
-                <label for="menu-checkbox" class="menu-toggle">☰</label>
-            </div>
-
-            <div class="search-bar">
-                <input type="text" placeholder="Search for appliances...">
-                <button>Search</button>
+                <label for="menu-checkbox" class="menu-toggle"><i class="fas fa-bars"></i></label>
             </div>
 
             <div class="nav-icons">
                 <a href="#" class="nav-icon">
-                    <span>👤</span>
+                    <i class="fas fa-user"></i>
                     <span class="nav-icon-text">Account</span>
                 </a>
                 <a href="cart.html" class="nav-icon">
-                    <span>🛒</span>
+                    <i class="fas fa-shopping-cart"></i>
                     <span class="nav-icon-text">Cart</span>
                     <span class="cart-badge">3</span>
                 </a>
@@ -36,92 +32,96 @@
 
     <main>
         <div class="contact-container">
-            <h1>Contact Us</h1>
+            <h1><i class="fas fa-envelope"></i> Contact Us</h1>
 
             <div class="contact-layout">
                 <!-- Contact Form -->
                 <div>
                     <form class="checkout-form">
                         <div class="form-section">
-                            <h2>Send us a Message</h2>
+                            <h2><i class="fas fa-paper-plane"></i> Send us a Message</h2>
 
                             <div class="form-group">
-                                <label for="name">Full Name</label>
+                                <label for="name"><i class="fas fa-user"></i> Full Name</label>
                                 <input type="text" id="name" name="name" required>
                             </div>
 
                             <div class="form-group">
-                                <label for="email">Email Address</label>
+                                <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
                                 <input type="email" id="email" name="email" required>
                             </div>
 
                             <div class="form-group">
-                                <label for="subject">Subject</label>
+                                <label for="subject"><i class="fas fa-tag"></i> Subject</label>
                                 <input type="text" id="subject" name="subject" required>
                             </div>
 
                             <div class="form-group">
-                                <label for="message">Message</label>
+                                <label for="message"><i class="fas fa-comment"></i> Message</label>
                                 <textarea id="message" name="message" required></textarea>
                             </div>
 
-                            <button type="submit" class="btn">Send Message</button>
+                            <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Send Message</button>
                         </div>
                     </form>
                 </div>
 
                 <!-- Contact Information -->
                 <div class="contact-info">
-                    <h2>Contact Information</h2>
+                    <h2><i class="fas fa-info-circle"></i> Contact Information</h2>
 
-                    <p><strong>Phone:</strong></p>
+                    <p><strong><i class="fas fa-phone"></i> Phone:</strong></p>
                     <p>1-800-TECH-HOUSE</p>
                     <p>(1-800-832-4468)</p>
 
-                    <p style="margin-top: 30px;"><strong>Email:</strong></p>
+                    <p style="margin-top: 30px;"><strong><i class="fas fa-envelope"></i> Email:</strong></p>
                     <p>support@techhouse.com</p>
                     <p>sales@techhouse.com</p>
 
-                    <p style="margin-top: 30px;"><strong>Business Hours:</strong></p>
+                    <p style="margin-top: 30px;"><strong><i class="fas fa-clock"></i> Business Hours:</strong></p>
                     <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
                     <p>Saturday: 10:00 AM - 4:00 PM</p>
                     <p>Sunday: Closed</p>
 
-                    <p style="margin-top: 30px;"><strong>Address:</strong></p>
+                    <p style="margin-top: 30px;"><strong><i class="fas fa-map-marker-alt"></i> Address:</strong></p>
                     <p>123 Technology Drive</p>
                     <p>Innovation Plaza, Suite 500</p>
                     <p>San Francisco, CA 94105</p>
 
                     <!-- Map Placeholder -->
                     <div class="map-placeholder">
-                        [Store Location Map]
+                        <i class="fas fa-map" style="font-size: 48px;"></i>
+                        <p style="margin-top: 20px;">Store Location Map</p>
                     </div>
                 </div>
             </div>
 
             <!-- Store Locations -->
             <div class="store-locations">
-                <h2>Our Store Locations</h2>
+                <h2><i class="fas fa-store"></i> Our Store Locations</h2>
                 <div class="store-grid">
                     <div class="store-card">
+                        <i class="fas fa-map-marker-alt" style="font-size: 32px; color: #1E3A8A; margin-bottom: 15px;"></i>
                         <h3>San Francisco</h3>
                         <p>123 Technology Drive</p>
                         <p>San Francisco, CA 94105</p>
-                        <p style="margin-top: 15px;"><strong>Phone:</strong> (415) 555-0100</p>
+                        <p style="margin-top: 15px;"><strong><i class="fas fa-phone"></i> Phone:</strong> (415) 555-0100</p>
                     </div>
 
                     <div class="store-card">
+                        <i class="fas fa-map-marker-alt" style="font-size: 32px; color: #1E3A8A; margin-bottom: 15px;"></i>
                         <h3>Los Angeles</h3>
                         <p>456 Innovation Blvd</p>
                         <p>Los Angeles, CA 90012</p>
-                        <p style="margin-top: 15px;"><strong>Phone:</strong> (213) 555-0200</p>
+                        <p style="margin-top: 15px;"><strong><i class="fas fa-phone"></i> Phone:</strong> (213) 555-0200</p>
                     </div>
 
                     <div class="store-card">
+                        <i class="fas fa-map-marker-alt" style="font-size: 32px; color: #1E3A8A; margin-bottom: 15px;"></i>
                         <h3>New York</h3>
                         <p>789 Digital Avenue</p>
                         <p>New York, NY 10001</p>
-                        <p style="margin-top: 15px;"><strong>Phone:</strong> (212) 555-0300</p>
+                        <p style="margin-top: 15px;"><strong><i class="fas fa-phone"></i> Phone:</strong> (212) 555-0300</p>
                     </div>
                 </div>
             </div>
@@ -131,7 +131,7 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Delivery</h3>
+                <h3><i class="fas fa-truck"></i> Delivery</h3>
                 <p>Standard Delivery: 3-5 business days</p>
                 <p>Express Delivery: 1-2 business days</p>
                 <p>Same-Day Delivery: Available in select areas</p>
@@ -139,7 +139,7 @@
             </div>
 
             <div class="footer-section">
-                <h3>Policies</h3>
+                <h3><i class="fas fa-file-alt"></i> Policies</h3>
                 <p><a href="#">Return Policy</a></p>
                 <p><a href="#">Warranty Information</a></p>
                 <p><a href="#">Privacy Policy</a></p>
@@ -147,10 +147,10 @@
             </div>
 
             <div class="footer-section">
-                <h3>Customer Service</h3>
-                <p>Phone: 1-800-TECH-HOUSE</p>
-                <p>Email: support@techhouse.com</p>
-                <p>Hours: Mon-Fri 9AM-6PM</p>
+                <h3><i class="fas fa-headset"></i> Customer Service</h3>
+                <p><i class="fas fa-phone"></i> 1-800-TECH-HOUSE</p>
+                <p><i class="fas fa-envelope"></i> support@techhouse.com</p>
+                <p><i class="fas fa-clock"></i> Mon-Fri 9AM-6PM</p>
             </div>
         </div>
         <div class="footer-bottom">

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart - Tech House</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,21 +13,16 @@
             <div class="nav-top">
                 <a href="index.html" class="logo">Tech House</a>
                 <input type="checkbox" id="menu-checkbox">
-                <label for="menu-checkbox" class="menu-toggle">☰</label>
-            </div>
-
-            <div class="search-bar">
-                <input type="text" placeholder="Search for appliances...">
-                <button>Search</button>
+                <label for="menu-checkbox" class="menu-toggle"><i class="fas fa-bars"></i></label>
             </div>
 
             <div class="nav-icons">
                 <a href="#" class="nav-icon">
-                    <span>👤</span>
+                    <i class="fas fa-user"></i>
                     <span class="nav-icon-text">Account</span>
                 </a>
                 <a href="cart.html" class="nav-icon">
-                    <span>🛒</span>
+                    <i class="fas fa-shopping-cart"></i>
                     <span class="nav-icon-text">Cart</span>
                     <span class="cart-badge">3</span>
                 </a>
@@ -36,7 +32,7 @@
 
     <main>
         <div class="cart-container">
-            <h1>Shopping Cart</h1>
+            <h1><i class="fas fa-shopping-cart"></i> Shopping Cart</h1>
 
             <!-- Cart Items Table -->
             <table class="cart-table">
@@ -52,7 +48,9 @@
                 <tbody>
                     <tr>
                         <td>
-                            <div class="cart-item-image">[Image]</div>
+                            <div class="cart-item-image">
+                                <i class="fas fa-coffee" style="font-size: 32px;"></i>
+                            </div>
                         </td>
                         <td>Smart Coffee Maker Pro</td>
                         <td>
@@ -60,12 +58,14 @@
                         </td>
                         <td>$299.99</td>
                         <td>
-                            <button class="remove-btn">✕</button>
+                            <button class="remove-btn"><i class="fas fa-times"></i></button>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <div class="cart-item-image">[Image]</div>
+                            <div class="cart-item-image">
+                                <i class="fas fa-broom" style="font-size: 32px;"></i>
+                            </div>
                         </td>
                         <td>Robotic Vacuum Cleaner</td>
                         <td>
@@ -73,12 +73,14 @@
                         </td>
                         <td>$399.98</td>
                         <td>
-                            <button class="remove-btn">✕</button>
+                            <button class="remove-btn"><i class="fas fa-times"></i></button>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <div class="cart-item-image">[Image]</div>
+                            <div class="cart-item-image">
+                                <i class="fas fa-fire" style="font-size: 32px;"></i>
+                            </div>
                         </td>
                         <td>Smart Thermostat</td>
                         <td>
@@ -86,7 +88,7 @@
                         </td>
                         <td>$249.99</td>
                         <td>
-                            <button class="remove-btn">✕</button>
+                            <button class="remove-btn"><i class="fas fa-times"></i></button>
                         </td>
                     </tr>
                 </tbody>
@@ -99,36 +101,36 @@
 
             <!-- Delivery Options -->
             <div class="delivery-options">
-                <h2>Delivery Method</h2>
+                <h2><i class="fas fa-truck"></i> Delivery Method</h2>
                 <div class="radio-group">
                     <label>
                         <input type="radio" name="delivery" value="home" checked>
-                        Home Delivery - Standard (3-5 business days) - Free
+                        <i class="fas fa-home"></i> Home Delivery - Standard (3-5 business days) - Free
                     </label>
                     <label>
                         <input type="radio" name="delivery" value="express">
-                        Home Delivery - Express (1-2 business days) - $19.99
+                        <i class="fas fa-shipping-fast"></i> Home Delivery - Express (1-2 business days) - $19.99
                     </label>
                     <label>
                         <input type="radio" name="delivery" value="same-day">
-                        Home Delivery - Same Day - $39.99
+                        <i class="fas fa-bolt"></i> Home Delivery - Same Day - $39.99
                     </label>
                     <label>
                         <input type="radio" name="delivery" value="pickup">
-                        In-Store Pickup - Free
+                        <i class="fas fa-store"></i> In-Store Pickup - Free
                     </label>
                 </div>
             </div>
 
             <!-- Checkout Button -->
-            <a href="checkout.html" class="btn">Proceed to Checkout</a>
+            <a href="checkout.html" class="btn"><i class="fas fa-check-circle"></i> Proceed to Checkout</a>
         </div>
     </main>
 
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Delivery</h3>
+                <h3><i class="fas fa-truck"></i> Delivery</h3>
                 <p>Standard Delivery: 3-5 business days</p>
                 <p>Express Delivery: 1-2 business days</p>
                 <p>Same-Day Delivery: Available in select areas</p>
@@ -136,7 +138,7 @@
             </div>
 
             <div class="footer-section">
-                <h3>Policies</h3>
+                <h3><i class="fas fa-file-alt"></i> Policies</h3>
                 <p><a href="#">Return Policy</a></p>
                 <p><a href="#">Warranty Information</a></p>
                 <p><a href="#">Privacy Policy</a></p>
@@ -144,10 +146,10 @@
             </div>
 
             <div class="footer-section">
-                <h3>Customer Service</h3>
-                <p>Phone: 1-800-TECH-HOUSE</p>
-                <p>Email: support@techhouse.com</p>
-                <p>Hours: Mon-Fri 9AM-6PM</p>
+                <h3><i class="fas fa-headset"></i> Customer Service</h3>
+                <p><i class="fas fa-phone"></i> 1-800-TECH-HOUSE</p>
+                <p><i class="fas fa-envelope"></i> support@techhouse.com</p>
+                <p><i class="fas fa-clock"></i> Mon-Fri 9AM-6PM</p>
             </div>
         </div>
         <div class="footer-bottom">

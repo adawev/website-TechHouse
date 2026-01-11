@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Details - Tech House</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,21 +13,16 @@
             <div class="nav-top">
                 <a href="index.html" class="logo">Tech House</a>
                 <input type="checkbox" id="menu-checkbox">
-                <label for="menu-checkbox" class="menu-toggle">☰</label>
-            </div>
-
-            <div class="search-bar">
-                <input type="text" placeholder="Search for appliances...">
-                <button>Search</button>
+                <label for="menu-checkbox" class="menu-toggle"><i class="fas fa-bars"></i></label>
             </div>
 
             <div class="nav-icons">
                 <a href="#" class="nav-icon">
-                    <span>👤</span>
+                    <i class="fas fa-user"></i>
                     <span class="nav-icon-text">Account</span>
                 </a>
                 <a href="cart.html" class="nav-icon">
-                    <span>🛒</span>
+                    <i class="fas fa-shopping-cart"></i>
                     <span class="nav-icon-text">Cart</span>
                     <span class="cart-badge">3</span>
                 </a>
@@ -37,7 +33,7 @@
     <main>
         <!-- Breadcrumb Navigation -->
         <div class="breadcrumb">
-            <a href="index.html">Home</a>
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
             <span>&gt;</span>
             <a href="#">Kitchen Appliances</a>
             <span>&gt;</span>
@@ -48,9 +44,15 @@
         <section class="product-detail">
             <!-- Product Images -->
             <div class="product-images">
-                <div class="product-image-large">[Main Product Image]</div>
-                <div class="product-image-large">[Product Image 2]</div>
-                <div class="product-image-large">[Product Image 3]</div>
+                <div class="product-image-large">
+                    <i class="fas fa-coffee" style="font-size: 80px;"></i>
+                </div>
+                <div class="product-image-large">
+                    <i class="fas fa-mug-hot" style="font-size: 80px;"></i>
+                </div>
+                <div class="product-image-large">
+                    <i class="fas fa-blender" style="font-size: 80px;"></i>
+                </div>
             </div>
 
             <!-- Product Info -->
@@ -58,13 +60,13 @@
                 <h1>Smart Coffee Maker Pro</h1>
                 <p class="price">$299.99</p>
 
-                <a href="cart.html" class="btn">Add to Cart</a>
+                <a href="cart.html" class="btn"><i class="fas fa-cart-plus"></i> Add to Cart</a>
 
                 <!-- Specifications Table -->
                 <table class="specs-table">
                     <thead>
                         <tr>
-                            <th colspan="2">Product Specifications</th>
+                            <th colspan="2"><i class="fas fa-info-circle"></i> Product Specifications</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -100,11 +102,11 @@
                 </table>
 
                 <!-- Membership Perks -->
-                <h2 style="margin-top: 40px; font-size: 24px; color: #0F172A;">Membership Perks</h2>
+                <h2 style="margin-top: 40px; font-size: 24px; color: #0F172A;"><i class="fas fa-gift"></i> Membership Perks</h2>
                 <ul class="perks-list">
-                    <li><strong>Bronze Members:</strong> 5% discount + 2-year warranty</li>
-                    <li><strong>Silver Members:</strong> 10% discount + 3-year warranty + Free express delivery</li>
-                    <li><strong>Gold Members:</strong> 15% discount + 5-year warranty + Free same-day delivery</li>
+                    <li><i class="fas fa-medal" style="color: #CD7F32;"></i> <strong>Bronze Members:</strong> 5% discount + 2-year warranty</li>
+                    <li><i class="fas fa-medal" style="color: #C0C0C0;"></i> <strong>Silver Members:</strong> 10% discount + 3-year warranty + Free express delivery</li>
+                    <li><i class="fas fa-medal" style="color: #FFD700;"></i> <strong>Gold Members:</strong> 15% discount + 5-year warranty + Free same-day delivery</li>
                 </ul>
             </div>
         </section>
@@ -113,7 +115,7 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Delivery</h3>
+                <h3><i class="fas fa-truck"></i> Delivery</h3>
                 <p>Standard Delivery: 3-5 business days</p>
                 <p>Express Delivery: 1-2 business days</p>
                 <p>Same-Day Delivery: Available in select areas</p>
@@ -121,7 +123,7 @@
             </div>
 
             <div class="footer-section">
-                <h3>Policies</h3>
+                <h3><i class="fas fa-file-alt"></i> Policies</h3>
                 <p><a href="#">Return Policy</a></p>
                 <p><a href="#">Warranty Information</a></p>
                 <p><a href="#">Privacy Policy</a></p>
@@ -129,10 +131,10 @@
             </div>
 
             <div class="footer-section">
-                <h3>Customer Service</h3>
-                <p>Phone: 1-800-TECH-HOUSE</p>
-                <p>Email: support@techhouse.com</p>
-                <p>Hours: Mon-Fri 9AM-6PM</p>
+                <h3><i class="fas fa-headset"></i> Customer Service</h3>
+                <p><i class="fas fa-phone"></i> 1-800-TECH-HOUSE</p>
+                <p><i class="fas fa-envelope"></i> support@techhouse.com</p>
+                <p><i class="fas fa-clock"></i> Mon-Fri 9AM-6PM</p>
             </div>
         </div>
         <div class="footer-bottom">

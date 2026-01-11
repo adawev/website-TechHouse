@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech House - Modern Appliances for Your Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,21 +13,16 @@
             <div class="nav-top">
                 <a href="index.html" class="logo">Tech House</a>
                 <input type="checkbox" id="menu-checkbox">
-                <label for="menu-checkbox" class="menu-toggle">☰</label>
-            </div>
-
-            <div class="search-bar">
-                <input type="text" placeholder="Search for appliances...">
-                <button>Search</button>
+                <label for="menu-checkbox" class="menu-toggle"><i class="fas fa-bars"></i></label>
             </div>
 
             <div class="nav-icons">
                 <a href="#" class="nav-icon">
-                    <span>👤</span>
+                    <i class="fas fa-user"></i>
                     <span class="nav-icon-text">Account</span>
                 </a>
                 <a href="cart.html" class="nav-icon">
-                    <span>🛒</span>
+                    <i class="fas fa-shopping-cart"></i>
                     <span class="nav-icon-text">Cart</span>
                     <span class="cart-badge">3</span>
                 </a>
@@ -39,7 +35,7 @@
         <section class="hero">
             <h1>Modern Appliances for Your Home</h1>
             <div class="hero-image">
-                [Appliance Photo]
+                <i class="fas fa-blender" style="font-size: 80px;"></i>
             </div>
         </section>
 
@@ -49,7 +45,9 @@
             <div class="grid">
                 <!-- Kitchen Appliances -->
                 <div class="product-card">
-                    <div class="product-image">[Kitchen Image]</div>
+                    <div class="product-image">
+                        <i class="fas fa-utensils" style="font-size: 60px;"></i>
+                    </div>
                     <h3>Kitchen Appliances</h3>
                     <p class="price">$299.99</p>
                     <a href="product.html" class="btn">Shop</a>
@@ -57,7 +55,9 @@
 
                 <!-- Cleaning Appliances -->
                 <div class="product-card">
-                    <div class="product-image">[Cleaning Image]</div>
+                    <div class="product-image">
+                        <i class="fas fa-broom" style="font-size: 60px;"></i>
+                    </div>
                     <h3>Cleaning Appliances</h3>
                     <p class="price">$199.99</p>
                     <a href="product.html" class="btn">Shop</a>
@@ -65,7 +65,9 @@
 
                 <!-- Heating Appliances -->
                 <div class="product-card">
-                    <div class="product-image">[Heating Image]</div>
+                    <div class="product-image">
+                        <i class="fas fa-fire" style="font-size: 60px;"></i>
+                    </div>
                     <h3>Heating Appliances</h3>
                     <p class="price">$249.99</p>
                     <a href="product.html" class="btn">Shop</a>
@@ -73,7 +75,9 @@
 
                 <!-- Personal Care -->
                 <div class="product-card">
-                    <div class="product-image">[Personal Care Image]</div>
+                    <div class="product-image">
+                        <i class="fas fa-spa" style="font-size: 60px;"></i>
+                    </div>
                     <h3>Personal Care</h3>
                     <p class="price">$149.99</p>
                     <a href="product.html" class="btn">Shop</a>
@@ -87,6 +91,7 @@
             <div class="promo-grid">
                 <!-- Bronze -->
                 <div class="promo-card">
+                    <i class="fas fa-medal" style="font-size: 48px; margin-bottom: 20px; color: #CD7F32;"></i>
                     <h3>Bronze</h3>
                     <p>5% discount on all purchases</p>
                     <p>Free standard delivery</p>
@@ -95,6 +100,7 @@
 
                 <!-- Silver -->
                 <div class="promo-card">
+                    <i class="fas fa-medal" style="font-size: 48px; margin-bottom: 20px; color: #C0C0C0;"></i>
                     <h3>Silver</h3>
                     <p>10% discount on all purchases</p>
                     <p>Free express delivery</p>
@@ -104,6 +110,7 @@
 
                 <!-- Gold -->
                 <div class="promo-card">
+                    <i class="fas fa-medal" style="font-size: 48px; margin-bottom: 20px; color: #FFD700;"></i>
                     <h3>Gold</h3>
                     <p>15% discount on all purchases</p>
                     <p>Free same-day delivery</p>
@@ -118,7 +125,7 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Delivery</h3>
+                <h3><i class="fas fa-truck"></i> Delivery</h3>
                 <p>Standard Delivery: 3-5 business days</p>
                 <p>Express Delivery: 1-2 business days</p>
                 <p>Same-Day Delivery: Available in select areas</p>
@@ -126,7 +133,7 @@
             </div>
 
             <div class="footer-section">
-                <h3>Policies</h3>
+                <h3><i class="fas fa-file-alt"></i> Policies</h3>
                 <p><a href="#">Return Policy</a></p>
                 <p><a href="#">Warranty Information</a></p>
                 <p><a href="#">Privacy Policy</a></p>
@@ -134,10 +141,10 @@
             </div>
 
             <div class="footer-section">
-                <h3>Customer Service</h3>
-                <p>Phone: 1-800-TECH-HOUSE</p>
-                <p>Email: support@techhouse.com</p>
-                <p>Hours: Mon-Fri 9AM-6PM</p>
+                <h3><i class="fas fa-headset"></i> Customer Service</h3>
+                <p><i class="fas fa-phone"></i> 1-800-TECH-HOUSE</p>
+                <p><i class="fas fa-envelope"></i> support@techhouse.com</p>
+                <p><i class="fas fa-clock"></i> Mon-Fri 9AM-6PM</p>
             </div>
         </div>
         <div class="footer-bottom">
