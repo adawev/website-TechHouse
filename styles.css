@@ -185,7 +185,7 @@ main {
 
 /* Hero Section */
 .hero {
-    background-color: var(--white);
+    background: linear-gradient(135deg, #ffffff 0%, #e8f5ec 100%);
     color: var(--dark-gray);
     padding: 60px 40px;
     display: grid;
@@ -193,7 +193,8 @@ main {
     gap: 60px;
     align-items: center;
     max-width: 1400px;
-    margin: 0 auto 80px;
+    margin: 0 auto;
+    border-radius: 0 0 40px 40px;
 }
 
 .hero-subtitle {
@@ -242,7 +243,8 @@ main {
 
 /* Product Grid */
 .product-grid {
-    padding: 0 40px 80px;
+    padding: 80px 40px;
+    background-color: var(--white);
 }
 
 .product-grid h2 {
@@ -384,11 +386,11 @@ main {
 
 /* Promotions Section */
 .promotions {
-    background-color: var(--dark-gray);
-    color: var(--white);
+    background: linear-gradient(135deg, #f0f9f4 0%, #e0f4e8 100%);
+    color: var(--dark-gray);
     padding: 80px 40px;
-    border-radius: 32px;
-    margin: 0 40px 80px;
+    border-radius: 0;
+    margin: 0;
 }
 
 .promotions h2 {
@@ -396,7 +398,7 @@ main {
     font-weight: 700;
     text-align: center;
     margin-bottom: 60px;
-    color: var(--white);
+    color: var(--dark-gray);
 }
 
 .promo-grid {
@@ -408,28 +410,58 @@ main {
 }
 
 .promo-card {
-    background-color: var(--primary-green);
+    background-color: var(--white);
     padding: 40px;
     text-align: center;
     border-radius: 32px;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.promo-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(70, 163, 88, 0.2);
+    border-color: var(--primary-green);
+}
+
+.promo-card:nth-child(1) {
+    border-top: 4px solid #CD7F32;
+}
+
+.promo-card:nth-child(2) {
+    border-top: 4px solid #C0C0C0;
+}
+
+.promo-card:nth-child(3) {
+    border-top: 4px solid #FFD700;
 }
 
 .promo-card h3 {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 700;
     margin-bottom: 20px;
-    color: var(--white);
+    color: var(--dark-gray);
 }
 
 .promo-card p {
     font-size: 16px;
     line-height: 1.8;
+    color: var(--dark-gray);
+    padding: 8px 0;
+}
+
+.promo-card p:before {
+    content: "✓ ";
+    color: var(--primary-green);
+    font-weight: bold;
+    margin-right: 8px;
 }
 
 /* Footer */
 footer {
-    background-color: #FBFBFB;
-    border-top: 1px solid var(--border-gray);
+    background-color: var(--white);
+    border-top: 1px solid #e8f5ec;
     color: var(--dark-gray);
     padding: 60px 40px 30px;
     margin-top: 0;
@@ -759,9 +791,9 @@ footer {
 .delivery-options {
     margin-bottom: 40px;
     padding: 30px;
-    background-color: #fafafa;
+    background-color: #f0f9f4;
     border-radius: 20px;
-    border: 1px solid var(--border-gray);
+    border: 1px solid #d0e8d8;
 }
 
 .delivery-options h2 {
@@ -1640,7 +1672,7 @@ footer {
 /* Comparison Table */
 .comparison-section {
     padding: 80px 40px;
-    background-color: var(--light-gray);
+    background-color: #f0f9f4;
 }
 
 .comparison-section h2 {
@@ -1899,8 +1931,8 @@ footer {
 
     .hero {
         padding: 24px 16px;
-        border-radius: 0;
-        margin-bottom: 32px;
+        border-radius: 0 0 24px 24px;
+        margin-bottom: 0;
         gap: 24px;
     }
 
@@ -1927,15 +1959,15 @@ footer {
 
     .product-grid,
     .promotions {
-        padding: 32px 16px;
-        margin: 0 0 32px;
+        padding: 48px 16px;
+        margin: 0;
         border-radius: 0;
     }
 
     .product-grid h2,
     .promotions h2 {
-        font-size: 22px;
-        margin-bottom: 24px;
+        font-size: 24px;
+        margin-bottom: 32px;
         font-weight: 700;
     }
 
@@ -1944,14 +1976,18 @@ footer {
         border-radius: 24px;
     }
 
+    .promo-card:hover {
+        transform: translateY(-4px);
+    }
+
     .promo-card h3 {
-        font-size: 20px;
+        font-size: 22px;
         margin-bottom: 16px;
     }
 
     .promo-card p {
-        font-size: 14px;
-        line-height: 1.6;
+        font-size: 15px;
+        line-height: 1.7;
     }
 
     .grid {
