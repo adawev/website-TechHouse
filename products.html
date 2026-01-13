@@ -160,7 +160,7 @@
                 <!-- Products Grid -->
                 <div class="products-grid">
                     <!-- Product 1 -->
-                    <div class="product-card">
+                    <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=400&h=300&fit=crop" alt="Coffee Maker">
                         </div>
@@ -173,12 +173,16 @@
                             <i class="fas fa-star"></i>
                             <span>(128)</span>
                         </div>
-                        <p class="price">$299.99</p>
-                        <a href="product.html" class="btn">View Details</a>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                            <p class="price" style="margin: 0; font-size: 20px; font-weight: 700;">$299.99</p>
+                            <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart({id: 'prod1', name: 'Smart Coffee Maker Pro', price: 299.99, image: 'https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=400&h=300&fit=crop'})" title="Add to Cart">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Product 2 -->
-                    <div class="product-card">
+                    <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1570222094114-d054a817e56b?w=400&h=300&fit=crop" alt="Blender">
                         </div>
@@ -191,12 +195,16 @@
                             <i class="far fa-star"></i>
                             <span>(95)</span>
                         </div>
-                        <p class="price">$149.99</p>
-                        <a href="product.html" class="btn">View Details</a>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                            <p class="price" style="margin: 0; font-size: 20px; font-weight: 700;">$149.99</p>
+                            <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart({id: 'prod2', name: 'Professional Blender 2000W', price: 149.99, image: 'https://images.unsplash.com/photo-1570222094114-d054a817e56b?w=400&h=300&fit=crop'})" title="Add to Cart">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Product 3 -->
-                    <div class="product-card">
+                    <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?w=400&h=300&fit=crop" alt="Robot Vacuum">
                         </div>
@@ -209,12 +217,16 @@
                             <i class="fas fa-star"></i>
                             <span>(256)</span>
                         </div>
-                        <p class="price">$399.99</p>
-                        <a href="product.html" class="btn">View Details</a>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                            <p class="price" style="margin: 0; font-size: 20px; font-weight: 700;">$399.99</p>
+                            <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart({id: 'prod3', name: 'Robot Vacuum Cleaner X9', price: 399.99, image: 'https://images.unsplash.com/photo-1558317374-067fb5f30001?w=400&h=300&fit=crop'})" title="Add to Cart">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Product 4 -->
-                    <div class="product-card">
+                    <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?w=400&h=300&fit=crop" alt="Thermostat">
                         </div>
@@ -227,12 +239,16 @@
                             <i class="far fa-star"></i>
                             <span>(187)</span>
                         </div>
-                        <p class="price">$249.99</p>
-                        <a href="product.html" class="btn">View Details</a>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                            <p class="price" style="margin: 0; font-size: 20px; font-weight: 700;">$249.99</p>
+                            <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart({id: 'prod4', name: 'Smart Thermostat WiFi', price: 249.99, image: 'https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?w=400&h=300&fit=crop'})" title="Add to Cart">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Product 5 -->
-                    <div class="product-card">
+                    <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1603039904123-d1c19eb97af9?w=400&h=300&fit=crop" alt="Air Fryer">
                         </div>
@@ -245,12 +261,16 @@
                             <i class="fas fa-star"></i>
                             <span>(342)</span>
                         </div>
-                        <p class="price">$179.99</p>
-                        <a href="product.html" class="btn">View Details</a>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                            <p class="price" style="margin: 0; font-size: 20px; font-weight: 700;">$179.99</p>
+                            <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart({id: 'prod5', name: 'Digital Air Fryer 5.8QT', price: 179.99, image: 'https://images.unsplash.com/photo-1603039904123-d1c19eb97af9?w=400&h=300&fit=crop'})" title="Add to Cart">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Product 6 -->
-                    <div class="product-card">
+                    <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=400&h=300&fit=crop" alt="Hair Dryer">
                         </div>
@@ -263,12 +283,16 @@
                             <i class="far fa-star"></i>
                             <span>(76)</span>
                         </div>
-                        <p class="price">$89.99</p>
-                        <a href="product.html" class="btn">View Details</a>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                            <p class="price" style="margin: 0; font-size: 20px; font-weight: 700;">$89.99</p>
+                            <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart({id: 'prod6', name: 'Ionic Hair Dryer Pro', price: 89.99, image: 'https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=400&h=300&fit=crop'})" title="Add to Cart">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Product 7 -->
-                    <div class="product-card">
+                    <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1574269909936-9c5d1a3c6e6b?w=400&h=300&fit=crop" alt="Microwave">
                         </div>
@@ -281,12 +305,16 @@
                             <i class="fas fa-star"></i>
                             <span>(210)</span>
                         </div>
-                        <p class="price">$199.99</p>
-                        <a href="product.html" class="btn">View Details</a>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                            <p class="price" style="margin: 0; font-size: 20px; font-weight: 700;">$199.99</p>
+                            <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart({id: 'prod7', name: 'Smart Microwave 1200W', price: 199.99, image: 'https://images.unsplash.com/photo-1574269909936-9c5d1a3c6e6b?w=400&h=300&fit=crop'})" title="Add to Cart">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Product 8 -->
-                    <div class="product-card">
+                    <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&h=300&fit=crop" alt="Air Conditioner">
                         </div>
@@ -299,12 +327,16 @@
                             <i class="far fa-star"></i>
                             <span>(143)</span>
                         </div>
-                        <p class="price">$349.99</p>
-                        <a href="product.html" class="btn">View Details</a>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                            <p class="price" style="margin: 0; font-size: 20px; font-weight: 700;">$349.99</p>
+                            <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart({id: 'prod8', name: 'Portable AC 10,000 BTU', price: 349.99, image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&h=300&fit=crop'})" title="Add to Cart">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Product 9 -->
-                    <div class="product-card">
+                    <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1572635148818-ef6fd45eb394?w=400&h=300&fit=crop" alt="Electric Kettle">
                         </div>
@@ -317,12 +349,16 @@
                             <i class="fas fa-star"></i>
                             <span>(412)</span>
                         </div>
-                        <p class="price">$59.99</p>
-                        <a href="product.html" class="btn">View Details</a>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                            <p class="price" style="margin: 0; font-size: 20px; font-weight: 700;">$59.99</p>
+                            <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart({id: 'prod9', name: 'Electric Kettle Stainless', price: 59.99, image: 'https://images.unsplash.com/photo-1572635148818-ef6fd45eb394?w=400&h=300&fit=crop'})" title="Add to Cart">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Product 10 -->
-                    <div class="product-card">
+                    <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1607522370275-f14206abe5d3?w=400&h=300&fit=crop" alt="Stand Mixer">
                         </div>
@@ -335,12 +371,16 @@
                             <i class="fas fa-star"></i>
                             <span>(289)</span>
                         </div>
-                        <p class="price">$279.99</p>
-                        <a href="product.html" class="btn">View Details</a>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                            <p class="price" style="margin: 0; font-size: 20px; font-weight: 700;">$279.99</p>
+                            <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart({id: 'prod10', name: 'Stand Mixer 660W', price: 279.99, image: 'https://images.unsplash.com/photo-1607522370275-f14206abe5d3?w=400&h=300&fit=crop'})" title="Add to Cart">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Product 11 -->
-                    <div class="product-card">
+                    <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1588868034969-d37242f83562?w=400&h=300&fit=crop" alt="Toaster">
                         </div>
@@ -353,12 +393,16 @@
                             <i class="far fa-star"></i>
                             <span>(156)</span>
                         </div>
-                        <p class="price">$79.99</p>
-                        <a href="product.html" class="btn">View Details</a>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                            <p class="price" style="margin: 0; font-size: 20px; font-weight: 700;">$79.99</p>
+                            <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart({id: 'prod11', name: '4-Slice Toaster Digital', price: 79.99, image: 'https://images.unsplash.com/photo-1588868034969-d37242f83562?w=400&h=300&fit=crop'})" title="Add to Cart">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Product 12 -->
-                    <div class="product-card">
+                    <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1608455065591-bd61e762783b?w=400&h=300&fit=crop" alt="Rice Cooker">
                         </div>
@@ -371,8 +415,188 @@
                             <i class="fas fa-star"></i>
                             <span>(523)</span>
                         </div>
-                        <p class="price">$129.99</p>
-                        <a href="product.html" class="btn">View Details</a>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                            <p class="price" style="margin: 0; font-size: 20px; font-weight: 700;">$129.99</p>
+                            <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart({id: 'prod12', name: 'Multi-Function Rice Cooker', price: 129.99, image: 'https://images.unsplash.com/photo-1608455065591-bd61e762783b?w=400&h=300&fit=crop'})" title="Add to Cart">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product 13 -->
+                    <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1585659722983-3a675dabf23d?w=400&h=300&fit=crop" alt="Smart Oven">
+                        </div>
+                        <h3>Smart Convection Oven</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(198)</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                            <p class="price" style="margin: 0; font-size: 20px; font-weight: 700;">$599.99</p>
+                            <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart({id: 'prod13', name: 'Smart Convection Oven', price: 599.99, image: 'https://images.unsplash.com/photo-1585659722983-3a675dabf23d?w=400&h=300&fit=crop'})" title="Add to Cart">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product 14 -->
+                    <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop" alt="Dishwasher">
+                        </div>
+                        <h3>Built-in Dishwasher</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(145)</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                            <p class="price" style="margin: 0; font-size: 20px; font-weight: 700;">$789.99</p>
+                            <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart({id: 'prod14', name: 'Built-in Dishwasher', price: 789.99, image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop'})" title="Add to Cart">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product 15 -->
+                    <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1565024354062-8c5e5baeb1d0?w=400&h=300&fit=crop" alt="Refrigerator">
+                        </div>
+                        <h3>French Door Refrigerator</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(389)</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                            <p class="price" style="margin: 0; font-size: 20px; font-weight: 700;">$1299.99</p>
+                            <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart({id: 'prod15', name: 'French Door Refrigerator', price: 1299.99, image: 'https://images.unsplash.com/photo-1565024354062-8c5e5baeb1d0?w=400&h=300&fit=crop'})" title="Add to Cart">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product 16 -->
+                    <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=400&h=300&fit=crop" alt="Washing Machine">
+                        </div>
+                        <h3>Front Load Washing Machine</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(512)</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                            <p class="price" style="margin: 0; font-size: 20px; font-weight: 700;">$899.99</p>
+                            <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart({id: 'prod16', name: 'Front Load Washing Machine', price: 899.99, image: 'https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=400&h=300&fit=crop'})" title="Add to Cart">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product 17 -->
+                    <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=400&h=300&fit=crop" alt="Dryer">
+                        </div>
+                        <h3>Electric Dryer 7.4 Cu Ft</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(267)</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                            <p class="price" style="margin: 0; font-size: 20px; font-weight: 700;">$699.99</p>
+                            <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart({id: 'prod17', name: 'Electric Dryer 7.4 Cu Ft', price: 699.99, image: 'https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=400&h=300&fit=crop'})" title="Add to Cart">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product 18 -->
+                    <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1585515320310-2dcf6d098c8c?w=400&h=300&fit=crop" alt="Smart Speaker">
+                        </div>
+                        <h3>Smart Speaker with Alexa</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(1523)</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                            <p class="price" style="margin: 0; font-size: 20px; font-weight: 700;">$99.99</p>
+                            <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart({id: 'prod18', name: 'Smart Speaker with Alexa', price: 99.99, image: 'https://images.unsplash.com/photo-1585515320310-2dcf6d098c8c?w=400&h=300&fit=crop'})" title="Add to Cart">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product 19 -->
+                    <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1558089687-e1c6e5b43e6d?w=400&h=300&fit=crop" alt="Slow Cooker">
+                        </div>
+                        <h3>Programmable Slow Cooker</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(445)</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                            <p class="price" style="margin: 0; font-size: 20px; font-weight: 700;">$79.99</p>
+                            <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart({id: 'prod19', name: 'Programmable Slow Cooker', price: 79.99, image: 'https://images.unsplash.com/photo-1558089687-e1c6e5b43e6d?w=400&h=300&fit=crop'})" title="Add to Cart">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product 20 -->
+                    <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1556228852-80c985b86107?w=400&h=300&fit=crop" alt="Food Processor">
+                        </div>
+                        <h3>14-Cup Food Processor</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(678)</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                            <p class="price" style="margin: 0; font-size: 20px; font-weight: 700;">$199.99</p>
+                            <button class="cart-icon-btn" onclick="event.stopPropagation(); addToCart({id: 'prod20', name: '14-Cup Food Processor', price: 199.99, image: 'https://images.unsplash.com/photo-1556228852-80c985b86107?w=400&h=300&fit=crop'})" title="Add to Cart">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -414,5 +638,7 @@
             <p>&copy; 2021 Tech House. All Rights Reserved.</p>
         </div>
     </footer>
+    <script src="cart.js"></script>
+    <script src="filters.js"></script>
 </body>
 </html>

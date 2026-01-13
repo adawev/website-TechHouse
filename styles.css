@@ -2686,3 +2686,91 @@ footer {
         font-size: 24px;
     }
 }
+
+/* Cart Notification */
+.cart-notification {
+    position: fixed;
+    top: 100px;
+    right: -400px;
+    background: linear-gradient(135deg, #46A358 0%, #3a8a4a 100%);
+    color: white;
+    padding: 16px 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(70, 163, 88, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 10000;
+    transition: right 0.3s ease;
+    font-weight: 500;
+    max-width: 350px;
+}
+
+.cart-notification.show {
+    right: 20px;
+}
+
+.cart-notification i {
+    font-size: 20px;
+}
+
+.cart-notification span {
+    font-size: 15px;
+}
+
+/* Cart Icon Button */
+.cart-icon-btn {
+    background-color: #F5F5F5;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cart-icon-btn i {
+    color: #3D3D3D;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.cart-icon-btn:hover {
+    background-color: #46A358;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(70, 163, 88, 0.3);
+}
+
+.cart-icon-btn:hover i {
+    color: white;
+}
+
+.cart-icon-btn:active {
+    transform: translateY(0);
+}
+
+/* Quantity Selector Buttons */
+#decrease-qty:hover,
+#increase-qty:hover {
+    background-color: #46A358 !important;
+    color: white !important;
+}
+
+#decrease-qty:active,
+#increase-qty:active {
+    background-color: #3a8a4a !important;
+}
+
+/* Product Detail Quantity Input */
+#product-qty::-webkit-inner-spin-button,
+#product-qty::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#product-qty {
+    -moz-appearance: textfield;
+}
