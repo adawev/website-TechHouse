@@ -108,7 +108,7 @@ function renderCart() {
                 <td colspan="5" style="text-align: center; padding: 40px;">
                     <i class="fas fa-shopping-cart" style="font-size: 48px; color: #CBD5E1; margin-bottom: 20px;"></i>
                     <p style="color: #64748B; font-size: 18px;">Savatchada hech narsa yo'q</p>
-                    <a href="products.html" class="btn" style="margin-top: 20px; display: inline-block;">Xarid qilish</a>
+                    <a href="../products.html" class="btn" style="margin-top: 20px; display: inline-block;">Xarid qilish</a>
                 </td>
             </tr>
         `;
