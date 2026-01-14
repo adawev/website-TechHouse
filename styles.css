@@ -1443,13 +1443,7 @@ footer {
     color: var(--dark-gray);
 }
 
-/* Membership Card */
-.membership-card {
-    background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-gray) 100%);
-    color: var(--white);
-    padding: 40px;
-    border-radius: 32px;
-}
+/* Membership Card - Old style removed */
 
 .membership-header {
     display: flex;
@@ -1739,6 +1733,16 @@ footer {
 
 .comparison-table tbody tr:hover {
     background-color: rgba(70, 163, 88, 0.05);
+}
+
+.comparison-table .action-row td {
+    padding: 30px 20px;
+    border-bottom: none;
+    background-color: #f8f9fa;
+}
+
+.comparison-table .action-row:hover {
+    background-color: #f8f9fa;
 }
 
 /* FAQ Section */
