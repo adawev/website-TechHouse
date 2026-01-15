@@ -148,84 +148,321 @@
         </div>
     </header>
     <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <p class="hero-subtitle">WELCOME TO TECH HOUSE</p>
-                <h1>LET'S MAKE A <span style="color: #46A358;">SMARTER HOME</span></h1>
-                <p class="hero-description">We are an online appliance shop offering a wide range of quality and modern appliances. Use our products to create a smart, efficient home. Order your favorite appliances!</p>
-                <a href="products.html" class="btn">SHOP NOW</a>
-            </div>
-            <div class="hero-image">
-                <img src="images/hero.jpg" alt="Smart Home Appliances">
+        <!-- Hero Banner Section -->
+        <section class="hero-banner">
+            <div class="hero-banner-container">
+                <div class="hero-main-banner">
+                    <div class="banner-content">
+                        <span class="banner-tag">New Collection 2024</span>
+                        <h1>Smart Home<br><span>Appliances</span></h1>
+                        <p>Transform your home with cutting-edge technology. Up to 30% off on selected items.</p>
+                        <div class="banner-btns">
+                            <a href="products.html" class="btn btn-primary">Shop Now</a>
+                            <a href="membership.html" class="btn btn-outline">Join Membership</a>
+                        </div>
+                    </div>
+                    <div class="banner-image">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=500&fit=crop" alt="Smart Home Appliances">
+                    </div>
+                </div>
+                <div class="hero-side-banners">
+                    <a href="products.html?cat=kitchen" class="side-banner side-banner-1">
+                        <span class="side-tag">Hot Deal</span>
+                        <h3>Kitchen<br>Appliances</h3>
+                        <span class="side-discount">-25%</span>
+                    </a>
+                    <a href="products.html?cat=smart" class="side-banner side-banner-2">
+                        <span class="side-tag">New</span>
+                        <h3>Smart<br>Devices</h3>
+                        <span class="side-link">Explore <i class="fas fa-arrow-right"></i></span>
+                    </a>
+                </div>
             </div>
         </section>
-        <!-- Product Categories -->
-        <section class="product-grid">
-            <h2>Shop by Category</h2>
-            <div class="grid">
-                <!-- Kitchen Appliances -->
-                <a href="products.html" class="category-card">
-                    <div class="category-image">
-                        <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=600&h=500&fit=crop" alt="Kitchen Appliances">
+
+        <!-- Benefits Bar -->
+        <section class="benefits-bar">
+            <div class="benefits-container">
+                <div class="benefit-item">
+                    <i class="fas fa-truck"></i>
+                    <div>
+                        <h4>Free Delivery</h4>
+                        <p>On orders over $100</p>
                     </div>
-                    <h3>Kitchen Appliances</h3>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <h4>2 Year Warranty</h4>
+                        <p>Full coverage</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-undo"></i>
+                    <div>
+                        <h4>Easy Returns</h4>
+                        <p>30 day return policy</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-headset"></i>
+                    <div>
+                        <h4>24/7 Support</h4>
+                        <p>Dedicated support</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Icons -->
+        <section class="category-icons">
+            <div class="category-icons-container">
+                <a href="products.html?cat=kitchen" class="cat-icon-item">
+                    <div class="cat-icon-circle">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <span>Kitchen</span>
                 </a>
-                <!-- Cleaning Appliances -->
-                <a href="products.html" class="category-card">
-                    <div class="category-image">
-                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=500&fit=crop" alt="Cleaning Appliances">
+                <a href="products.html?cat=cleaning" class="cat-icon-item">
+                    <div class="cat-icon-circle">
+                        <i class="fas fa-broom"></i>
                     </div>
-                    <h3>Cleaning Appliances</h3>
+                    <span>Cleaning</span>
                 </a>
-                <!-- Heating Appliances -->
-                <a href="products.html" class="category-card">
-                    <div class="category-image">
-                        <img src="https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?w=600&h=500&fit=crop" alt="Heating Appliances">
+                <a href="products.html?cat=heating" class="cat-icon-item">
+                    <div class="cat-icon-circle">
+                        <i class="fas fa-thermometer-half"></i>
                     </div>
-                    <h3>Heating Appliances</h3>
+                    <span>Climate</span>
                 </a>
-                <!-- Personal Care -->
-                <a href="products.html" class="category-card">
-                    <div class="category-image">
-                        <img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=600&h=500&fit=crop" alt="Personal Care">
+                <a href="products.html?cat=smart" class="cat-icon-item">
+                    <div class="cat-icon-circle">
+                        <i class="fas fa-home"></i>
                     </div>
-                    <h3>Personal Care</h3>
+                    <span>Smart Home</span>
+                </a>
+                <a href="products.html?cat=personal" class="cat-icon-item">
+                    <div class="cat-icon-circle">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <span>Personal Care</span>
+                </a>
+                <a href="products.html?cat=laundry" class="cat-icon-item">
+                    <div class="cat-icon-circle">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <span>Laundry</span>
+                </a>
+                <a href="products.html" class="cat-icon-item">
+                    <div class="cat-icon-circle">
+                        <i class="fas fa-blender"></i>
+                    </div>
+                    <span>Small</span>
+                </a>
+                <a href="products.html" class="cat-icon-item">
+                    <div class="cat-icon-circle">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <span>Electronics</span>
                 </a>
             </div>
         </section>
-        <!-- Membership Tiers Section -->
-        <section class="promotions">
-            <h2><i class="fas fa-star"></i>Membership Tiers</h2>
-            <p style="text-align: center; color: #64748B; margin-bottom: 40px;">Join our loyalty program and enjoy exclusive benefits</p>
-            <div class="promo-grid">
-                <!-- Bronze -->
-                <div class="promo-card">
-                    <i class="fas fa-medal" style="font-size: 48px; margin-bottom: 20px; color: #CD7F32;"></i>
-                    <h3>Bronze Membership</h3>
-                    <p><i class="fas fa-percent"></i> Basic loyalty points</p>
-                    <p><i class="fas fa-tag"></i> Access to selected discounts</p>
-                    <p><i class="fas fa-shield-alt"></i> Extended warranty coverage</p>
-                    <a href="membership.html" class="btn" style="margin-top: 20px;">Learn More</a>
+
+        <!-- Featured Products -->
+        <section class="featured-products">
+            <div class="section-header">
+                <h2>Featured Products</h2>
+                <a href="products.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="featured-grid">
+                <!-- Product 1 -->
+                <div class="featured-card">
+                    <span class="product-badge sale">-20%</span>
+                    <div class="featured-image">
+                        <img src="https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=400&h=300&fit=crop" alt="Coffee Maker">
+                        <div class="featured-overlay">
+                            <button class="quick-btn" onclick="addToCart({id: 'prod1', name: 'Smart Coffee Maker Pro', price: 299.99, image: 'https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=400&h=300&fit=crop'})"><i class="fas fa-shopping-cart"></i></button>
+                            <button class="quick-btn"><i class="fas fa-heart"></i></button>
+                            <button class="quick-btn"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="featured-info">
+                        <span class="featured-category">Kitchen</span>
+                        <h3><a href="product.html">Smart Coffee Maker Pro</a></h3>
+                        <div class="featured-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(128)</span>
+                        </div>
+                        <div class="featured-price">
+                            <span class="current-price">$239.99</span>
+                            <span class="old-price">$299.99</span>
+                        </div>
+                    </div>
                 </div>
-                <!-- Silver -->
-                <div class="promo-card" style="border: 2px solid #46A358; transform: scale(1.05);">
-                    <i class="fas fa-medal" style="font-size: 48px; margin-bottom: 20px; color: #C0C0C0;"></i>
-                    <h3>Silver Membership</h3>
-                    <span style="background: #46A358; color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">POPULAR</span>
-                    <p style="margin-top: 15px;"><i class="fas fa-star"></i> Increased loyalty points</p>
-                    <p><i class="fas fa-headset"></i> Priority customer support</p>
-                    <p><i class="fas fa-gift"></i> Monthly exclusive offers</p>
-                    <a href="membership.html" class="btn" style="margin-top: 20px;">Learn More</a>
+                <!-- Product 2 -->
+                <div class="featured-card">
+                    <span class="product-badge new">New</span>
+                    <div class="featured-image">
+                        <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?w=400&h=300&fit=crop" alt="Robot Vacuum">
+                        <div class="featured-overlay">
+                            <button class="quick-btn" onclick="addToCart({id: 'prod3', name: 'Robot Vacuum Cleaner X9', price: 399.99, image: 'https://images.unsplash.com/photo-1558317374-067fb5f30001?w=400&h=300&fit=crop'})"><i class="fas fa-shopping-cart"></i></button>
+                            <button class="quick-btn"><i class="fas fa-heart"></i></button>
+                            <button class="quick-btn"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="featured-info">
+                        <span class="featured-category">Cleaning</span>
+                        <h3><a href="product.html">Robot Vacuum Cleaner X9</a></h3>
+                        <div class="featured-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(256)</span>
+                        </div>
+                        <div class="featured-price">
+                            <span class="current-price">$399.99</span>
+                        </div>
+                    </div>
                 </div>
-                <!-- Gold -->
-                <div class="promo-card">
-                    <i class="fas fa-medal" style="font-size: 48px; margin-bottom: 20px; color: #FFD700;"></i>
-                    <h3>Gold Membership</h3>
-                    <p><i class="fas fa-trophy"></i> Highest loyalty rewards</p>
-                    <p><i class="fas fa-shipping-fast"></i> Free delivery on all orders</p>
-                    <p><i class="fas fa-bolt"></i> Early access to new products</p>
-                    <a href="membership.html" class="btn" style="margin-top: 20px;">Learn More</a>
+                <!-- Product 3 -->
+                <div class="featured-card">
+                    <span class="product-badge hot">Hot</span>
+                    <div class="featured-image">
+                        <img src="https://images.unsplash.com/photo-1626509653291-18d9a934b9db?w=400&h=300&fit=crop" alt="Air Fryer">
+                        <div class="featured-overlay">
+                            <button class="quick-btn" onclick="addToCart({id: 'prod5', name: 'Digital Air Fryer 5.8QT', price: 179.99, image: 'https://images.unsplash.com/photo-1626509653291-18d9a934b9db?w=400&h=300&fit=crop'})"><i class="fas fa-shopping-cart"></i></button>
+                            <button class="quick-btn"><i class="fas fa-heart"></i></button>
+                            <button class="quick-btn"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="featured-info">
+                        <span class="featured-category">Kitchen</span>
+                        <h3><a href="product.html">Digital Air Fryer 5.8QT</a></h3>
+                        <div class="featured-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(342)</span>
+                        </div>
+                        <div class="featured-price">
+                            <span class="current-price">$179.99</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="featured-card">
+                    <div class="featured-image">
+                        <img src="https://images.unsplash.com/photo-1585515320310-2dcf6d098c8c?w=400&h=300&fit=crop" alt="Smart Speaker">
+                        <div class="featured-overlay">
+                            <button class="quick-btn" onclick="addToCart({id: 'prod18', name: 'Smart Speaker with Alexa', price: 99.99, image: 'https://images.unsplash.com/photo-1585515320310-2dcf6d098c8c?w=400&h=300&fit=crop'})"><i class="fas fa-shopping-cart"></i></button>
+                            <button class="quick-btn"><i class="fas fa-heart"></i></button>
+                            <button class="quick-btn"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="featured-info">
+                        <span class="featured-category">Smart Home</span>
+                        <h3><a href="product.html">Smart Speaker with Alexa</a></h3>
+                        <div class="featured-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(1523)</span>
+                        </div>
+                        <div class="featured-price">
+                            <span class="current-price">$99.99</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promo Banners -->
+        <section class="promo-banners">
+            <div class="promo-banners-container">
+                <a href="products.html" class="promo-banner promo-banner-1">
+                    <div class="promo-banner-content">
+                        <span class="promo-tag">Limited Time</span>
+                        <h3>Kitchen Week</h3>
+                        <p>Up to 40% off on all kitchen appliances</p>
+                        <span class="promo-link">Shop Now <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="membership.html" class="promo-banner promo-banner-2">
+                    <div class="promo-banner-content">
+                        <span class="promo-tag">Exclusive</span>
+                        <h3>Join Membership</h3>
+                        <p>Get extra 10% off + free delivery</p>
+                        <span class="promo-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Category Cards -->
+        <section class="category-cards">
+            <div class="section-header">
+                <h2>Shop by Category</h2>
+                <a href="products.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="category-cards-grid">
+                <a href="products.html?cat=kitchen" class="cat-card">
+                    <div class="cat-card-image">
+                        <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=600&h=400&fit=crop" alt="Kitchen">
+                    </div>
+                    <div class="cat-card-info">
+                        <h3>Kitchen Appliances</h3>
+                        <span>45 Products</span>
+                    </div>
+                </a>
+                <a href="products.html?cat=cleaning" class="cat-card">
+                    <div class="cat-card-image">
+                        <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?w=600&h=400&fit=crop" alt="Cleaning">
+                    </div>
+                    <div class="cat-card-info">
+                        <h3>Cleaning Appliances</h3>
+                        <span>28 Products</span>
+                    </div>
+                </a>
+                <a href="products.html?cat=heating" class="cat-card">
+                    <div class="cat-card-image">
+                        <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&h=400&fit=crop" alt="Heating">
+                    </div>
+                    <div class="cat-card-info">
+                        <h3>Heating & Cooling</h3>
+                        <span>32 Products</span>
+                    </div>
+                </a>
+                <a href="products.html?cat=smart" class="cat-card">
+                    <div class="cat-card-image">
+                        <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=600&h=400&fit=crop" alt="Smart Home">
+                    </div>
+                    <div class="cat-card-info">
+                        <h3>Smart Home</h3>
+                        <span>24 Products</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Membership Section -->
+        <section class="membership-promo">
+            <div class="membership-promo-container">
+                <div class="membership-promo-content">
+                    <span class="membership-tag"><i class="fas fa-crown"></i> VIP Benefits</span>
+                    <h2>Join Our Membership Program</h2>
+                    <p>Unlock exclusive discounts, free delivery, and priority support with our membership tiers.</p>
+                    <div class="membership-tiers-mini">
+                        <div class="tier-mini">
+                            <i class="fas fa-medal" style="color: #CD7F32;"></i>
+                            <span>Bronze</span>
+                        </div>
+                        <div class="tier-mini">
+                            <i class="fas fa-medal" style="color: #C0C0C0;"></i>
+                            <span>Silver</span>
+                        </div>
+                        <div class="tier-mini">
+                            <i class="fas fa-medal" style="color: #FFD700;"></i>
+                            <span>Gold</span>
+                        </div>
+                    </div>
+                    <a href="membership.html" class="btn btn-primary">Explore Membership</a>
+                </div>
+                <div class="membership-promo-image">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=400&fit=crop" alt="Membership Benefits">
                 </div>
             </div>
         </section>

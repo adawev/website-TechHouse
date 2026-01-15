@@ -1245,5 +1245,45 @@
     <script src="js/cart.js"></script>
     <script src="js/filters.js"></script>
     <script src="js/search.js"></script>
+    <script>
+        // Catalog Dropdown Toggle
+        const catalogBtn = document.getElementById('catalogBtn');
+        const catalogDropdown = document.getElementById('catalogDropdown');
+        if (catalogBtn && catalogDropdown) {
+            catalogBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                catalogDropdown.classList.toggle('active');
+            });
+            document.addEventListener('click', (e) => {
+                if (!catalogDropdown.contains(e.target)) {
+                    catalogDropdown.classList.remove('active');
+                }
+            });
+        }
+        // Header Search
+        const headerSearchInput = document.getElementById('headerSearchInput');
+        if (headerSearchInput) {
+            headerSearchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    const query = headerSearchInput.value.trim();
+                    if (query) {
+                        window.location.href = 'products.html?search=' + encodeURIComponent(query);
+                    }
+                }
+            });
+        }
+        // Update cart badge
+        function updateCartBadge() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const badges = document.querySelectorAll('.cart-badge-header, .action-badge');
+            badges.forEach(badge => {
+                if (badge.closest('.cart-action')) {
+                    badge.textContent = totalItems;
+                }
+            });
+        }
+        updateCartBadge();
+    </script>
 </body>
 </html>
