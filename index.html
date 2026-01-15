@@ -11,32 +11,141 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html" class="logo">
-                <i class="fas fa-home" style="color: #46A358; font-size: 28px;"></i>
-                <span>Tech House</span>
-            </a>
-            <div class="nav-menu">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="products.html" class="nav-link">Shop</a>
-                <a href="membership.html" class="nav-link">Membership</a>
-                <a href="locations.html" class="nav-link">Locations</a>
+    <header class="ecommerce-header">
+        <!-- Top Bar -->
+        <div class="header-top">
+            <div class="header-top-container">
+                <div class="header-top-left">
+                    <a href="locations.html" class="top-link">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Tashkent</span>
+                    </a>
+                    <a href="locations.html" class="top-link">
+                        <i class="fas fa-store"></i>
+                        <span>Our Stores</span>
+                    </a>
+                    <a href="#" class="top-link">
+                        <i class="fas fa-truck"></i>
+                        <span>Delivery</span>
+                    </a>
+                </div>
+                <div class="header-top-right">
+                    <a href="membership.html" class="top-link highlight">
+                        <i class="fas fa-percent"></i>
+                        <span>Promotions</span>
+                    </a>
+                    <a href="#" class="top-link">
+                        <i class="fas fa-headset"></i>
+                        <span>Support</span>
+                    </a>
+                </div>
             </div>
-            <div class="nav-icons">
-                <a href="#" class="nav-icon">
-                    <i class="fas fa-search"></i>
+        </div>
+        <!-- Main Header -->
+        <div class="header-main">
+            <div class="header-main-container">
+                <!-- Logo -->
+                <a href="index.html" class="header-logo">
+                    <i class="fas fa-home"></i>
+                    <span>Tech House</span>
                 </a>
-                <a href="cart.html" class="nav-icon">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-badge">3</span>
+                <!-- Catalog Button -->
+                <button class="catalog-btn" id="catalogBtn">
+                    <i class="fas fa-bars"></i>
+                    <span>Catalog</span>
+                </button>
+                <!-- Search Bar -->
+                <div class="header-search">
+                    <input type="text" placeholder="Search for products..." class="search-input" id="headerSearchInput">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <!-- Phone -->
+                <a href="tel:+998712345678" class="header-phone">
+                    <i class="fas fa-phone-alt"></i>
+                    <div class="phone-info">
+                        <span class="phone-number">+998 71 234 56 78</span>
+                        <span class="phone-label">Call us</span>
+                    </div>
                 </a>
-                <a href="account.html" class="btn-login">
-                    <i class="fas fa-sign-in-alt"></i>
-                    Login
-                </a>
+                <!-- Action Icons -->
+                <div class="header-actions">
+                    <a href="account.html" class="header-action">
+                        <i class="fas fa-user"></i>
+                        <span>Account</span>
+                    </a>
+                    <a href="#" class="header-action">
+                        <i class="fas fa-heart"></i>
+                        <span>Favorites</span>
+                        <span class="action-badge">0</span>
+                    </a>
+                    <a href="cart.html" class="header-action cart-action">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Cart</span>
+                        <span class="action-badge cart-badge-header">0</span>
+                    </a>
+                </div>
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Categories Nav -->
+        <nav class="header-categories">
+            <div class="header-categories-container">
+                <a href="index.html" class="category-link active">Home</a>
+                <a href="products.html" class="category-link">All Products</a>
+                <a href="products.html?cat=kitchen" class="category-link">Kitchen</a>
+                <a href="products.html?cat=cleaning" class="category-link">Cleaning</a>
+                <a href="products.html?cat=heating" class="category-link">Heating & Cooling</a>
+                <a href="products.html?cat=smart" class="category-link">Smart Home</a>
+                <a href="membership.html" class="category-link">Membership</a>
             </div>
         </nav>
+        <!-- Catalog Dropdown -->
+        <div class="catalog-dropdown" id="catalogDropdown">
+            <div class="catalog-dropdown-container">
+                <div class="catalog-category">
+                    <h4><i class="fas fa-utensils"></i> Kitchen Appliances</h4>
+                    <ul>
+                        <li><a href="products.html">Coffee Makers</a></li>
+                        <li><a href="products.html">Blenders</a></li>
+                        <li><a href="products.html">Microwaves</a></li>
+                        <li><a href="products.html">Air Fryers</a></li>
+                        <li><a href="products.html">Toasters</a></li>
+                    </ul>
+                </div>
+                <div class="catalog-category">
+                    <h4><i class="fas fa-broom"></i> Cleaning Appliances</h4>
+                    <ul>
+                        <li><a href="products.html">Vacuum Cleaners</a></li>
+                        <li><a href="products.html">Robot Vacuums</a></li>
+                        <li><a href="products.html">Steam Mops</a></li>
+                        <li><a href="products.html">Carpet Cleaners</a></li>
+                    </ul>
+                </div>
+                <div class="catalog-category">
+                    <h4><i class="fas fa-thermometer-half"></i> Heating & Cooling</h4>
+                    <ul>
+                        <li><a href="products.html">Air Conditioners</a></li>
+                        <li><a href="products.html">Fans</a></li>
+                        <li><a href="products.html">Heaters</a></li>
+                        <li><a href="products.html">Air Purifiers</a></li>
+                    </ul>
+                </div>
+                <div class="catalog-category">
+                    <h4><i class="fas fa-home"></i> Smart Home</h4>
+                    <ul>
+                        <li><a href="products.html">Smart Speakers</a></li>
+                        <li><a href="products.html">Smart Locks</a></li>
+                        <li><a href="products.html">Doorbells</a></li>
+                        <li><a href="products.html">Thermostats</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </header>
     <main>
         <!-- Hero Section -->
@@ -182,5 +291,49 @@
     </footer>
     <script src="js/cart.js"></script>
     <script src="js/search.js"></script>
+    <script>
+        // Catalog Dropdown Toggle
+        const catalogBtn = document.getElementById('catalogBtn');
+        const catalogDropdown = document.getElementById('catalogDropdown');
+
+        if (catalogBtn && catalogDropdown) {
+            catalogBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                catalogDropdown.classList.toggle('active');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!catalogDropdown.contains(e.target)) {
+                    catalogDropdown.classList.remove('active');
+                }
+            });
+        }
+
+        // Header Search
+        const headerSearchInput = document.getElementById('headerSearchInput');
+        if (headerSearchInput) {
+            headerSearchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    const query = headerSearchInput.value.trim();
+                    if (query) {
+                        window.location.href = 'products.html?search=' + encodeURIComponent(query);
+                    }
+                }
+            });
+        }
+
+        // Update cart badge
+        function updateCartBadge() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const badges = document.querySelectorAll('.cart-badge-header, .action-badge');
+            badges.forEach(badge => {
+                if (badge.closest('.cart-action')) {
+                    badge.textContent = totalItems;
+                }
+            });
+        }
+        updateCartBadge();
+    </script>
 </body>
 </html>
