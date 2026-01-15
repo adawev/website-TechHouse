@@ -49,15 +49,10 @@
                     <i class="fas fa-home"></i>
                     <span>Tech House</span>
                 </a>
-                <!-- Catalog Button -->
-                <button class="catalog-btn" id="catalogBtn">
-                    <i class="fas fa-bars"></i>
-                    <span>Catalog</span>
-                </button>
                 <!-- Search Bar -->
                 <div class="header-search">
                     <input type="text" placeholder="Search for products..." class="search-input" id="headerSearchInput">
-                    <button class="search-btn">
+                    <button class="search-btn" id="searchBtn">
                         <i class="fas fa-search"></i>
                     </button>
                 </div>
@@ -75,10 +70,10 @@
                         <i class="fas fa-user"></i>
                         <span>Account</span>
                     </a>
-                    <a href="#" class="header-action">
+                    <a href="favorites.html" class="header-action favorites-action">
                         <i class="fas fa-heart"></i>
                         <span>Favorites</span>
-                        <span class="action-badge">0</span>
+                        <span class="action-badge favorites-badge">0</span>
                     </a>
                     <a href="cart.html" class="header-action cart-action">
                         <i class="fas fa-shopping-cart"></i>
@@ -96,56 +91,12 @@
         <nav class="header-categories">
             <div class="header-categories-container">
                 <a href="index.html" class="category-link active">Home</a>
-                <a href="products.html" class="category-link">All Products</a>
-                <a href="products.html?cat=kitchen" class="category-link">Kitchen</a>
-                <a href="products.html?cat=cleaning" class="category-link">Cleaning</a>
-                <a href="products.html?cat=heating" class="category-link">Heating & Cooling</a>
-                <a href="products.html?cat=smart" class="category-link">Smart Home</a>
+                <a href="products.html" class="category-link">Shop</a>
                 <a href="membership.html" class="category-link">Membership</a>
+                <a href="locations.html" class="category-link">Locations</a>
+                <a href="contact.html" class="category-link">Contact</a>
             </div>
         </nav>
-        <!-- Catalog Dropdown -->
-        <div class="catalog-dropdown" id="catalogDropdown">
-            <div class="catalog-dropdown-container">
-                <div class="catalog-category">
-                    <h4><i class="fas fa-utensils"></i> Kitchen Appliances</h4>
-                    <ul>
-                        <li><a href="products.html">Coffee Makers</a></li>
-                        <li><a href="products.html">Blenders</a></li>
-                        <li><a href="products.html">Microwaves</a></li>
-                        <li><a href="products.html">Air Fryers</a></li>
-                        <li><a href="products.html">Toasters</a></li>
-                    </ul>
-                </div>
-                <div class="catalog-category">
-                    <h4><i class="fas fa-broom"></i> Cleaning Appliances</h4>
-                    <ul>
-                        <li><a href="products.html">Vacuum Cleaners</a></li>
-                        <li><a href="products.html">Robot Vacuums</a></li>
-                        <li><a href="products.html">Steam Mops</a></li>
-                        <li><a href="products.html">Carpet Cleaners</a></li>
-                    </ul>
-                </div>
-                <div class="catalog-category">
-                    <h4><i class="fas fa-thermometer-half"></i> Heating & Cooling</h4>
-                    <ul>
-                        <li><a href="products.html">Air Conditioners</a></li>
-                        <li><a href="products.html">Fans</a></li>
-                        <li><a href="products.html">Heaters</a></li>
-                        <li><a href="products.html">Air Purifiers</a></li>
-                    </ul>
-                </div>
-                <div class="catalog-category">
-                    <h4><i class="fas fa-home"></i> Smart Home</h4>
-                    <ul>
-                        <li><a href="products.html">Smart Speakers</a></li>
-                        <li><a href="products.html">Smart Locks</a></li>
-                        <li><a href="products.html">Doorbells</a></li>
-                        <li><a href="products.html">Thermostats</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
     </header>
     <main>
         <!-- Hero Banner Section -->
@@ -527,50 +478,6 @@
         </div>
     </footer>
     <script src="js/cart.js"></script>
-    <script src="js/search.js"></script>
-    <script>
-        // Catalog Dropdown Toggle
-        const catalogBtn = document.getElementById('catalogBtn');
-        const catalogDropdown = document.getElementById('catalogDropdown');
-
-        if (catalogBtn && catalogDropdown) {
-            catalogBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                catalogDropdown.classList.toggle('active');
-            });
-
-            document.addEventListener('click', (e) => {
-                if (!catalogDropdown.contains(e.target)) {
-                    catalogDropdown.classList.remove('active');
-                }
-            });
-        }
-
-        // Header Search
-        const headerSearchInput = document.getElementById('headerSearchInput');
-        if (headerSearchInput) {
-            headerSearchInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
-                    const query = headerSearchInput.value.trim();
-                    if (query) {
-                        window.location.href = 'products.html?search=' + encodeURIComponent(query);
-                    }
-                }
-            });
-        }
-
-        // Update cart badge
-        function updateCartBadge() {
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-            const badges = document.querySelectorAll('.cart-badge-header, .action-badge');
-            badges.forEach(badge => {
-                if (badge.closest('.cart-action')) {
-                    badge.textContent = totalItems;
-                }
-            });
-        }
-        updateCartBadge();
-    </script>
+    <script src="js/favorites.js"></script>
 </body>
 </html>

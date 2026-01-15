@@ -1459,6 +1459,7 @@ main {
     border-radius: 32px 32px 0 0;
     transition: transform 0.3s;
     overflow: hidden;
+    position: relative;
 }
 
 .product-card:hover {
@@ -1476,6 +1477,7 @@ main {
     color: var(--primary-green);
     border-radius: 0;
     overflow: hidden;
+    position: relative;
 }
 
 .product-image img {
@@ -4289,4 +4291,328 @@ footer {
     font-size: 16px;
     font-weight: 600;
     color: #46A358;
+}
+
+/* ===== FAVORITES PAGE ===== */
+.favorites-page {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--dark-gray);
+    margin-bottom: 10px;
+}
+
+.page-header h1 i {
+    color: var(--primary-green);
+    margin-right: 10px;
+}
+
+.page-header p {
+    color: #666;
+    font-size: 16px;
+}
+
+.favorites-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.favorite-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+.remove-favorite {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    z-index: 2;
+    transition: all 0.3s;
+}
+
+.remove-favorite:hover {
+    background: #f44336;
+    color: white;
+}
+
+.favorite-image {
+    height: 180px;
+    overflow: hidden;
+}
+
+.favorite-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.favorite-info {
+    padding: 15px;
+}
+
+.favorite-info h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark-gray);
+    margin-bottom: 10px;
+}
+
+.favorite-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 15px;
+}
+
+.empty-favorites {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.empty-favorites i {
+    font-size: 80px;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.empty-favorites h2 {
+    font-size: 24px;
+    color: var(--dark-gray);
+    margin-bottom: 10px;
+}
+
+.empty-favorites p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* ===== CONTACT PAGE ===== */
+.contact-page {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.contact-container {
+    display: grid;
+    gap: 40px;
+}
+
+.contact-info-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.contact-card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.contact-card-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(70, 163, 88, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.contact-card-icon i {
+    font-size: 28px;
+    color: var(--primary-green);
+}
+
+.contact-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark-gray);
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.contact-form-section {
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.contact-form-section h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--dark-gray);
+    margin-bottom: 30px;
+}
+
+.contact-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--dark-gray);
+    margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--border-gray);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-green);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+/* ===== NOTIFICATION ===== */
+.notification {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--dark-gray);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== FAVORITE BUTTON IN PRODUCT CARDS ===== */
+.favorite-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 3;
+    transition: all 0.3s;
+}
+
+.favorite-btn i {
+    font-size: 16px;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.favorite-btn:hover {
+    transform: scale(1.1);
+}
+
+.favorite-btn:hover i {
+    color: #f44336;
+}
+
+.favorite-btn.active i {
+    color: #f44336;
+}
+
+/* Responsive for Favorites and Contact */
+@media (max-width: 992px) {
+    .favorites-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contact-info-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .favorites-page,
+    .contact-page {
+        padding: 20px 15px;
+    }
+
+    .favorites-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .contact-info-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form-section {
+        padding: 25px;
+    }
 }

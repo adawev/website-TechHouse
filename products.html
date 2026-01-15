@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="ecommerce-header">
+        <header class="ecommerce-header">
         <!-- Top Bar -->
         <div class="header-top">
             <div class="header-top-container">
@@ -48,13 +48,9 @@
                     <i class="fas fa-home"></i>
                     <span>Tech House</span>
                 </a>
-                <button class="catalog-btn" id="catalogBtn">
-                    <i class="fas fa-bars"></i>
-                    <span>Catalog</span>
-                </button>
                 <div class="header-search">
                     <input type="text" placeholder="Search for products..." class="search-input" id="headerSearchInput">
-                    <button class="search-btn">
+                    <button class="search-btn" id="searchBtn">
                         <i class="fas fa-search"></i>
                     </button>
                 </div>
@@ -70,10 +66,10 @@
                         <i class="fas fa-user"></i>
                         <span>Account</span>
                     </a>
-                    <a href="#" class="header-action">
+                    <a href="favorites.html" class="header-action favorites-action">
                         <i class="fas fa-heart"></i>
                         <span>Favorites</span>
-                        <span class="action-badge">0</span>
+                        <span class="action-badge favorites-badge">0</span>
                     </a>
                     <a href="cart.html" class="header-action cart-action">
                         <i class="fas fa-shopping-cart"></i>
@@ -87,56 +83,12 @@
         <nav class="header-categories">
             <div class="header-categories-container">
                 <a href="index.html" class="category-link">Home</a>
-                <a href="products.html" class="category-link active">All Products</a>
-                <a href="products.html?cat=kitchen" class="category-link">Kitchen</a>
-                <a href="products.html?cat=cleaning" class="category-link">Cleaning</a>
-                <a href="products.html?cat=heating" class="category-link">Heating & Cooling</a>
-                <a href="products.html?cat=smart" class="category-link">Smart Home</a>
+                <a href="products.html" class="category-link">Shop</a>
                 <a href="membership.html" class="category-link">Membership</a>
+                <a href="locations.html" class="category-link">Locations</a>
+                <a href="contact.html" class="category-link">Contact</a>
             </div>
         </nav>
-        <!-- Catalog Dropdown -->
-        <div class="catalog-dropdown" id="catalogDropdown">
-            <div class="catalog-dropdown-container">
-                <div class="catalog-category">
-                    <h4><i class="fas fa-utensils"></i> Kitchen Appliances</h4>
-                    <ul>
-                        <li><a href="products.html">Coffee Makers</a></li>
-                        <li><a href="products.html">Blenders</a></li>
-                        <li><a href="products.html">Microwaves</a></li>
-                        <li><a href="products.html">Air Fryers</a></li>
-                        <li><a href="products.html">Toasters</a></li>
-                    </ul>
-                </div>
-                <div class="catalog-category">
-                    <h4><i class="fas fa-broom"></i> Cleaning Appliances</h4>
-                    <ul>
-                        <li><a href="products.html">Vacuum Cleaners</a></li>
-                        <li><a href="products.html">Robot Vacuums</a></li>
-                        <li><a href="products.html">Steam Mops</a></li>
-                        <li><a href="products.html">Carpet Cleaners</a></li>
-                    </ul>
-                </div>
-                <div class="catalog-category">
-                    <h4><i class="fas fa-thermometer-half"></i> Heating & Cooling</h4>
-                    <ul>
-                        <li><a href="products.html">Air Conditioners</a></li>
-                        <li><a href="products.html">Fans</a></li>
-                        <li><a href="products.html">Heaters</a></li>
-                        <li><a href="products.html">Air Purifiers</a></li>
-                    </ul>
-                </div>
-                <div class="catalog-category">
-                    <h4><i class="fas fa-home"></i> Smart Home</h4>
-                    <ul>
-                        <li><a href="products.html">Smart Speakers</a></li>
-                        <li><a href="products.html">Smart Locks</a></li>
-                        <li><a href="products.html">Doorbells</a></li>
-                        <li><a href="products.html">Thermostats</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
     </header>
     <main>
         <div class="products-page">
@@ -253,6 +205,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=400&h=300&fit=crop" alt="Coffee Maker">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'coffee_maker', name: 'Coffee Maker', image: 'https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Smart Coffee Maker Pro</h3>
                         <div class="product-rating">
@@ -274,6 +229,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1570222094114-d054a817e56b?w=400&h=300&fit=crop" alt="Blender">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'blender', name: 'Blender', image: 'https://images.unsplash.com/photo-1570222094114-d054a817e56b?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Professional Blender 2000W</h3>
                         <div class="product-rating">
@@ -295,6 +253,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?w=400&h=300&fit=crop" alt="Robot Vacuum">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'robot_vacuum', name: 'Robot Vacuum', image: 'https://images.unsplash.com/photo-1558317374-067fb5f30001?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Robot Vacuum Cleaner X9</h3>
                         <div class="product-rating">
@@ -316,6 +277,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?w=400&h=300&fit=crop" alt="Thermostat">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'thermostat', name: 'Thermostat', image: 'https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Smart Thermostat WiFi</h3>
                         <div class="product-rating">
@@ -337,6 +301,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1626509653291-18d9a934b9db?w=400&h=300&fit=crop" alt="Air Fryer">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'air_fryer', name: 'Air Fryer', image: 'https://images.unsplash.com/photo-1626509653291-18d9a934b9db?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Digital Air Fryer 5.8QT</h3>
                         <div class="product-rating">
@@ -358,6 +325,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=400&h=300&fit=crop" alt="Hair Dryer">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'hair_dryer', name: 'Hair Dryer', image: 'https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Ionic Hair Dryer Pro</h3>
                         <div class="product-rating">
@@ -379,6 +349,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1585659722983-3a675dabf23d?w=400&h=300&fit=crop" alt="Microwave">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'microwave', name: 'Microwave', image: 'https://images.unsplash.com/photo-1585659722983-3a675dabf23d?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Smart Microwave 1200W</h3>
                         <div class="product-rating">
@@ -400,6 +373,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&h=300&fit=crop" alt="Air Conditioner">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'air_conditioner', name: 'Air Conditioner', image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Portable AC 10,000 BTU</h3>
                         <div class="product-rating">
@@ -421,6 +397,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1572635148818-ef6fd45eb394?w=400&h=300&fit=crop" alt="Electric Kettle">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'electric_kettle', name: 'Electric Kettle', image: 'https://images.unsplash.com/photo-1572635148818-ef6fd45eb394?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Electric Kettle Stainless</h3>
                         <div class="product-rating">
@@ -442,6 +421,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1607522370275-f14206abe5d3?w=400&h=300&fit=crop" alt="Stand Mixer">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'stand_mixer', name: 'Stand Mixer', image: 'https://images.unsplash.com/photo-1607522370275-f14206abe5d3?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Stand Mixer 660W</h3>
                         <div class="product-rating">
@@ -463,6 +445,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop" alt="Toaster">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'toaster', name: 'Toaster', image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>4-Slice Toaster Digital</h3>
                         <div class="product-rating">
@@ -484,6 +469,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1608455065591-bd61e762783b?w=400&h=300&fit=crop" alt="Rice Cooker">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'rice_cooker', name: 'Rice Cooker', image: 'https://images.unsplash.com/photo-1608455065591-bd61e762783b?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Multi-Function Rice Cooker</h3>
                         <div class="product-rating">
@@ -505,6 +493,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1544568100-847a948585b9?w=400&h=300&fit=crop" alt="Smart Oven">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'smart_oven', name: 'Smart Oven', image: 'https://images.unsplash.com/photo-1544568100-847a948585b9?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Smart Convection Oven</h3>
                         <div class="product-rating">
@@ -526,6 +517,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1528823872057-9c018a7a7553?w=400&h=300&fit=crop" alt="Dishwasher">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'dishwasher', name: 'Dishwasher', image: 'https://images.unsplash.com/photo-1528823872057-9c018a7a7553?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Built-in Dishwasher</h3>
                         <div class="product-rating">
@@ -547,6 +541,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1565024354062-8c5e5baeb1d0?w=400&h=300&fit=crop" alt="Refrigerator">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'refrigerator', name: 'Refrigerator', image: 'https://images.unsplash.com/photo-1565024354062-8c5e5baeb1d0?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>French Door Refrigerator</h3>
                         <div class="product-rating">
@@ -568,6 +565,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=400&h=300&fit=crop" alt="Washing Machine">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'washing_machine', name: 'Washing Machine', image: 'https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Front Load Washing Machine</h3>
                         <div class="product-rating">
@@ -589,6 +589,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=400&h=300&fit=crop" alt="Dryer">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'dryer', name: 'Dryer', image: 'https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Electric Dryer 7.4 Cu Ft</h3>
                         <div class="product-rating">
@@ -610,6 +613,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1585515320310-2dcf6d098c8c?w=400&h=300&fit=crop" alt="Smart Speaker">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'smart_speaker', name: 'Smart Speaker', image: 'https://images.unsplash.com/photo-1585515320310-2dcf6d098c8c?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Smart Speaker with Alexa</h3>
                         <div class="product-rating">
@@ -631,6 +637,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1544233726-9f1d2b27be8b?w=400&h=300&fit=crop" alt="Slow Cooker">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'slow_cooker', name: 'Slow Cooker', image: 'https://images.unsplash.com/photo-1544233726-9f1d2b27be8b?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Programmable Slow Cooker</h3>
                         <div class="product-rating">
@@ -652,6 +661,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1578345218746-50a229b3d0f8?w=400&h=300&fit=crop" alt="Food Processor">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'food_processor', name: 'Food Processor', image: 'https://images.unsplash.com/photo-1578345218746-50a229b3d0f8?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>14-Cup Food Processor</h3>
                         <div class="product-rating">
@@ -673,6 +685,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=300&fit=crop" alt="Espresso Machine Pro">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'espresso_machine_pro', name: 'Espresso Machine Pro', image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Espresso Machine Pro</h3>
                         <div class="product-rating">
@@ -690,6 +705,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=400&h=300&fit=crop" alt="Cordless Vacuum V12">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'cordless_vacuum_v12', name: 'Cordless Vacuum V12', image: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Cordless Vacuum V12</h3>
                         <div class="product-rating">
@@ -707,6 +725,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&h=300&fit=crop" alt="Steam Iron 2400W">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'steam_iron_2400w', name: 'Steam Iron 2400W', image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Steam Iron 2400W</h3>
                         <div class="product-rating">
@@ -724,6 +745,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop" alt="Electric Pressure Cooker">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'electric_pressure_co', name: 'Electric Pressure Cooker', image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Electric Pressure Cooker</h3>
                         <div class="product-rating">
@@ -741,6 +765,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?w=400&h=300&fit=crop" alt="Hand Mixer 300W">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'hand_mixer_300w', name: 'Hand Mixer 300W', image: 'https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Hand Mixer 300W</h3>
                         <div class="product-rating">
@@ -758,6 +785,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=400&h=300&fit=crop" alt="Induction Cooktop">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'induction_cooktop', name: 'Induction Cooktop', image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Induction Cooktop</h3>
                         <div class="product-rating">
@@ -775,6 +805,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&h=300&fit=crop" alt="Wine Cooler 18 Bottle">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'wine_cooler_18_bottl', name: 'Wine Cooler 18 Bottle', image: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Wine Cooler 18 Bottle</h3>
                         <div class="product-rating">
@@ -792,6 +825,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1558030006-450675393462?w=400&h=300&fit=crop" alt="Electric Grill Indoor">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'electric_grill_indoo', name: 'Electric Grill Indoor', image: 'https://images.unsplash.com/photo-1558030006-450675393462?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Electric Grill Indoor</h3>
                         <div class="product-rating">
@@ -809,6 +845,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=300&fit=crop" alt="Bread Maker Machine">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'bread_maker_machine', name: 'Bread Maker Machine', image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Bread Maker Machine</h3>
                         <div class="product-rating">
@@ -826,6 +865,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1589733955941-5eeaf752f6dd?w=400&h=300&fit=crop" alt="Juicer Extractor 800W">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'juicer_extractor_800', name: 'Juicer Extractor 800W', image: 'https://images.unsplash.com/photo-1589733955941-5eeaf752f6dd?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Juicer Extractor 800W</h3>
                         <div class="product-rating">
@@ -843,6 +885,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" alt="Dehumidifier 50 Pint">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'dehumidifier_50_pint', name: 'Dehumidifier 50 Pint', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Dehumidifier 50 Pint</h3>
                         <div class="product-rating">
@@ -860,6 +905,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1613152443581-a3f4b7c2c5f5?w=400&h=300&fit=crop" alt="Tower Fan">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'tower_fan', name: 'Tower Fan', image: 'https://images.unsplash.com/photo-1613152443581-a3f4b7c2c5f5?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Tower Fan Oscillating</h3>
                         <div class="product-rating">
@@ -877,6 +925,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1621607512214-68297480165e?w=400&h=300&fit=crop" alt="Electric Shaver">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'electric_shaver', name: 'Electric Shaver', image: 'https://images.unsplash.com/photo-1621607512214-68297480165e?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Electric Shaver Pro</h3>
                         <div class="product-rating">
@@ -894,6 +945,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=300&fit=crop" alt="Hair Straightener">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'hair_straightener', name: 'Hair Straightener', image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Hair Straightener Ceramic</h3>
                         <div class="product-rating">
@@ -911,6 +965,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1559650656-5d1d361ad10e?w=400&h=300&fit=crop" alt="Electric Toothbrush">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'electric_toothbrush', name: 'Electric Toothbrush', image: 'https://images.unsplash.com/photo-1559650656-5d1d361ad10e?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Electric Toothbrush</h3>
                         <div class="product-rating">
@@ -928,6 +985,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=400&h=300&fit=crop" alt="Water Purifier">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'water_purifier', name: 'Water Purifier', image: 'https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Water Purifier System</h3>
                         <div class="product-rating">
@@ -945,6 +1005,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=400&h=300&fit=crop" alt="Ice Maker">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'ice_maker', name: 'Ice Maker', image: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Ice Maker Portable</h3>
                         <div class="product-rating">
@@ -962,6 +1025,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1617850687395-620757feb1f3?w=400&h=300&fit=crop" alt="Garbage Disposal">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'garbage_disposal', name: 'Garbage Disposal', image: 'https://images.unsplash.com/photo-1617850687395-620757feb1f3?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Garbage Disposal 1HP</h3>
                         <div class="product-rating">
@@ -979,6 +1045,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=400&h=300&fit=crop" alt="Range Hood">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'range_hood', name: 'Range Hood', image: 'https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Range Hood 30 inch</h3>
                         <div class="product-rating">
@@ -996,6 +1065,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=400&h=300&fit=crop" alt="Chest Freezer">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'chest_freezer', name: 'Chest Freezer', image: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Chest Freezer 7 Cu Ft</h3>
                         <div class="product-rating">
@@ -1013,6 +1085,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?w=400&h=300&fit=crop" alt="Steam Mop">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'steam_mop', name: 'Steam Mop', image: 'https://images.unsplash.com/photo-1563453392212-326f5e854473?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Steam Mop Floor Cleaner</h3>
                         <div class="product-rating">
@@ -1030,6 +1105,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=400&h=300&fit=crop" alt="Carpet Cleaner">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'carpet_cleaner', name: 'Carpet Cleaner', image: 'https://images.unsplash.com/photo-1558171813-4c088753af8f?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Carpet Cleaner Pro</h3>
                         <div class="product-rating">
@@ -1047,6 +1125,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?w=400&h=300&fit=crop" alt="Air Purifier">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'air_purifier', name: 'Air Purifier', image: 'https://images.unsplash.com/photo-1593784991095-a205069470b6?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Air Purifier HEPA</h3>
                         <div class="product-rating">
@@ -1064,6 +1145,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=400&h=300&fit=crop" alt="Smart Door Lock">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'smart_door_lock', name: 'Smart Door Lock', image: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Smart Door Lock WiFi</h3>
                         <div class="product-rating">
@@ -1081,6 +1165,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1558403194-611308249627?w=400&h=300&fit=crop" alt="Video Doorbell">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'video_doorbell', name: 'Video Doorbell', image: 'https://images.unsplash.com/photo-1558403194-611308249627?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Video Doorbell HD</h3>
                         <div class="product-rating">
@@ -1098,6 +1185,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=400&h=300&fit=crop" alt="Smart Light Bulb">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'smart_light_bulb', name: 'Smart Light Bulb', image: 'https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Smart Light Bulb 4Pack</h3>
                         <div class="product-rating">
@@ -1115,6 +1205,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=300&fit=crop" alt="Electric Fireplace">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'electric_fireplace', name: 'Electric Fireplace', image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Electric Fireplace</h3>
                         <div class="product-rating">
@@ -1132,6 +1225,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1606567595334-d39972c85dfd?w=400&h=300&fit=crop" alt="Portable Heater">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'portable_heater', name: 'Portable Heater', image: 'https://images.unsplash.com/photo-1606567595334-d39972c85dfd?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Portable Heater 1500W</h3>
                         <div class="product-rating">
@@ -1149,6 +1245,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=400&h=300&fit=crop" alt="Ceiling Fan">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'ceiling_fan', name: 'Ceiling Fan', image: 'https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Ceiling Fan with Light</h3>
                         <div class="product-rating">
@@ -1166,6 +1265,9 @@
                     <div class="product-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                         <div class="product-image">
                             <img src="https://images.unsplash.com/photo-1611084063568-aec5f1e5e8ba?w=400&h=300&fit=crop" alt="Bathroom Scale">
+                            <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'bathroom_scale', name: 'Bathroom Scale', image: 'https://images.unsplash.com/photo-1611084063568-aec5f1e5e8ba?w=400&h=300&fit=crop'}, this)" title="Add to Favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
                         <h3>Bathroom Scale Digital</h3>
                         <div class="product-rating">
@@ -1244,46 +1346,7 @@
     </footer>
     <script src="js/cart.js"></script>
     <script src="js/filters.js"></script>
-    <script src="js/search.js"></script>
-    <script>
-        // Catalog Dropdown Toggle
-        const catalogBtn = document.getElementById('catalogBtn');
-        const catalogDropdown = document.getElementById('catalogDropdown');
-        if (catalogBtn && catalogDropdown) {
-            catalogBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                catalogDropdown.classList.toggle('active');
-            });
-            document.addEventListener('click', (e) => {
-                if (!catalogDropdown.contains(e.target)) {
-                    catalogDropdown.classList.remove('active');
-                }
-            });
-        }
-        // Header Search
-        const headerSearchInput = document.getElementById('headerSearchInput');
-        if (headerSearchInput) {
-            headerSearchInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
-                    const query = headerSearchInput.value.trim();
-                    if (query) {
-                        window.location.href = 'products.html?search=' + encodeURIComponent(query);
-                    }
-                }
-            });
-        }
-        // Update cart badge
-        function updateCartBadge() {
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-            const badges = document.querySelectorAll('.cart-badge-header, .action-badge');
-            badges.forEach(badge => {
-                if (badge.closest('.cart-action')) {
-                    badge.textContent = totalItems;
-                }
-            });
-        }
-        updateCartBadge();
-    </script>
+    <script src="js/favorites.js"></script>
+    
 </body>
 </html>
