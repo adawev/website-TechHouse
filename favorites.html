@@ -86,7 +86,6 @@
                 <a href="products.html" class="category-link">Shop</a>
                 <a href="membership.html" class="category-link">Membership</a>
                 <a href="locations.html" class="category-link">Locations</a>
-                <a href="contact.html" class="category-link">Contact</a>
             </div>
         </nav>
     </header>
@@ -128,7 +127,6 @@
                         <li><a href="products.html">Shop</a></li>
                         <li><a href="membership.html">Membership</a></li>
                         <li><a href="locations.html">Locations</a></li>
-                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -136,7 +134,6 @@
                     <ul>
                         <li><a href="#">Delivery Information</a></li>
                         <li><a href="#">Returns & Refunds</a></li>
-                        <li><a href="#">FAQs</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -177,7 +174,9 @@
             container.style.display = 'grid';
             emptyState.style.display = 'none';
 
-            container.innerHTML = favorites.map(product => `
+            container.innerHTML = favorites.map(product => {
+                const price = product.price || 0;
+                return `
                 <div class="favorite-item">
                     <button class="remove-favorite" onclick="removeFavoriteItem('${product.id}')">
                         <i class="fas fa-times"></i>
@@ -187,13 +186,13 @@
                     </div>
                     <div class="favorite-info">
                         <h3>${product.name}</h3>
-                        <p class="favorite-price">$${product.price.toFixed(2)}</p>
-                        <button class="btn btn-primary" onclick="addToCart({id: '${product.id}', name: '${product.name}', price: ${product.price}, image: '${product.image}'})">
+                        <p class="favorite-price">$${price.toFixed(2)}</p>
+                        <button class="btn btn-primary" onclick="addToCart({id: '${product.id}', name: '${product.name}', price: ${price}, image: '${product.image}'})">
                             <i class="fas fa-shopping-cart"></i> Add to Cart
                         </button>
                     </div>
                 </div>
-            `).join('');
+            `}).join('');
         }
 
         function removeFavoriteItem(productId) {

@@ -11,11 +11,10 @@ function saveCart() {
 
 // Update cart badge count
 function updateCartBadge() {
-    const badges = document.querySelectorAll('.cart-badge');
+    const badges = document.querySelectorAll('.cart-badge-header');
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
     badges.forEach(badge => {
         badge.textContent = totalItems;
-        badge.style.display = totalItems > 0 ? 'flex' : 'none';
     });
 }
 
@@ -105,15 +104,15 @@ function renderCart() {
     if (cart.length === 0) {
         cartTableBody.innerHTML = `
             <tr>
-                <td colspan="5" style="text-align: center; padding: 40px;">
-                    <i class="fas fa-shopping-cart" style="font-size: 48px; color: #CBD5E1; margin-bottom: 20px;"></i>
-                    <p style="color: #64748B; font-size: 18px;">Savatchada hech narsa yo'q</p>
-                    <a href="../products.html" class="btn" style="margin-top: 20px; display: inline-block;">Xarid qilish</a>
+                <td colspan="6" style="text-align: center; padding: 40px;">
+                    <i class="fas fa-shopping-cart" style="font-size: 48px; color: #CBD5E1; margin-bottom: 20px; display: block;"></i>
+                    <p style="color: #64748B; font-size: 18px;">Your cart is empty</p>
+                    <a href="products.html" class="btn btn-primary" style="margin-top: 20px; display: inline-block;">Shop Now</a>
                 </td>
             </tr>
         `;
         if (cartSummary) {
-            cartSummary.innerHTML = '<p class="subtotal">Jami: $0.00</p>';
+            cartSummary.innerHTML = '<p class="subtotal">Total: $0.00</p>';
         }
         return;
     }
@@ -126,10 +125,11 @@ function renderCart() {
                 </div>
             </td>
             <td data-label="Name">${item.name}</td>
+            <td data-label="Price">$${item.price.toFixed(2)}</td>
             <td data-label="Quantity">
                 <input type="number" class="qty-input" value="${item.quantity}" min="1" onchange="updateQuantity('${item.id}', this.value)">
             </td>
-            <td data-label="Price">$${(item.price * item.quantity).toFixed(2)}</td>
+            <td data-label="Total">$${(item.price * item.quantity).toFixed(2)}</td>
             <td data-label="Remove">
                 <button class="remove-btn" onclick="removeFromCart('${item.id}')"><i class="fas fa-times"></i></button>
             </td>
@@ -137,7 +137,7 @@ function renderCart() {
     `).join('');
 
     if (cartSummary) {
-        cartSummary.innerHTML = `<p class="subtotal">Jami: $${getCartTotal().toFixed(2)}</p>`;
+        cartSummary.innerHTML = `<p class="subtotal">Total: $${getCartTotal().toFixed(2)}</p>`;
     }
 }
 
