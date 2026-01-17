@@ -2076,8 +2076,8 @@ footer {
 }
 
 .cart-table th {
-    background: var(--light-gray);
-    color: var(--dark-gray);
+    background: var(--primary-green);
+    color: white;
     font-weight: 600;
     font-size: 13px;
     text-transform: uppercase;
@@ -2093,7 +2093,7 @@ footer {
 }
 
 .cart-table tr:not(:last-child) td {
-    border-bottom: 2px solid var(--light-gray);
+    border-bottom: 1px solid var(--border-gray);
 }
 
 .cart-table td[data-label="Name"] {
@@ -2166,10 +2166,8 @@ footer {
 }
 
 .remove-btn:hover {
-    background-color: #fdd;
-    border-color: #c33;
-    color: #a11;
-    transform: scale(1.05);
+    background-color: #fee;
+    color: #c33;
 }
 
 .cart-summary {
