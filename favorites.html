@@ -92,9 +92,8 @@
 
     <main>
         <div class="favorites-page">
-            <div class="page-header">
+            <div class="favorites-header">
                 <h1><i class="fas fa-heart"></i> My Favorites</h1>
-                <p>Products you've saved for later</p>
             </div>
 
             <div class="favorites-container" id="favoritesContainer">
@@ -175,7 +174,12 @@
             emptyState.style.display = 'none';
 
             container.innerHTML = favorites.map(product => {
-                const price = product.price || 0;
+                // Get price from allProducts if missing
+                let price = product.price;
+                if (!price || price === 0) {
+                    const found = allProducts.find(p => p.id === product.id);
+                    price = found ? found.price : 99.99;
+                }
                 return `
                 <div class="favorite-item">
                     <button class="remove-favorite" onclick="removeFavoriteItem('${product.id}')">
@@ -187,8 +191,8 @@
                     <div class="favorite-info">
                         <h3>${product.name}</h3>
                         <p class="favorite-price">$${price.toFixed(2)}</p>
-                        <button class="btn btn-primary" onclick="addToCart({id: '${product.id}', name: '${product.name}', price: ${price}, image: '${product.image}'})">
-                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        <button class="btn btn-small" onclick="addToCart({id: '${product.id}', name: '${product.name}', price: ${price}, image: '${product.image}'})">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
                         </button>
                     </div>
                 </div>
