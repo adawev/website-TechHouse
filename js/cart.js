@@ -35,7 +35,7 @@ function addToCart(product, quantity = 1) {
     }
 
     saveCart();
-    showNotification(`${product.name} savatchaga qo'shildi!`);
+    showNotification(`${product.name} added to cart!`);
 }
 
 // Remove item from cart

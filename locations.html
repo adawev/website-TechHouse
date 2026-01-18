@@ -11,8 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-            <header class="ecommerce-header">
-        <!-- Top Bar -->
+    <header class="ecommerce-header">
         <div class="header-top">
             <div class="header-top-container">
                 <div class="header-top-left">
@@ -41,7 +40,6 @@
                 </div>
             </div>
         </div>
-        <!-- Main Header -->
         <div class="header-main">
             <div class="header-main-container">
                 <a href="index.html" class="header-logo">
@@ -79,295 +77,201 @@
                 </div>
             </div>
         </div>
-        <!-- Categories Nav -->
         <nav class="header-categories">
             <div class="header-categories-container">
                 <a href="index.html" class="category-link">Home</a>
                 <a href="products.html" class="category-link">Shop</a>
                 <a href="membership.html" class="category-link">Membership</a>
-                <a href="locations.html" class="category-link">Locations</a>
+                <a href="locations.html" class="category-link active">Locations</a>
             </div>
         </nav>
     </header>
-    <main style="margin-top: 100px; padding: 60px 40px;">
-        <!-- Page Header -->
-        <div style="text-align: center; margin-bottom: 60px;">
-            <h1 style="font-size: 42px; color: #0F172A; margin-bottom: 20px;"><i class="fas fa-map-marker-alt" style="color: #46A358;"></i> Our Store Locations</h1>
-            <p style="font-size: 18px; color: #64748B; max-width: 700px; margin: 0 auto;">Visit one of our 5 convenient locations across the country. Experience our products firsthand and get expert advice from our knowledgeable staff.</p>
+
+    <main class="locations-page">
+        <div class="locations-header">
+            <h1><i class="fas fa-map-marker-alt"></i> Our Store Locations</h1>
+            <p>Visit one of our 5 convenient locations across the country. Experience our products firsthand and get expert advice from our knowledgeable staff.</p>
         </div>
-        <!-- Locations Grid -->
-        <div style="max-width: 1400px; margin: 0 auto; display: grid; gap: 40px;">
-            <!-- Location 1: Flagship Store - New York -->
-            <div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.12); display: grid; grid-template-columns: 1fr 1fr; min-height: 350px;">
-                <div style="background: linear-gradient(135deg, rgba(70, 163, 88, 0.95), rgba(58, 138, 74, 0.95)), url('https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=600&h=400&fit=crop'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; color: white; position: relative;">
-                    <div style="text-align: center; z-index: 1;">
-                        <i class="fas fa-star" style="font-size: 48px; margin-bottom: 15px;"></i>
-                        <h3 style="font-size: 24px; margin: 0;">FLAGSHIP STORE</h3>
+
+        <div class="locations-grid">
+            <!-- Location 1: New York -->
+            <div class="location-card">
+                <div class="location-visual green">
+                    <div>
+                        <i class="fas fa-star"></i>
+                        <h3>FLAGSHIP STORE</h3>
                     </div>
                 </div>
-                <div style="padding: 40px;">
-                    <h2 style="color: #0F172A; margin-bottom: 25px; display: flex; align-items: center; gap: 10px;">
-                        <i class="fas fa-building" style="color: #46A358;"></i>
-                        New York - Manhattan
-                    </h2>
-                    <div style="margin-bottom: 20px;">
-                        <p style="color: #64748B; line-height: 1.8; margin-bottom: 15px;">
-                            <i class="fas fa-map-marker-alt" style="color: #46A358; width: 20px;"></i>
-                            <strong>Address:</strong> 70 West Buckingham Ave, Farmingdale, NY 11735
-                        </p>
-                        <p style="color: #64748B; line-height: 1.8; margin-bottom: 15px;">
-                            <i class="fas fa-phone" style="color: #46A358; width: 20px;"></i>
-                            <strong>Phone:</strong> +1 (555) 123-4567
-                        </p>
-                        <p style="color: #64748B; line-height: 1.8; margin-bottom: 15px;">
-                            <i class="fas fa-envelope" style="color: #46A358; width: 20px;"></i>
-                            <strong>Email:</strong> newyork@techhouse.com
-                        </p>
-                        <p style="color: #64748B; line-height: 1.8; margin-bottom: 15px;">
-                            <i class="fas fa-clock" style="color: #46A358; width: 20px;"></i>
-                            <strong>Hours:</strong> Mon-Sat: 9:00 AM - 9:00 PM, Sun: 10:00 AM - 6:00 PM
-                        </p>
-                        <div style="margin-top: 20px;">
-                            <span style="background: #46A358; color: white; padding: 6px 12px; border-radius: 6px; font-size: 12px; margin-right: 8px;"><i class="fas fa-parking"></i> Free Parking</span>
-                            <span style="background: #46A358; color: white; padding: 6px 12px; border-radius: 6px; font-size: 12px;"><i class="fas fa-wheelchair"></i> Accessible</span>
-                        </div>
+                <div class="location-info">
+                    <h2><i class="fas fa-building"></i> New York - Manhattan</h2>
+                    <p class="location-detail"><i class="fas fa-map-marker-alt"></i> 70 West Buckingham Ave, Farmingdale, NY 11735</p>
+                    <p class="location-detail"><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p class="location-detail"><i class="fas fa-envelope"></i> newyork@techhouse.com</p>
+                    <p class="location-detail"><i class="fas fa-clock"></i> Mon-Sat: 9AM-9PM, Sun: 10AM-6PM</p>
+                    <div class="location-tags">
+                        <span class="location-tag"><i class="fas fa-parking"></i> Free Parking</span>
+                        <span class="location-tag"><i class="fas fa-wheelchair"></i> Accessible</span>
                     </div>
                 </div>
             </div>
+
             <!-- Location 2: Los Angeles -->
-            <div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.12); display: grid; grid-template-columns: 1fr 1fr; min-height: 350px;">
-                <div style="padding: 40px;">
-                    <h2 style="color: #0F172A; margin-bottom: 25px; display: flex; align-items: center; gap: 10px;">
-                        <i class="fas fa-store" style="color: #46A358;"></i>
-                        Los Angeles - Beverly Hills
-                    </h2>
-                    <div style="margin-bottom: 20px;">
-                        <p style="color: #64748B; line-height: 1.8; margin-bottom: 15px;">
-                            <i class="fas fa-map-marker-alt" style="color: #46A358; width: 20px;"></i>
-                            <strong>Address:</strong> 9500 Wilshire Blvd, Beverly Hills, CA 90212
-                        </p>
-                        <p style="color: #64748B; line-height: 1.8; margin-bottom: 15px;">
-                            <i class="fas fa-phone" style="color: #46A358; width: 20px;"></i>
-                            <strong>Phone:</strong> +1 (555) 234-5678
-                        </p>
-                        <p style="color: #64748B; line-height: 1.8; margin-bottom: 15px;">
-                            <i class="fas fa-envelope" style="color: #46A358; width: 20px;"></i>
-                            <strong>Email:</strong> losangeles@techhouse.com
-                        </p>
-                        <p style="color: #64748B; line-height: 1.8; margin-bottom: 15px;">
-                            <i class="fas fa-clock" style="color: #46A358; width: 20px;"></i>
-                            <strong>Hours:</strong> Mon-Sat: 10:00 AM - 8:00 PM, Sun: 11:00 AM - 7:00 PM
-                        </p>
-                        <div style="margin-top: 20px;">
-                            <span style="background: #3B82F6; color: white; padding: 6px 12px; border-radius: 6px; font-size: 12px; margin-right: 8px;"><i class="fas fa-car"></i> Valet Service</span>
-                            <span style="background: #3B82F6; color: white; padding: 6px 12px; border-radius: 6px; font-size: 12px;"><i class="fas fa-wifi"></i> Free WiFi</span>
-                        </div>
+            <div class="location-card reverse">
+                <div class="location-info">
+                    <h2><i class="fas fa-store"></i> Los Angeles - Beverly Hills</h2>
+                    <p class="location-detail"><i class="fas fa-map-marker-alt"></i> 9500 Wilshire Blvd, Beverly Hills, CA 90212</p>
+                    <p class="location-detail"><i class="fas fa-phone"></i> +1 (555) 234-5678</p>
+                    <p class="location-detail"><i class="fas fa-envelope"></i> losangeles@techhouse.com</p>
+                    <p class="location-detail"><i class="fas fa-clock"></i> Mon-Sat: 10AM-8PM, Sun: 11AM-7PM</p>
+                    <div class="location-tags">
+                        <span class="location-tag blue"><i class="fas fa-car"></i> Valet Service</span>
+                        <span class="location-tag blue"><i class="fas fa-wifi"></i> Free WiFi</span>
                     </div>
                 </div>
-                <div style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.95), rgba(30, 64, 175, 0.95)), url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&h=400&fit=crop'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; color: white;">
-                    <div style="text-align: center;">
-                        <i class="fas fa-city" style="font-size: 48px; margin-bottom: 15px;"></i>
-                        <h3 style="font-size: 20px; margin: 0;">LUXURY LOCATION</h3>
+                <div class="location-visual blue">
+                    <div>
+                        <i class="fas fa-city"></i>
+                        <h3>LUXURY LOCATION</h3>
                     </div>
                 </div>
             </div>
+
             <!-- Location 3: Chicago -->
-            <div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.12); display: grid; grid-template-columns: 1fr 1fr; min-height: 350px;">
-                <div style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.95), rgba(109, 40, 217, 0.95)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; color: white;">
-                    <div style="text-align: center;">
-                        <i class="fas fa-building" style="font-size: 48px; margin-bottom: 15px;"></i>
-                        <h3 style="font-size: 20px; margin: 0;">DOWNTOWN STORE</h3>
+            <div class="location-card">
+                <div class="location-visual purple">
+                    <div>
+                        <i class="fas fa-building"></i>
+                        <h3>DOWNTOWN STORE</h3>
                     </div>
                 </div>
-                <div style="padding: 40px;">
-                    <h2 style="color: #0F172A; margin-bottom: 25px; display: flex; align-items: center; gap: 10px;">
-                        <i class="fas fa-store" style="color: #46A358;"></i>
-                        Chicago - Downtown
-                    </h2>
-                    <div style="margin-bottom: 20px;">
-                        <p style="color: #64748B; line-height: 1.8; margin-bottom: 15px;">
-                            <i class="fas fa-map-marker-alt" style="color: #46A358; width: 20px;"></i>
-                            <strong>Address:</strong> 233 N Michigan Ave, Chicago, IL 60601
-                        </p>
-                        <p style="color: #64748B; line-height: 1.8; margin-bottom: 15px;">
-                            <i class="fas fa-phone" style="color: #46A358; width: 20px;"></i>
-                            <strong>Phone:</strong> +1 (555) 345-6789
-                        </p>
-                        <p style="color: #64748B; line-height: 1.8; margin-bottom: 15px;">
-                            <i class="fas fa-envelope" style="color: #46A358; width: 20px;"></i>
-                            <strong>Email:</strong> chicago@techhouse.com
-                        </p>
-                        <p style="color: #64748B; line-height: 1.8; margin-bottom: 15px;">
-                            <i class="fas fa-clock" style="color: #46A358; width: 20px;"></i>
-                            <strong>Hours:</strong> Mon-Fri: 9:00 AM - 8:00 PM, Sat-Sun: 10:00 AM - 7:00 PM
-                        </p>
-                        <div style="margin-top: 20px;">
-                            <span style="background: #8B5CF6; color: white; padding: 6px 12px; border-radius: 6px; font-size: 12px; margin-right: 8px;"><i class="fas fa-subway"></i> Metro Access</span>
-                            <span style="background: #8B5CF6; color: white; padding: 6px 12px; border-radius: 6px; font-size: 12px;"><i class="fas fa-coffee"></i> Cafe Inside</span>
-                        </div>
+                <div class="location-info">
+                    <h2><i class="fas fa-store"></i> Chicago - Downtown</h2>
+                    <p class="location-detail"><i class="fas fa-map-marker-alt"></i> 233 N Michigan Ave, Chicago, IL 60601</p>
+                    <p class="location-detail"><i class="fas fa-phone"></i> +1 (555) 345-6789</p>
+                    <p class="location-detail"><i class="fas fa-envelope"></i> chicago@techhouse.com</p>
+                    <p class="location-detail"><i class="fas fa-clock"></i> Mon-Fri: 9AM-8PM, Sat-Sun: 10AM-7PM</p>
+                    <div class="location-tags">
+                        <span class="location-tag purple"><i class="fas fa-subway"></i> Metro Access</span>
+                        <span class="location-tag purple"><i class="fas fa-coffee"></i> Cafe Inside</span>
                     </div>
                 </div>
             </div>
+
             <!-- Location 4: Houston -->
-            <div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.12); display: grid; grid-template-columns: 1fr 1fr; min-height: 350px;">
-                <div style="padding: 40px;">
-                    <h2 style="color: #0F172A; margin-bottom: 25px; display: flex; align-items: center; gap: 10px;">
-                        <i class="fas fa-store-alt" style="color: #46A358;"></i>
-                        Houston - Galleria
-                    </h2>
-                    <div style="margin-bottom: 20px;">
-                        <p style="color: #64748B; line-height: 1.8; margin-bottom: 15px;">
-                            <i class="fas fa-map-marker-alt" style="color: #46A358; width: 20px;"></i>
-                            <strong>Address:</strong> 5085 Westheimer Rd, Houston, TX 77056
-                        </p>
-                        <p style="color: #64748B; line-height: 1.8; margin-bottom: 15px;">
-                            <i class="fas fa-phone" style="color: #46A358; width: 20px;"></i>
-                            <strong>Phone:</strong> +1 (555) 456-7890
-                        </p>
-                        <p style="color: #64748B; line-height: 1.8; margin-bottom: 15px;">
-                            <i class="fas fa-envelope" style="color: #46A358; width: 20px;"></i>
-                            <strong>Email:</strong> houston@techhouse.com
-                        </p>
-                        <p style="color: #64748B; line-height: 1.8; margin-bottom: 15px;">
-                            <i class="fas fa-clock" style="color: #46A358; width: 20px;"></i>
-                            <strong>Hours:</strong> Mon-Sat: 10:00 AM - 9:00 PM, Sun: 12:00 PM - 6:00 PM
-                        </p>
-                        <div style="margin-top: 20px;">
-                            <span style="background: #F59E0B; color: white; padding: 6px 12px; border-radius: 6px; font-size: 12px; margin-right: 8px;"><i class="fas fa-shopping-bag"></i> Mall Location</span>
-                            <span style="background: #F59E0B; color: white; padding: 6px 12px; border-radius: 6px; font-size: 12px;"><i class="fas fa-parking"></i> Mall Parking</span>
-                        </div>
+            <div class="location-card reverse">
+                <div class="location-info">
+                    <h2><i class="fas fa-store-alt"></i> Houston - Galleria</h2>
+                    <p class="location-detail"><i class="fas fa-map-marker-alt"></i> 5085 Westheimer Rd, Houston, TX 77056</p>
+                    <p class="location-detail"><i class="fas fa-phone"></i> +1 (555) 456-7890</p>
+                    <p class="location-detail"><i class="fas fa-envelope"></i> houston@techhouse.com</p>
+                    <p class="location-detail"><i class="fas fa-clock"></i> Mon-Sat: 10AM-9PM, Sun: 12PM-6PM</p>
+                    <div class="location-tags">
+                        <span class="location-tag orange"><i class="fas fa-shopping-bag"></i> Mall Location</span>
+                        <span class="location-tag orange"><i class="fas fa-parking"></i> Mall Parking</span>
                     </div>
                 </div>
-                <div style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.95), rgba(217, 119, 6, 0.95)), url('https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=600&h=400&fit=crop'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; color: white;">
-                    <div style="text-align: center;">
-                        <i class="fas fa-shopping-cart" style="font-size: 48px; margin-bottom: 15px;"></i>
-                        <h3 style="font-size: 20px; margin: 0;">SHOPPING CENTER</h3>
+                <div class="location-visual orange">
+                    <div>
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3>SHOPPING CENTER</h3>
                     </div>
                 </div>
             </div>
+
             <!-- Location 5: Miami -->
-            <div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.12); display: grid; grid-template-columns: 1fr 1fr; min-height: 350px;">
-                <div style="background: linear-gradient(135deg, rgba(236, 72, 153, 0.95), rgba(190, 24, 93, 0.95)), url('https://images.unsplash.com/photo-1514214246283-d427a95c5d2f?w=600&h=400&fit=crop'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; color: white;">
-                    <div style="text-align: center;">
-                        <i class="fas fa-umbrella-beach" style="font-size: 48px; margin-bottom: 15px;"></i>
-                        <h3 style="font-size: 20px; margin: 0;">COASTAL STORE</h3>
+            <div class="location-card">
+                <div class="location-visual pink">
+                    <div>
+                        <i class="fas fa-umbrella-beach"></i>
+                        <h3>COASTAL STORE</h3>
                     </div>
                 </div>
-                <div style="padding: 40px;">
-                    <h2 style="color: #0F172A; margin-bottom: 25px; display: flex; align-items: center; gap: 10px;">
-                        <i class="fas fa-store" style="color: #46A358;"></i>
-                        Miami - Brickell
-                    </h2>
-                    <div style="margin-bottom: 20px;">
-                        <p style="color: #64748B; line-height: 1.8; margin-bottom: 15px;">
-                            <i class="fas fa-map-marker-alt" style="color: #46A358; width: 20px;"></i>
-                            <strong>Address:</strong> 701 S Miami Ave, Miami, FL 33130
-                        </p>
-                        <p style="color: #64748B; line-height: 1.8; margin-bottom: 15px;">
-                            <i class="fas fa-phone" style="color: #46A358; width: 20px;"></i>
-                            <strong>Phone:</strong> +1 (555) 567-8901
-                        </p>
-                        <p style="color: #64748B; line-height: 1.8; margin-bottom: 15px;">
-                            <i class="fas fa-envelope" style="color: #46A358; width: 20px;"></i>
-                            <strong>Email:</strong> miami@techhouse.com
-                        </p>
-                        <p style="color: #64748B; line-height: 1.8; margin-bottom: 15px;">
-                            <i class="fas fa-clock" style="color: #46A358; width: 20px;"></i>
-                            <strong>Hours:</strong> Mon-Thu: 10:00 AM - 8:00 PM, Fri-Sun: 10:00 AM - 9:00 PM
-                        </p>
-                        <div style="margin-top: 20px;">
-                            <span style="background: #EC4899; color: white; padding: 6px 12px; border-radius: 6px; font-size: 12px; margin-right: 8px;"><i class="fas fa-sun"></i> Ocean View</span>
-                            <span style="background: #EC4899; color: white; padding: 6px 12px; border-radius: 6px; font-size: 12px;"><i class="fas fa-charging-station"></i> EV Charging</span>
-                        </div>
+                <div class="location-info">
+                    <h2><i class="fas fa-store"></i> Miami - Brickell</h2>
+                    <p class="location-detail"><i class="fas fa-map-marker-alt"></i> 701 S Miami Ave, Miami, FL 33130</p>
+                    <p class="location-detail"><i class="fas fa-phone"></i> +1 (555) 567-8901</p>
+                    <p class="location-detail"><i class="fas fa-envelope"></i> miami@techhouse.com</p>
+                    <p class="location-detail"><i class="fas fa-clock"></i> Mon-Thu: 10AM-8PM, Fri-Sun: 10AM-9PM</p>
+                    <div class="location-tags">
+                        <span class="location-tag pink"><i class="fas fa-sun"></i> Ocean View</span>
+                        <span class="location-tag pink"><i class="fas fa-charging-station"></i> EV Charging</span>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Additional Services -->
-        <div style="max-width: 1400px; margin: 80px auto 0; background: linear-gradient(135deg, #F0FDF4, #DCFCE7); padding: 50px; border-radius: 16px;">
-            <h2 style="text-align: center; color: #0F172A; margin-bottom: 40px;"><i class="fas fa-concierge-bell"></i> Services Available at All Locations</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
-                <div style="text-align: center;">
-                    <i class="fas fa-tools" style="font-size: 40px; color: #46A358; margin-bottom: 15px;"></i>
-                    <h3 style="color: #0F172A; margin-bottom: 10px;">Installation Service</h3>
-                    <p style="color: #64748B;">Professional installation for all appliances</p>
+
+        <div class="locations-services">
+            <h2><i class="fas fa-concierge-bell"></i> Services Available at All Locations</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <i class="fas fa-tools"></i>
+                    <h3>Installation Service</h3>
+                    <p>Professional installation for all appliances</p>
                 </div>
-                <div style="text-align: center;">
-                    <i class="fas fa-wrench" style="font-size: 40px; color: #46A358; margin-bottom: 15px;"></i>
-                    <h3 style="color: #0F172A; margin-bottom: 10px;">Repair & Maintenance</h3>
-                    <p style="color: #64748B;">Expert repair services and regular maintenance</p>
+                <div class="service-item">
+                    <i class="fas fa-wrench"></i>
+                    <h3>Repair & Maintenance</h3>
+                    <p>Expert repair services and regular maintenance</p>
                 </div>
-                <div style="text-align: center;">
-                    <i class="fas fa-exchange-alt" style="font-size: 40px; color: #46A358; margin-bottom: 15px;"></i>
-                    <h3 style="color: #0F172A; margin-bottom: 10px;">Trade-In Program</h3>
-                    <p style="color: #64748B;">Get credit for your old appliances</p>
+                <div class="service-item">
+                    <i class="fas fa-exchange-alt"></i>
+                    <h3>Trade-In Program</h3>
+                    <p>Get credit for your old appliances</p>
                 </div>
-                <div style="text-align: center;">
-                    <i class="fas fa-graduation-cap" style="font-size: 40px; color: #46A358; margin-bottom: 15px;"></i>
-                    <h3 style="color: #0F172A; margin-bottom: 10px;">Product Demos</h3>
-                    <p style="color: #64748B;">Free in-store product demonstrations</p>
+                <div class="service-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Product Demos</h3>
+                    <p>Free in-store product demonstrations</p>
                 </div>
             </div>
         </div>
     </main>
+
     <footer>
         <div class="footer-main">
             <div class="footer-grid">
-                <!-- Column 1: Logo & About -->
                 <div class="footer-col">
                     <a href="index.html" class="footer-logo">
                         <i class="fas fa-home"></i>
                         <span>Tech House</span>
                     </a>
-                    <p class="footer-desc">Your trusted destination for modern home appliances. Quality products, competitive prices, and exceptional service since 2020.</p>
+                    <p class="footer-desc">Your trusted destination for modern home appliances.</p>
                 </div>
-                <!-- Column 2: Quick Links -->
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Shop All Products</a></li>
-                        <li><a href="membership.html">Membership Plans</a></li>
-                        <li><a href="locations.html">Store Locations</a></li>
-                        <li><a href="account.html">My Account</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="locations.html">Locations</a></li>
                     </ul>
                 </div>
-                <!-- Column 3: Customer Service -->
                 <div class="footer-col">
                     <h4>Customer Service</h4>
                     <ul>
                         <li><a href="#">Delivery Information</a></li>
                         <li><a href="#">Returns & Refunds</a></li>
-                        <li><a href="#">Warranty Policy</a></li>
-                        <li><a href="#">Track Your Order</a></li>
                     </ul>
                 </div>
-                <!-- Column 4: Contact -->
                 <div class="footer-col">
                     <h4>Get In Touch</h4>
-                    <div class="footer-contact">
-                        <p><i class="fas fa-envelope"></i> support@techhouse.com</p>
-                    </div>
+                    <p><i class="fas fa-envelope"></i> support@techhouse.com</p>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="footer-bottom-content">
                 <p>&copy; 2024 Tech House. All Rights Reserved.</p>
-                <div class="footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms & Conditions</a>
-                </div>
                 <div class="footer-payments">
                     <span>We Accept:</span>
                     <i class="fab fa-cc-visa"></i>
                     <i class="fab fa-cc-mastercard"></i>
                     <i class="fab fa-cc-paypal"></i>
-                    <i class="fab fa-apple-pay"></i>
                 </div>
             </div>
         </div>
     </footer>
+
     <script src="js/cart.js"></script>
     <script src="js/favorites.js"></script>
 </body>
