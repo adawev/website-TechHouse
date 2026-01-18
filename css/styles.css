@@ -160,7 +160,6 @@ body {
     display: flex;
     max-width: 600px;
     min-width: 300px;
-    border: 2px solid var(--border-gray);
     border-radius: 30px;
     overflow: visible;
     transition: border-color 0.3s;
@@ -249,7 +248,7 @@ body {
 .search-input {
     flex: 1;
     padding: 12px 20px;
-    border: none;
+    border: 2px solid var(--border-gray);
     font-size: 14px;
     outline: none;
     font-family: inherit;
@@ -2611,6 +2610,262 @@ footer {
     font-size: 14px;
 }
 
+/* Filter Header */
+.filters-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.filters-header h2 {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filters-header h2 i {
+    color: var(--primary-green);
+}
+
+.clear-filters-btn {
+    background: none;
+    border: none;
+    color: #ef4444;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.clear-filters-btn:hover {
+    background-color: #fee2e2;
+}
+
+/* Filter Groups */
+.filter-group {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.filter-group:last-of-type {
+    border-bottom: none;
+    margin-bottom: 20px;
+}
+
+.filter-group h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--dark-gray);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-group h3 i {
+    color: var(--primary-green);
+    font-size: 14px;
+}
+
+.filter-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Custom Checkbox */
+.filter-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--dark-gray);
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.filter-checkbox:hover {
+    background-color: #f0f9f4;
+}
+
+.filter-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.filter-checkbox .checkmark {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--border-gray);
+    border-radius: 4px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.filter-checkbox:hover .checkmark {
+    border-color: var(--primary-green);
+}
+
+.filter-checkbox input:checked + .checkmark {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+}
+
+.filter-checkbox input:checked + .checkmark::after {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: white;
+    font-size: 10px;
+}
+
+/* Custom Radio */
+.filter-radio {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--dark-gray);
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.filter-radio:hover {
+    background-color: #f0f9f4;
+}
+
+.filter-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.filter-radio .radio-mark {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--border-gray);
+    border-radius: 50%;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.filter-radio:hover .radio-mark {
+    border-color: var(--primary-green);
+}
+
+.filter-radio input:checked + .radio-mark {
+    border-color: var(--primary-green);
+}
+
+.filter-radio input:checked + .radio-mark::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-green);
+    border-radius: 50%;
+}
+
+.filter-radio .stars {
+    display: flex;
+    gap: 2px;
+    margin-right: 5px;
+}
+
+.filter-radio .stars i {
+    color: #fbbf24;
+    font-size: 12px;
+}
+
+/* Price Range */
+.price-range-inputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.price-range-inputs input {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid var(--border-gray);
+    border-radius: 8px;
+    font-size: 14px;
+    width: 80px;
+}
+
+.price-range-inputs input:focus {
+    outline: none;
+    border-color: var(--primary-green);
+}
+
+.price-range-inputs span {
+    color: #9ca3af;
+}
+
+.price-presets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.price-preset {
+    padding: 6px 12px;
+    border: 1px solid var(--border-gray);
+    background: white;
+    border-radius: 20px;
+    font-size: 12px;
+    color: var(--dark-gray);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.price-preset:hover,
+.price-preset.active {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+    color: white;
+}
+
+/* Apply Filters Button */
+.apply-filters-btn {
+    width: 100%;
+    padding: 14px 20px;
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.apply-filters-btn:hover {
+    background-color: var(--hover-green);
+}
+
 /* Products Content */
 .products-content {
     width: 100%;
@@ -2650,6 +2905,36 @@ footer {
     gap: 30px;
 }
 
+/* No Results Message */
+.no-results-message {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+    background: white;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.no-results-message i {
+    font-size: 48px;
+    color: #d1d5db;
+    margin-bottom: 20px;
+}
+
+.no-results-message h3 {
+    font-size: 22px;
+    color: var(--dark-gray);
+    margin-bottom: 10px;
+}
+
+.no-results-message p {
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
 .product-rating {
     display: flex;
     align-items: center;
@@ -2665,6 +2950,73 @@ footer {
 
 .product-rating .far {
     color: var(--light-gray);
+}
+
+/* Product Card Actions */
+.product-actions {
+    padding: 0 20px 20px 20px;
+}
+
+.product-actions .price {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin: 0 0 12px 0;
+    text-align: left;
+}
+
+.qty-cart-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Product Quantity Selector */
+.product-qty-selector {
+    display: flex;
+    align-items: center;
+    background: #f3f4f6;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.product-qty-selector .qty-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark-gray);
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-qty-selector .qty-btn:hover {
+    background: var(--primary-green);
+    color: white;
+}
+
+.product-qty-selector .product-qty {
+    width: 40px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark-gray);
+    -moz-appearance: textfield;
+}
+
+.product-qty-selector .product-qty::-webkit-outer-spin-button,
+.product-qty-selector .product-qty::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .product-rating span {

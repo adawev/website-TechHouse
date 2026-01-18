@@ -3,6 +3,24 @@ function getFavorites() {
     return JSON.parse(localStorage.getItem('favorites')) || [];
 }
 
+// Product Quantity Functions
+function changeQty(btn, delta) {
+    const container = btn.closest('.product-qty-selector');
+    const input = container.querySelector('.product-qty');
+    let value = parseInt(input.value) || 1;
+    value = Math.max(1, Math.min(99, value + delta));
+    input.value = value;
+}
+
+function addToCartWithQty(btn, product) {
+    const card = btn.closest('.product-card');
+    const qtyInput = card.querySelector('.product-qty');
+    const quantity = qtyInput ? parseInt(qtyInput.value) || 1 : 1;
+    addToCart(product, quantity);
+    // Reset quantity to 1 after adding
+    if (qtyInput) qtyInput.value = 1;
+}
+
 function saveFavorites(favorites) {
     localStorage.setItem('favorites', JSON.stringify(favorites));
     updateFavoritesBadge();
