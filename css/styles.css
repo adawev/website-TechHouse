@@ -4182,6 +4182,18 @@ footer {
     transform: translateY(0);
 }
 
+.cart-icon-btn.disabled,
+.cart-icon-btn:disabled {
+    background-color: #d1d5db;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.cart-icon-btn.disabled i,
+.cart-icon-btn:disabled i {
+    color: #9ca3af;
+}
+
 /* Quantity Selector Buttons */
 #decrease-qty:hover,
 #increase-qty:hover {
@@ -4935,4 +4947,183 @@ footer {
     .locations-services {
         padding: 25px;
     }
+}
+
+/* ==========================================
+   ACCESSIBILITY - Focus Indicators
+   ========================================== */
+
+/* Global focus outline for all interactive elements */
+:focus {
+    outline: 2px solid var(--primary-green);
+    outline-offset: 2px;
+}
+
+/* Remove default outline, use custom focus-visible */
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 2px solid var(--primary-green);
+    outline-offset: 2px;
+}
+
+/* Buttons focus state */
+.btn:focus-visible,
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.btn-small:focus-visible,
+.btn-outline:focus-visible {
+    outline: 3px solid var(--primary-green);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.2);
+}
+
+/* Header links focus */
+.header-action:focus-visible,
+.category-link:focus-visible,
+.top-link:focus-visible {
+    outline: 2px solid var(--primary-green);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Product card focus */
+.product-card:focus-within {
+    outline: 3px solid var(--primary-green);
+    outline-offset: 2px;
+    transform: translateY(-4px);
+}
+
+.product-card a:focus-visible,
+.product-card button:focus-visible {
+    outline: 2px solid var(--primary-green);
+    outline-offset: 2px;
+}
+
+/* Input focus */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--primary-green);
+    outline-offset: 1px;
+    border-color: var(--primary-green);
+}
+
+/* Search input focus */
+.header-search:focus-within {
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
+}
+
+/* Favorite button focus */
+.favorite-btn:focus-visible {
+    outline: 2px solid var(--primary-green);
+    outline-offset: 2px;
+}
+
+/* Remove button focus */
+.remove-btn:focus-visible,
+.remove-favorite:focus-visible {
+    outline: 2px solid #c33;
+    outline-offset: 2px;
+}
+
+/* Footer links focus */
+footer a:focus-visible {
+    outline: 2px solid var(--primary-green);
+    outline-offset: 2px;
+}
+
+/* Skip to content link (for screen readers) */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-green);
+    color: white;
+    padding: 8px 16px;
+    z-index: 10000;
+    text-decoration: none;
+    font-weight: 600;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* ==========================================
+   STOCK AVAILABILITY INDICATOR
+   ========================================== */
+
+.stock-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 8px 24px;
+}
+
+.stock-indicator i {
+    font-size: 10px;
+}
+
+.stock-indicator.in-stock {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.stock-indicator.low-stock {
+    background-color: #fef3c7;
+    color: #b45309;
+}
+
+.stock-indicator.out-of-stock {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+/* Product card with stock indicator */
+.product-info {
+    padding: 0;
+}
+
+.product-card .stock-indicator {
+    margin: 0 24px 10px 24px;
+}
+
+/* Disable add to cart for out of stock */
+.product-card .btn.disabled,
+.product-card .btn:disabled {
+    background-color: #d1d5db;
+    color: #6b7280;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Stock badge on product image */
+.stock-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.stock-badge.out-of-stock {
+    background-color: #ef4444;
+    color: white;
+}
+
+.stock-badge.low-stock {
+    background-color: #f59e0b;
+    color: white;
 }
