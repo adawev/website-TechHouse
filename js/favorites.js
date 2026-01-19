@@ -3,24 +3,6 @@ function getFavorites() {
     return JSON.parse(localStorage.getItem('favorites')) || [];
 }
 
-// Product Quantity Functions
-function changeQty(btn, delta) {
-    const container = btn.closest('.product-qty-selector');
-    const input = container.querySelector('.product-qty');
-    let value = parseInt(input.value) || 1;
-    value = Math.max(1, Math.min(99, value + delta));
-    input.value = value;
-}
-
-function addToCartWithQty(btn, product) {
-    const card = btn.closest('.product-card');
-    const qtyInput = card.querySelector('.product-qty');
-    const quantity = qtyInput ? parseInt(qtyInput.value) || 1 : 1;
-    addToCart(product, quantity);
-    // Reset quantity to 1 after adding
-    if (qtyInput) qtyInput.value = 1;
-}
-
 function saveFavorites(favorites) {
     localStorage.setItem('favorites', JSON.stringify(favorites));
     updateFavoritesBadge();
@@ -151,14 +133,14 @@ const allProducts = [
 // Get stock status for a product
 function getStockStatus(productId) {
     const product = allProducts.find(p => p.id === productId);
-    if (!product) return { status: 'in-stock', label: 'In Stock', icon: 'fa-check-circle' };
+    if (!product) return { status: 'in-stock', label: 'In Stock', stock: 99, icon: 'fa-check-circle' };
 
     if (product.stock === 0) {
-        return { status: 'out-of-stock', label: 'Out of Stock', icon: 'fa-times-circle' };
+        return { status: 'out-of-stock', label: 'Out of Stock', stock: 0, icon: 'fa-times-circle' };
     } else if (product.stock <= 5) {
-        return { status: 'low-stock', label: `Only ${product.stock} left`, icon: 'fa-exclamation-circle' };
+        return { status: 'low-stock', label: `Only ${product.stock} left!`, stock: product.stock, icon: 'fa-exclamation-circle' };
     } else {
-        return { status: 'in-stock', label: 'In Stock', icon: 'fa-check-circle' };
+        return { status: 'in-stock', label: `${product.stock} in stock`, stock: product.stock, icon: 'fa-check-circle' };
     }
 }
 
@@ -171,6 +153,15 @@ function initStockIndicators() {
         const stockInfo = getStockStatus(productId);
         const productImage = card.querySelector('.product-image');
         const cartBtn = card.querySelector('.cart-icon-btn');
+        const rating = card.querySelector('.product-rating');
+
+        // Add stock quantity indicator below rating
+        if (rating && !card.querySelector('.stock-qty')) {
+            const stockQty = document.createElement('div');
+            stockQty.className = `stock-qty ${stockInfo.status}`;
+            stockQty.innerHTML = `<i class="fas ${stockInfo.icon}"></i> ${stockInfo.label}`;
+            rating.insertAdjacentElement('afterend', stockQty);
+        }
 
         // Add stock badge to image for out of stock
         if (stockInfo.status === 'out-of-stock' && productImage) {

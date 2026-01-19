@@ -2952,73 +2952,6 @@ footer {
     color: var(--light-gray);
 }
 
-/* Product Card Actions */
-.product-actions {
-    padding: 0 20px 20px 20px;
-}
-
-.product-actions .price {
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--primary-green);
-    margin: 0 0 12px 0;
-    text-align: left;
-}
-
-.qty-cart-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-}
-
-/* Product Quantity Selector */
-.product-qty-selector {
-    display: flex;
-    align-items: center;
-    background: #f3f4f6;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.product-qty-selector .qty-btn {
-    width: 32px;
-    height: 32px;
-    border: none;
-    background: transparent;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--dark-gray);
-    cursor: pointer;
-    transition: all 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.product-qty-selector .qty-btn:hover {
-    background: var(--primary-green);
-    color: white;
-}
-
-.product-qty-selector .product-qty {
-    width: 40px;
-    height: 32px;
-    border: none;
-    background: transparent;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--dark-gray);
-    -moz-appearance: textfield;
-}
-
-.product-qty-selector .product-qty::-webkit-outer-spin-button,
-.product-qty-selector .product-qty::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
 .product-rating span {
     color: var(--primary-green);
     margin-left: 5px;
@@ -5409,43 +5342,36 @@ footer a:focus-visible {
    STOCK AVAILABILITY INDICATOR
    ========================================== */
 
-.stock-indicator {
-    display: inline-flex;
+/* Stock Quantity Display */
+.stock-qty {
+    display: flex;
     align-items: center;
+    justify-content: center;
     gap: 6px;
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
+    padding: 6px 16px;
     margin: 8px 24px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
 }
 
-.stock-indicator i {
-    font-size: 10px;
+.stock-qty i {
+    font-size: 12px;
 }
 
-.stock-indicator.in-stock {
+.stock-qty.in-stock {
     background-color: #dcfce7;
     color: #15803d;
 }
 
-.stock-indicator.low-stock {
+.stock-qty.low-stock {
     background-color: #fef3c7;
     color: #b45309;
 }
 
-.stock-indicator.out-of-stock {
+.stock-qty.out-of-stock {
     background-color: #fee2e2;
     color: #b91c1c;
-}
-
-/* Product card with stock indicator */
-.product-info {
-    padding: 0;
-}
-
-.product-card .stock-indicator {
-    margin: 0 24px 10px 24px;
 }
 
 /* Disable add to cart for out of stock */
