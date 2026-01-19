@@ -12,9 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const maxPriceInput = document.getElementById('maxPrice');
     const inStockCheckbox = document.getElementById('inStockOnly');
 
-    // Get search query from URL
+    // Get search query and category from URL
     const urlParams = new URLSearchParams(window.location.search);
     const searchQuery = urlParams.get('search');
+    const categoryParam = urlParams.get('cat');
 
     // Populate search input with query
     if (searchQuery) {
@@ -24,13 +25,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Auto-select category from URL parameter
+    if (categoryParam) {
+        const categoryCheckbox = document.querySelector(`input[name="category"][value="${categoryParam}"]`);
+        if (categoryCheckbox) {
+            categoryCheckbox.checked = true;
+        }
+    }
+
     // Category mapping for products (by index)
     const productCategories = {
         'kitchen': [0, 1, 4, 5, 8, 10, 12, 13, 16, 18, 20, 22, 23, 24, 25, 27, 28, 29, 36],
         'cleaning': [2, 6, 11, 15, 30, 40, 41],
         'climate': [3, 9, 14, 19, 31, 42, 47, 48],
         'smart-home': [17, 21, 43, 44, 45],
-        'personal-care': [7, 32, 33, 34, 49]
+        'personal-care': [7, 32, 33, 34, 49],
+        'laundry': []
     };
 
     // Apply sorting when select changes

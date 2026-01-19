@@ -841,7 +841,7 @@ main {
 /* Benefits Bar */
 .benefits-bar {
     background: var(--light-gray);
-    padding: 25px 40px;
+    padding: 25px 40px 25px 80px;
 }
 
 .benefits-container {
