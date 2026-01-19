@@ -11,13 +11,10 @@ const products = [
     { id: 9, name: 'Electric Kettle Stainless', price: 59.99, category: 'kitchen', url: 'product.html' },
     { id: 10, name: 'Stand Mixer 660W', price: 279.99, category: 'kitchen', url: 'product.html' },
     { id: 11, name: '4-Slice Toaster Digital', price: 79.99, category: 'kitchen', url: 'product.html' },
-    { id: 12, name: 'Multi-Function Rice Cooker', price: 129.99, category: 'kitchen', url: 'product.html' },
     { id: 13, name: 'Smart Convection Oven', price: 599.99, category: 'kitchen', url: 'product.html' },
     { id: 14, name: 'Built-in Dishwasher', price: 789.99, category: 'kitchen', url: 'product.html' },
-    { id: 15, name: 'French Door Refrigerator', price: 1299.99, category: 'kitchen', url: 'product.html' },
     { id: 16, name: 'Front Load Washing Machine', price: 899.99, category: 'cleaning', url: 'product.html' },
     { id: 17, name: 'Electric Dryer 7.4 Cu Ft', price: 699.99, category: 'cleaning', url: 'product.html' },
-    { id: 18, name: 'Smart Speaker with Alexa', price: 99.99, category: 'smart', url: 'product.html' },
     { id: 19, name: 'Programmable Slow Cooker', price: 79.99, category: 'kitchen', url: 'product.html' },
     { id: 20, name: '14-Cup Food Processor', price: 199.99, category: 'kitchen', url: 'product.html' },
     { id: 21, name: 'Espresso Machine Pro', price: 449.99, category: 'kitchen', url: 'product.html' },
@@ -31,7 +28,6 @@ const products = [
     { id: 29, name: 'Bread Maker Machine', price: 159.99, category: 'kitchen', url: 'product.html' },
     { id: 30, name: 'Juicer Extractor 800W', price: 99.99, category: 'kitchen', url: 'product.html' },
     { id: 31, name: 'Dehumidifier 50 Pint', price: 249.99, category: 'heating', url: 'product.html' },
-    { id: 32, name: 'Tower Fan Oscillating', price: 89.99, category: 'heating', url: 'product.html' },
     { id: 33, name: 'Electric Shaver Pro', price: 149.99, category: 'personal', url: 'product.html' },
     { id: 34, name: 'Hair Straightener Ceramic', price: 79.99, category: 'personal', url: 'product.html' },
     { id: 35, name: 'Electric Toothbrush', price: 129.99, category: 'personal', url: 'product.html' },
@@ -47,9 +43,7 @@ const products = [
     { id: 45, name: 'Video Doorbell HD', price: 149.99, category: 'smart', url: 'product.html' },
     { id: 46, name: 'Smart Light Bulb 4Pack', price: 49.99, category: 'smart', url: 'product.html' },
     { id: 47, name: 'Electric Fireplace', price: 399.99, category: 'heating', url: 'product.html' },
-    { id: 48, name: 'Portable Heater 1500W', price: 79.99, category: 'heating', url: 'product.html' },
-    { id: 49, name: 'Ceiling Fan with Light', price: 189.99, category: 'heating', url: 'product.html' },
-    { id: 50, name: 'Bathroom Scale Digital', price: 39.99, category: 'personal', url: 'product.html' }
+    { id: 49, name: 'Ceiling Fan with Light', price: 189.99, category: 'heating', url: 'product.html' }
 ];
 
 // Create search modal

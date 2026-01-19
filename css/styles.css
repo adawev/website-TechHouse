@@ -1958,26 +1958,6 @@ footer {
     color: #fff;
 }
 
-/* Breadcrumb */
-.breadcrumb {
-    padding: 30px 40px;
-    font-size: 14px;
-}
-
-.breadcrumb a {
-    color: var(--primary-green);
-    text-decoration: none;
-}
-
-.breadcrumb a:hover {
-    text-decoration: underline;
-}
-
-.breadcrumb span {
-    margin: 0 10px;
-    color: var(--dark-gray);
-}
-
 /* Product Detail Page */
 .product-detail {
     padding: 40px;
@@ -3793,13 +3773,6 @@ footer {
 
     .form-row {
         grid-template-columns: 1fr;
-    }
-
-    .breadcrumb {
-        padding: 15px 20px;
-        font-size: 12px;
-        overflow-x: auto;
-        white-space: nowrap;
     }
 
     .product-detail,

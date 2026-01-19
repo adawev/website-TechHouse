@@ -226,19 +226,18 @@
             </div>
             <div class="featured-grid">
                 <!-- Product 1 -->
-                <div class="featured-card">
+                <div class="featured-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                     <span class="product-badge sale">-20%</span>
                     <div class="featured-image">
                         <img src="https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=400&h=300&fit=crop" alt="Coffee Maker">
                         <div class="featured-overlay">
-                            <button class="quick-btn" onclick="addToCart({id: 'prod1', name: 'Smart Coffee Maker Pro', price: 239.99, image: 'https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=400&h=300&fit=crop'})"><i class="fas fa-shopping-cart"></i></button>
-                            <button class="quick-btn" onclick="toggleFavorite({id: 'prod1', name: 'Smart Coffee Maker Pro', price: 239.99, image: 'https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=400&h=300&fit=crop'}, this)"><i class="fas fa-heart"></i></button>
-                            <button class="quick-btn"><i class="fas fa-eye"></i></button>
+                            <button class="quick-btn" onclick="event.stopPropagation(); addToCart({id: 'prod1', name: 'Smart Coffee Maker Pro', price: 239.99, image: 'https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=400&h=300&fit=crop'})"><i class="fas fa-shopping-cart"></i></button>
+                            <button class="quick-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'prod1', name: 'Smart Coffee Maker Pro', price: 239.99, image: 'https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=400&h=300&fit=crop'}, this)"><i class="fas fa-heart"></i></button>
                         </div>
                     </div>
                     <div class="featured-info">
                         <span class="featured-category">Kitchen</span>
-                        <h3><a href="product.html">Smart Coffee Maker Pro</a></h3>
+                        <h3>Smart Coffee Maker Pro</h3>
                         <div class="featured-rating">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             <span>(128)</span>
@@ -250,19 +249,18 @@
                     </div>
                 </div>
                 <!-- Product 2 -->
-                <div class="featured-card">
+                <div class="featured-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                     <span class="product-badge new">New</span>
                     <div class="featured-image">
                         <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?w=400&h=300&fit=crop" alt="Robot Vacuum">
                         <div class="featured-overlay">
-                            <button class="quick-btn" onclick="addToCart({id: 'prod3', name: 'Robot Vacuum Cleaner X9', price: 399.99, image: 'https://images.unsplash.com/photo-1558317374-067fb5f30001?w=400&h=300&fit=crop'})"><i class="fas fa-shopping-cart"></i></button>
-                            <button class="quick-btn" onclick="toggleFavorite({id: 'prod3', name: 'Robot Vacuum Cleaner X9', price: 399.99, image: 'https://images.unsplash.com/photo-1558317374-067fb5f30001?w=400&h=300&fit=crop'}, this)"><i class="fas fa-heart"></i></button>
-                            <button class="quick-btn"><i class="fas fa-eye"></i></button>
+                            <button class="quick-btn" onclick="event.stopPropagation(); addToCart({id: 'prod3', name: 'Robot Vacuum Cleaner X9', price: 399.99, image: 'https://images.unsplash.com/photo-1558317374-067fb5f30001?w=400&h=300&fit=crop'})"><i class="fas fa-shopping-cart"></i></button>
+                            <button class="quick-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'prod3', name: 'Robot Vacuum Cleaner X9', price: 399.99, image: 'https://images.unsplash.com/photo-1558317374-067fb5f30001?w=400&h=300&fit=crop'}, this)"><i class="fas fa-heart"></i></button>
                         </div>
                     </div>
                     <div class="featured-info">
                         <span class="featured-category">Cleaning</span>
-                        <h3><a href="product.html">Robot Vacuum Cleaner X9</a></h3>
+                        <h3>Robot Vacuum Cleaner X9</h3>
                         <div class="featured-rating">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             <span>(256)</span>
@@ -273,19 +271,18 @@
                     </div>
                 </div>
                 <!-- Product 3 -->
-                <div class="featured-card">
+                <div class="featured-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                     <span class="product-badge hot">Hot</span>
                     <div class="featured-image">
                         <img src="https://images.unsplash.com/photo-1626509653291-18d9a934b9db?w=400&h=300&fit=crop" alt="Air Fryer">
                         <div class="featured-overlay">
-                            <button class="quick-btn" onclick="addToCart({id: 'prod5', name: 'Digital Air Fryer 5.8QT', price: 179.99, image: 'https://images.unsplash.com/photo-1626509653291-18d9a934b9db?w=400&h=300&fit=crop'})"><i class="fas fa-shopping-cart"></i></button>
-                            <button class="quick-btn" onclick="toggleFavorite({id: 'prod5', name: 'Digital Air Fryer 5.8QT', price: 179.99, image: 'https://images.unsplash.com/photo-1626509653291-18d9a934b9db?w=400&h=300&fit=crop'}, this)"><i class="fas fa-heart"></i></button>
-                            <button class="quick-btn"><i class="fas fa-eye"></i></button>
+                            <button class="quick-btn" onclick="event.stopPropagation(); addToCart({id: 'prod5', name: 'Digital Air Fryer 5.8QT', price: 179.99, image: 'https://images.unsplash.com/photo-1626509653291-18d9a934b9db?w=400&h=300&fit=crop'})"><i class="fas fa-shopping-cart"></i></button>
+                            <button class="quick-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'prod5', name: 'Digital Air Fryer 5.8QT', price: 179.99, image: 'https://images.unsplash.com/photo-1626509653291-18d9a934b9db?w=400&h=300&fit=crop'}, this)"><i class="fas fa-heart"></i></button>
                         </div>
                     </div>
                     <div class="featured-info">
                         <span class="featured-category">Kitchen</span>
-                        <h3><a href="product.html">Digital Air Fryer 5.8QT</a></h3>
+                        <h3>Digital Air Fryer 5.8QT</h3>
                         <div class="featured-rating">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             <span>(342)</span>
@@ -296,24 +293,23 @@
                     </div>
                 </div>
                 <!-- Product 4 -->
-                <div class="featured-card">
+                <div class="featured-card" style="cursor: pointer;" onclick="window.location.href='product.html'">
                     <div class="featured-image">
-                        <img src="https://images.unsplash.com/photo-1585515320310-2dcf6d098c8c?w=400&h=300&fit=crop" alt="Smart Speaker">
+                        <img src="https://images.unsplash.com/photo-1610889556528-9a770e32642f?w=400&h=300&fit=crop" alt="Espresso Machine">
                         <div class="featured-overlay">
-                            <button class="quick-btn" onclick="addToCart({id: 'prod18', name: 'Smart Speaker with Alexa', price: 99.99, image: 'https://images.unsplash.com/photo-1585515320310-2dcf6d098c8c?w=400&h=300&fit=crop'})"><i class="fas fa-shopping-cart"></i></button>
-                            <button class="quick-btn" onclick="toggleFavorite({id: 'prod18', name: 'Smart Speaker with Alexa', price: 99.99, image: 'https://images.unsplash.com/photo-1585515320310-2dcf6d098c8c?w=400&h=300&fit=crop'}, this)"><i class="fas fa-heart"></i></button>
-                            <button class="quick-btn"><i class="fas fa-eye"></i></button>
+                            <button class="quick-btn" onclick="event.stopPropagation(); addToCart({id: 'prod19', name: 'Espresso Machine Pro', price: 499.99, image: 'https://images.unsplash.com/photo-1610889556528-9a770e32642f?w=400&h=300&fit=crop'})"><i class="fas fa-shopping-cart"></i></button>
+                            <button class="quick-btn" onclick="event.stopPropagation(); toggleFavorite({id: 'prod19', name: 'Espresso Machine Pro', price: 499.99, image: 'https://images.unsplash.com/photo-1610889556528-9a770e32642f?w=400&h=300&fit=crop'}, this)"><i class="fas fa-heart"></i></button>
                         </div>
                     </div>
                     <div class="featured-info">
-                        <span class="featured-category">Smart Home</span>
-                        <h3><a href="product.html">Smart Speaker with Alexa</a></h3>
+                        <span class="featured-category">Kitchen</span>
+                        <h3>Espresso Machine Pro</h3>
                         <div class="featured-rating">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            <span>(1523)</span>
+                            <span>(847)</span>
                         </div>
                         <div class="featured-price">
-                            <span class="current-price">$99.99</span>
+                            <span class="current-price">$499.99</span>
                         </div>
                     </div>
                 </div>

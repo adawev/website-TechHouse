@@ -91,11 +91,9 @@ const allProducts = [
     { id: 'prod11', name: 'Microwave Oven 1100W', price: 129.99, image: 'https://images.unsplash.com/photo-1585659722983-3a675dabf23d?w=400&h=300&fit=crop', stock: 29 },
     { id: 'prod12', name: 'Handheld Steam Cleaner', price: 79.99, image: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=400&h=300&fit=crop', stock: 0 },
     { id: 'prod13', name: 'Electric Toaster 4-Slice', price: 69.99, image: 'https://images.unsplash.com/photo-1556909114-44e3e70034e2?w=400&h=300&fit=crop', stock: 47 },
-    { id: 'prod14', name: 'Rice Cooker 10-Cup', price: 89.99, image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=400&h=300&fit=crop', stock: 21 },
     { id: 'prod15', name: 'Portable Space Heater', price: 59.99, image: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=300&fit=crop', stock: 2 },
     { id: 'prod16', name: 'Smart Robot Mop', price: 449.99, image: 'https://images.unsplash.com/photo-1589894404892-7310b92ea7a2?w=400&h=300&fit=crop', stock: 15 },
     { id: 'prod17', name: 'Food Processor 12-Cup', price: 179.99, image: 'https://images.unsplash.com/photo-1585237672814-8f85a8118bf6?w=400&h=300&fit=crop', stock: 38 },
-    { id: 'prod18', name: 'Smart Speaker with Alexa', price: 99.99, image: 'https://images.unsplash.com/photo-1585515320310-2dcf6d098c8c?w=400&h=300&fit=crop', stock: 64 },
     { id: 'prod19', name: 'Espresso Machine Pro', price: 499.99, image: 'https://images.unsplash.com/photo-1610889556528-9a770e32642f?w=400&h=300&fit=crop', stock: 4 },
     { id: 'prod20', name: 'Humidifier Ultrasonic', price: 69.99, image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&h=300&fit=crop', stock: 31 },
     { id: 'prod21', name: 'Immersion Blender Set', price: 59.99, image: 'https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?w=400&h=300&fit=crop', stock: 52 },
@@ -109,7 +107,6 @@ const allProducts = [
     { id: 'prod29', name: 'Bread Maker Machine', price: 159.99, image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=300&fit=crop', stock: 14 },
     { id: 'prod30', name: 'Juicer Extractor 800W', price: 99.99, image: 'https://images.unsplash.com/photo-1589733955941-5eeaf752f6dd?w=400&h=300&fit=crop', stock: 23 },
     { id: 'prod31', name: 'Dehumidifier 50 Pint', price: 249.99, image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', stock: 7 },
-    { id: 'prod32', name: 'Tower Fan Oscillating', price: 89.99, image: 'https://images.unsplash.com/photo-1613152443581-a3f4b7c2c5f5?w=400&h=300&fit=crop', stock: 41 },
     { id: 'prod33', name: 'Electric Shaver Pro', price: 149.99, image: 'https://images.unsplash.com/photo-1621607512214-68297480165e?w=400&h=300&fit=crop', stock: 0 },
     { id: 'prod34', name: 'Hair Straightener Ceramic', price: 79.99, image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=300&fit=crop', stock: 28 },
     { id: 'prod35', name: 'Electric Toothbrush', price: 129.99, image: 'https://images.unsplash.com/photo-1559650656-5d1d361ad10e?w=400&h=300&fit=crop', stock: 53 },
@@ -125,9 +122,7 @@ const allProducts = [
     { id: 'prod45', name: 'Video Doorbell HD', price: 149.99, image: 'https://images.unsplash.com/photo-1558403194-611308249627?w=400&h=300&fit=crop', stock: 17 },
     { id: 'prod46', name: 'Smart Light Bulb 4Pack', price: 49.99, image: 'https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=400&h=300&fit=crop', stock: 78 },
     { id: 'prod47', name: 'Electric Fireplace', price: 399.99, image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=300&fit=crop', stock: 4 },
-    { id: 'prod48', name: 'Portable Heater 1500W', price: 79.99, image: 'https://images.unsplash.com/photo-1606567595334-d39972c85dfd?w=400&h=300&fit=crop', stock: 39 },
-    { id: 'prod49', name: 'Ceiling Fan with Light', price: 189.99, image: 'https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=400&h=300&fit=crop', stock: 13 },
-    { id: 'prod50', name: 'Bathroom Scale Digital', price: 39.99, image: 'https://images.unsplash.com/photo-1611084063568-aec5f1e5e8ba?w=400&h=300&fit=crop', stock: 61 }
+    { id: 'prod49', name: 'Ceiling Fan with Light', price: 189.99, image: 'https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=400&h=300&fit=crop', stock: 13 }
 ];
 
 // Get stock status for a product
