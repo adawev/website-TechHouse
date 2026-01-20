@@ -7201,63 +7201,120 @@ footer {
     gap: 30px;
 }
 
-.locations-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+/* Store Cards - New Layout */
+.locations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.location-card {
+.store-card {
     background: white;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.06);
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    transition: box-shadow 0.3s;
 }
 
-.location-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+.store-card:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
-.location-image {
+.store-image {
     position: relative;
-    height: 180px;
-    overflow: hidden;
+    height: 100%;
+    min-height: 200px;
 }
 
-.location-image img {
+.store-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s;
 }
 
-.location-card:hover .location-image img {
-    transform: scale(1.05);
-}
-
-.location-badge {
+.store-badge {
     position: absolute;
     top: 12px;
     left: 12px;
     background: var(--primary-green);
     color: white;
-    padding: 5px 12px;
+    padding: 5px 14px;
     border-radius: 6px;
     font-size: 12px;
     font-weight: 600;
 }
 
-.location-info {
-    padding: 20px;
+.store-details {
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.location-info h2 {
+.store-details h3 {
+    font-size: 20px;
+    font-weight: 600;
     color: var(--dark-gray);
     margin-bottom: 15px;
-    font-size: 18px;
-    font-weight: 600;
+}
+
+.store-info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.store-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.store-info-item i {
+    color: var(--primary-green);
+    width: 16px;
+    margin-top: 3px;
+}
+
+.store-features {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.store-features span {
+    font-size: 13px;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.store-features span i {
+    color: var(--primary-green);
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .store-card {
+        grid-template-columns: 1fr;
+    }
+
+    .store-image {
+        height: 180px;
+        min-height: auto;
+    }
+
+    .store-details {
+        padding: 20px;
+    }
 }
 
 .location-detail {
