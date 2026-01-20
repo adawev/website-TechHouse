@@ -90,116 +90,264 @@
         </nav>
     </header>
     <main>
-        <!-- Product Detail -->
-        <section class="product-detail">
-            <!-- Product Images -->
-            <div class="product-images">
-                <div class="product-image-large">
-                    <i class="fas fa-coffee" style="font-size: 80px;"></i>
-                </div>
-                <div class="product-image-large">
-                    <i class="fas fa-mug-hot" style="font-size: 80px;"></i>
-                </div>
-                <div class="product-image-large">
-                    <i class="fas fa-blender" style="font-size: 80px;"></i>
-                </div>
-            </div>
-            <!-- Product Info -->
-            <div class="product-info">
-                <h1>Smart Coffee Maker Pro</h1>
-                <p class="price" style="font-size: 32px; font-weight: 700; color: #46A358; margin: 20px 0;">$299.99</p>
-                <!-- Quantity Selector -->
-                <div style="margin: 30px 0;">
-                    <label style="font-weight: 500; color: #3D3D3D; margin-bottom: 10px; display: block;">Quantity:</label>
-                    <div style="display: flex; align-items: center; gap: 15px;">
-                        <div style="display: flex; align-items: center; border: 2px solid #EAEAEA; border-radius: 8px; overflow: hidden;">
-                            <button id="decrease-qty" style="background: #F5F5F5; border: none; padding: 10px 16px; cursor: pointer; font-size: 18px; font-weight: 600; color: #3D3D3D; transition: all 0.3s;">-</button>
-                            <input type="number" id="product-qty" value="1" min="1" max="99" style="width: 60px; text-align: center; border: none; font-size: 16px; font-weight: 500; padding: 10px 5px;" readonly>
-                            <button id="increase-qty" style="background: #F5F5F5; border: none; padding: 10px 16px; cursor: pointer; font-size: 18px; font-weight: 600; color: #3D3D3D; transition: all 0.3s;">+</button>
+        <div class="product-page-container">
+            <!-- Product Detail Section -->
+            <section class="product-detail-new">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <div class="product-main-image">
+                        <img src="https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=600&h=600&fit=crop" alt="Smart Coffee Maker Pro" id="mainProductImage">
+                        <span class="product-badge-detail">-20%</span>
+                    </div>
+                    <div class="product-thumbnails">
+                        <div class="thumbnail active" onclick="changeImage(this, 'https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=600&h=600&fit=crop')">
+                            <img src="https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=100&h=100&fit=crop" alt="View 1">
                         </div>
-                        <button id="add-to-cart-btn" class="btn" style="border: none; cursor: pointer; padding: 12px 30px;">
-                            <i class="fas fa-cart-plus"></i> Add to Cart
-                        </button>
+                        <div class="thumbnail" onclick="changeImage(this, 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&h=600&fit=crop')">
+                            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=100&h=100&fit=crop" alt="View 2">
+                        </div>
+                        <div class="thumbnail" onclick="changeImage(this, 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&h=600&fit=crop')">
+                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=100&h=100&fit=crop" alt="View 3">
+                        </div>
+                        <div class="thumbnail" onclick="changeImage(this, 'https://images.unsplash.com/photo-1509785307050-d4066910ec1e?w=600&h=600&fit=crop')">
+                            <img src="https://images.unsplash.com/photo-1509785307050-d4066910ec1e?w=100&h=100&fit=crop" alt="View 4">
+                        </div>
                     </div>
                 </div>
-                <script>
-                    // Quantity controls
-                    const qtyInput = document.getElementById('product-qty');
-                    const decreaseBtn = document.getElementById('decrease-qty');
-                    const increaseBtn = document.getElementById('increase-qty');
-                    const addToCartBtn = document.getElementById('add-to-cart-btn');
-                    decreaseBtn.addEventListener('click', () => {
-                        if (parseInt(qtyInput.value) > 1) {
-                            qtyInput.value = parseInt(qtyInput.value) - 1;
-                        }
-                    });
-                    increaseBtn.addEventListener('click', () => {
-                        if (parseInt(qtyInput.value) < 99) {
-                            qtyInput.value = parseInt(qtyInput.value) + 1;
-                        }
-                    });
-                    addToCartBtn.addEventListener('click', () => {
-                        const qty = parseInt(qtyInput.value);
-                        const product = {
-                            id: 'prod1',
-                            name: 'Smart Coffee Maker Pro',
-                            price: 299.99,
-                            image: 'https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=400&h=300&fit=crop'
-                        };
-                        // Add with quantity
-                        addToCart(product, qty);
-                        setTimeout(() => {
-                            window.location.href = 'cart.html';
-                        }, 1500);
-                    });
-                </script>
-                <!-- Specifications Table -->
-                <table class="specs-table">
-                    <thead>
-                        <tr>
-                            <th colspan="2"><i class="fas fa-info-circle"></i> Product Specifications</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Capacity</strong></td>
-                            <td>12 cups</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Power</strong></td>
-                            <td>1200W</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Material</strong></td>
-                            <td>Stainless Steel</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Dimensions</strong></td>
-                            <td>12" x 8" x 14"</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Weight</strong></td>
-                            <td>5.2 lbs</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Color</strong></td>
-                            <td>Brushed Silver</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Warranty</strong></td>
-                            <td>1 Year Standard</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <!-- Membership Perks -->
-                <h2 style="margin-top: 40px; font-size: 24px; color: #0F172A;"><i class="fas fa-gift"></i> Membership Perks</h2>
-                <ul class="perks-list">
-                    <li><i class="fas fa-medal" style="color: #CD7F32;"></i> <strong>Bronze Members:</strong> 5% discount + 2-year warranty</li>
-                    <li><i class="fas fa-medal" style="color: #C0C0C0;"></i> <strong>Silver Members:</strong> 10% discount + 3-year warranty + Free express delivery</li>
-                    <li><i class="fas fa-medal" style="color: #FFD700;"></i> <strong>Gold Members:</strong> 15% discount + 5-year warranty + Free same-day delivery</li>
-                </ul>
-            </div>
-        </section>
+
+                <!-- Product Info -->
+                <div class="product-info-new">
+                    <span class="product-category-tag">Kitchen Appliances</span>
+                    <h1 class="product-title">Smart Coffee Maker Pro</h1>
+
+                    <div class="product-rating-row">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-text">4.5 (128 reviews)</span>
+                    </div>
+
+                    <div class="product-price-row">
+                        <span class="current-price">$239.99</span>
+                        <span class="original-price">$299.99</span>
+                        <span class="discount-tag">Save $60</span>
+                    </div>
+
+                    <div class="stock-indicator in-stock">
+                        <i class="fas fa-check-circle"></i>
+                        <span>25 in stock</span>
+                    </div>
+
+                    <p class="product-description">
+                        Experience the perfect brew every morning with our Smart Coffee Maker Pro.
+                        Features programmable settings, built-in grinder, and WiFi connectivity for
+                        remote brewing via smartphone app. Premium stainless steel construction ensures durability.
+                    </p>
+
+                    <div class="product-features">
+                        <div class="feature-item">
+                            <i class="fas fa-wifi"></i>
+                            <span>WiFi Connected</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Programmable</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-cog"></i>
+                            <span>Built-in Grinder</span>
+                        </div>
+                    </div>
+
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button id="decrease-qty" class="qty-btn">-</button>
+                            <input type="number" id="product-qty" value="1" min="1" max="25" readonly>
+                            <button id="increase-qty" class="qty-btn">+</button>
+                        </div>
+                        <button id="add-to-cart-btn" class="btn-add-cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <button id="add-to-favorites-btn" class="btn-favorite">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+
+                    <div class="product-guarantees">
+                        <div class="guarantee-item">
+                            <i class="fas fa-truck"></i>
+                            <div>
+                                <strong>Free Delivery</strong>
+                                <span>Orders over $100</span>
+                            </div>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-undo"></i>
+                            <div>
+                                <strong>30 Day Returns</strong>
+                                <span>Easy returns</span>
+                            </div>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <strong>2 Year Warranty</strong>
+                                <span>Full coverage</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Product Details Tabs -->
+            <section class="product-tabs-section">
+                <div class="product-tabs">
+                    <button class="tab-btn active" onclick="showTab('specifications')">Specifications</button>
+                    <button class="tab-btn" onclick="showTab('membership')">Membership Benefits</button>
+                </div>
+
+                <div class="tab-content" id="specifications">
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <span class="spec-label">Capacity</span>
+                            <span class="spec-value">12 cups</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Power</span>
+                            <span class="spec-value">1200W</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Material</span>
+                            <span class="spec-value">Stainless Steel</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Dimensions</span>
+                            <span class="spec-value">12" x 8" x 14"</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Weight</span>
+                            <span class="spec-value">5.2 lbs</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Color</span>
+                            <span class="spec-value">Brushed Silver</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Warranty</span>
+                            <span class="spec-value">1 Year Standard</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Connectivity</span>
+                            <span class="spec-value">WiFi 2.4GHz</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="membership" style="display: none;">
+                    <div class="membership-benefits-grid">
+                        <div class="benefit-card bronze">
+                            <div class="benefit-icon">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <h3>Bronze Member</h3>
+                            <ul>
+                                <li><i class="fas fa-check"></i> 5% discount on this product</li>
+                                <li><i class="fas fa-check"></i> 2-year extended warranty</li>
+                                <li><i class="fas fa-check"></i> Priority support</li>
+                            </ul>
+                            <span class="benefit-price">Pay only $227.99</span>
+                        </div>
+                        <div class="benefit-card silver">
+                            <div class="benefit-icon">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <h3>Silver Member</h3>
+                            <ul>
+                                <li><i class="fas fa-check"></i> 10% discount on this product</li>
+                                <li><i class="fas fa-check"></i> 3-year extended warranty</li>
+                                <li><i class="fas fa-check"></i> Free express delivery</li>
+                            </ul>
+                            <span class="benefit-price">Pay only $215.99</span>
+                        </div>
+                        <div class="benefit-card gold">
+                            <div class="benefit-icon">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <h3>Gold Member</h3>
+                            <ul>
+                                <li><i class="fas fa-check"></i> 15% discount on this product</li>
+                                <li><i class="fas fa-check"></i> 5-year extended warranty</li>
+                                <li><i class="fas fa-check"></i> Free same-day delivery</li>
+                            </ul>
+                            <span class="benefit-price">Pay only $203.99</span>
+                        </div>
+                    </div>
+                    <a href="membership.html" class="btn btn-outline membership-cta">
+                        <i class="fas fa-crown"></i> Explore Membership Plans
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <script>
+            // Image gallery
+            function changeImage(thumbnail, imageUrl) {
+                document.getElementById('mainProductImage').src = imageUrl;
+                document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+                thumbnail.classList.add('active');
+            }
+
+            // Tabs
+            function showTab(tabId) {
+                document.querySelectorAll('.tab-content').forEach(t => t.style.display = 'none');
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.getElementById(tabId).style.display = 'block';
+                event.target.classList.add('active');
+            }
+
+            // Quantity controls
+            const qtyInput = document.getElementById('product-qty');
+            const decreaseBtn = document.getElementById('decrease-qty');
+            const increaseBtn = document.getElementById('increase-qty');
+            const addToCartBtn = document.getElementById('add-to-cart-btn');
+            const addToFavoritesBtn = document.getElementById('add-to-favorites-btn');
+
+            decreaseBtn.addEventListener('click', () => {
+                if (parseInt(qtyInput.value) > 1) {
+                    qtyInput.value = parseInt(qtyInput.value) - 1;
+                }
+            });
+
+            increaseBtn.addEventListener('click', () => {
+                if (parseInt(qtyInput.value) < 25) {
+                    qtyInput.value = parseInt(qtyInput.value) + 1;
+                }
+            });
+
+            const productData = {
+                id: 'prod1',
+                name: 'Smart Coffee Maker Pro',
+                price: 239.99,
+                image: 'https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=400&h=300&fit=crop'
+            };
+
+            addToCartBtn.addEventListener('click', () => {
+                const qty = parseInt(qtyInput.value);
+                addToCart(productData, qty);
+            });
+
+            addToFavoritesBtn.addEventListener('click', () => {
+                toggleFavorite(productData, addToFavoritesBtn);
+                const icon = addToFavoritesBtn.querySelector('i');
+                icon.classList.toggle('far');
+                icon.classList.toggle('fas');
+                icon.classList.toggle('active');
+            });
+        </script>
     </main>
 <footer>
         <div class="footer-main">
