@@ -1267,7 +1267,7 @@ main {
 /* Membership Promo */
 .membership-promo {
     background: linear-gradient(135deg, #e8f5ec 0%, #d4edda 100%);
-    padding: 60px 40px;
+    padding: 60px 40px 60px 80px;
     margin: 40px 0 0;
 }
 
