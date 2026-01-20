@@ -95,13 +95,10 @@
                 <!-- Account Sidebar -->
                 <aside class="account-sidebar-new">
                     <div class="account-user-card">
-                        <div class="user-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="user-info">
-                            <h3>John Doe</h3>
-                            <span class="membership-badge gold"><i class="fas fa-crown"></i> Gold Member</span>
-                        </div>
+                        <div class="account-avatar">JD</div>
+                        <h3 class="account-user-name">John Doe</h3>
+                        <p class="account-user-email">john.doe@example.com</p>
+                        <span class="account-member-tag"><i class="fas fa-crown"></i> Gold</span>
                     </div>
                     <nav class="account-nav">
                         <a href="#" class="account-nav-item active" data-section="profile">
@@ -111,10 +108,6 @@
                         <a href="#" class="account-nav-item" data-section="orders">
                             <i class="fas fa-shopping-bag"></i>
                             <span>My Orders</span>
-                        </a>
-                        <a href="#" class="account-nav-item" data-section="addresses">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Addresses</span>
                         </a>
                         <a href="#" class="account-nav-item" data-section="membership">
                             <i class="fas fa-medal"></i>
@@ -242,45 +235,6 @@
                         </div>
                     </div>
 
-                    <!-- Addresses Section -->
-                    <div class="account-section-new" id="addresses">
-                        <div class="section-header-new">
-                            <h2>My Addresses</h2>
-                            <p>Manage your delivery addresses</p>
-                        </div>
-                        <div class="section-body">
-                            <div class="addresses-grid">
-                                <div class="address-card default">
-                                    <div class="address-badge">Default</div>
-                                    <h4><i class="fas fa-home"></i> Home</h4>
-                                    <p>John Doe</p>
-                                    <p>123 Main Street, Apt 4</p>
-                                    <p>Tashkent, 100000</p>
-                                    <p>+998 90 123 45 67</p>
-                                    <div class="address-actions">
-                                        <button class="btn-edit"><i class="fas fa-edit"></i> Edit</button>
-                                        <button class="btn-delete"><i class="fas fa-trash"></i> Delete</button>
-                                    </div>
-                                </div>
-                                <div class="address-card">
-                                    <h4><i class="fas fa-briefcase"></i> Office</h4>
-                                    <p>John Doe</p>
-                                    <p>456 Business Center, Floor 5</p>
-                                    <p>Tashkent, 100100</p>
-                                    <p>+998 90 987 65 43</p>
-                                    <div class="address-actions">
-                                        <button class="btn-edit"><i class="fas fa-edit"></i> Edit</button>
-                                        <button class="btn-delete"><i class="fas fa-trash"></i> Delete</button>
-                                    </div>
-                                </div>
-                                <div class="address-card add-new">
-                                    <i class="fas fa-plus"></i>
-                                    <span>Add New Address</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <!-- Membership Section -->
                     <div class="account-section-new" id="membership">
                         <div class="section-header-new">
@@ -360,13 +314,6 @@
                 });
             });
 
-            // Orders filter
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                    this.classList.add('active');
-                });
-            });
         </script>
     </main>
 <footer>
