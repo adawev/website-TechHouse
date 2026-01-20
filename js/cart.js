@@ -63,6 +63,30 @@ function updateQuantity(productId, quantity) {
     }
 }
 
+// Increase cart item quantity
+function increaseCartQty(productId) {
+    const item = cart.find(item => item.id === productId);
+    if (item && item.quantity < 99) {
+        item.quantity += 1;
+        saveCart();
+        renderCart();
+    }
+}
+
+// Decrease cart item quantity
+function decreaseCartQty(productId) {
+    const item = cart.find(item => item.id === productId);
+    if (item) {
+        if (item.quantity > 1) {
+            item.quantity -= 1;
+            saveCart();
+            renderCart();
+        } else {
+            removeFromCart(productId);
+        }
+    }
+}
+
 // Calculate cart total
 function getCartTotal() {
     return cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
@@ -127,7 +151,11 @@ function renderCart() {
             <td data-label="Name">${item.name}</td>
             <td data-label="Price">$${item.price.toFixed(2)}</td>
             <td data-label="Quantity">
-                <input type="number" class="qty-input" value="${item.quantity}" min="1" onchange="updateQuantity('${item.id}', this.value)">
+                <div class="cart-qty-selector">
+                    <button class="cart-qty-btn" onclick="decreaseCartQty('${item.id}')">-</button>
+                    <span class="cart-qty-value">${item.quantity}</span>
+                    <button class="cart-qty-btn" onclick="increaseCartQty('${item.id}')">+</button>
+                </div>
             </td>
             <td data-label="Total">$${(item.price * item.quantity).toFixed(2)}</td>
             <td data-label="Remove">
