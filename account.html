@@ -90,147 +90,284 @@
         </nav>
     </header>
     <main>
-        <div class="account-page">
-            <h1><i class="fas fa-user-circle"></i> My Account</h1>
-            <div class="account-layout">
+        <div class="account-page-new">
+            <div class="account-layout-new">
                 <!-- Account Sidebar -->
-                <aside class="account-sidebar">
-                    <div class="account-menu">
-                        <a href="#profile" class="account-menu-item active">
-                            <i class="fas fa-user"></i> Profile Information
-                        </a>
-                        <a href="#orders" class="account-menu-item">
-                            <i class="fas fa-shopping-bag"></i> My Orders
-                        </a>
-                        <a href="#addresses" class="account-menu-item">
-                            <i class="fas fa-map-marker-alt"></i> Addresses
-                        </a>
-                        <a href="#payment" class="account-menu-item">
-                            <i class="fas fa-credit-card"></i> Payment Methods
-                        </a>
-                        <a href="#membership" class="account-menu-item">
-                            <i class="fas fa-medal"></i> Membership
-                        </a>
-                        <a href="#settings" class="account-menu-item">
-                            <i class="fas fa-cog"></i> Settings
-                        </a>
-                        <a href="#" class="account-menu-item logout">
-                            <i class="fas fa-sign-out-alt"></i> Logout
-                        </a>
+                <aside class="account-sidebar-new">
+                    <div class="account-user-card">
+                        <div class="user-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="user-info">
+                            <h3>John Doe</h3>
+                            <span class="membership-badge gold"><i class="fas fa-crown"></i> Gold Member</span>
+                        </div>
                     </div>
+                    <nav class="account-nav">
+                        <a href="#" class="account-nav-item active" data-section="profile">
+                            <i class="fas fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                        <a href="#" class="account-nav-item" data-section="orders">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>My Orders</span>
+                        </a>
+                        <a href="#" class="account-nav-item" data-section="addresses">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Addresses</span>
+                        </a>
+                        <a href="#" class="account-nav-item" data-section="membership">
+                            <i class="fas fa-medal"></i>
+                            <span>Membership</span>
+                        </a>
+                        <a href="#" class="account-nav-item logout">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </nav>
                 </aside>
+
                 <!-- Account Content -->
-                <div class="account-content">
+                <div class="account-content-new">
                     <!-- Profile Section -->
-                    <div class="account-section">
-                        <h2><i class="fas fa-user"></i> Profile Information</h2>
-                        <div class="profile-info">
-                            <div class="profile-avatar">
-                                <i class="fas fa-user-circle" style="font-size: 80px; color: #46A358;"></i>
+                    <div class="account-section-new active" id="profile">
+                        <div class="section-header-new">
+                            <h2>Profile Information</h2>
+                            <p>Manage your personal information</p>
+                        </div>
+                        <div class="section-body">
+                            <div class="profile-card">
+                                <div class="profile-avatar-large">
+                                    <i class="fas fa-user"></i>
+                                    <button class="avatar-edit"><i class="fas fa-camera"></i></button>
+                                </div>
+                                <form class="profile-form-new">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label>First Name</label>
+                                            <input type="text" value="John" placeholder="First Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Last Name</label>
+                                            <input type="text" value="Doe" placeholder="Last Name">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Email Address</label>
+                                        <input type="email" value="john.doe@example.com" placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Phone Number</label>
+                                        <input type="tel" value="+998 90 123 45 67" placeholder="Phone">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Date of Birth</label>
+                                        <input type="date" value="1990-05-15">
+                                    </div>
+                                    <button type="submit" class="btn-save"><i class="fas fa-save"></i> Save Changes</button>
+                                </form>
                             </div>
-                            <form class="profile-form">
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label for="firstname"><i class="fas fa-user"></i> First Name</label>
-                                        <input type="text" id="firstname" name="firstname" value="John">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="lastname"><i class="fas fa-user"></i> Last Name</label>
-                                        <input type="text" id="lastname" name="lastname" value="Doe">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email"><i class="fas fa-envelope"></i> Email</label>
-                                    <input type="email" id="email" name="email" value="john.doe@example.com">
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone"><i class="fas fa-phone"></i> Phone</label>
-                                    <input type="tel" id="phone" name="phone" value="+1 (555) 123-4567">
-                                </div>
-                                <button type="submit" class="btn">
-                                    <i class="fas fa-save"></i> Save Changes
-                                </button>
-                            </form>
                         </div>
                     </div>
+
                     <!-- Orders Section -->
-                    <div class="account-section" style="margin-top: 40px;">
-                        <h2><i class="fas fa-shopping-bag"></i> Recent Orders</h2>
-                        <div class="orders-list">
-                            <div class="order-card">
-                                <div class="order-header">
-                                    <div>
-                                        <h3>Order #12345</h3>
-                                        <p>Placed on January 5, 2026</p>
+                    <div class="account-section-new" id="orders">
+                        <div class="section-header-new">
+                            <h2>My Orders</h2>
+                            <p>Track and manage your orders</p>
+                        </div>
+                        <div class="section-body">
+                            <div class="orders-list-new">
+                                <div class="order-card-new">
+                                    <div class="order-header-new">
+                                        <div class="order-id">
+                                            <span class="label">Order ID</span>
+                                            <span class="value">#TH-12345</span>
+                                        </div>
+                                        <div class="order-date">
+                                            <span class="label">Date</span>
+                                            <span class="value">Jan 15, 2026</span>
+                                        </div>
+                                        <div class="order-status-new delivered">
+                                            <i class="fas fa-check-circle"></i> Delivered
+                                        </div>
                                     </div>
-                                    <span class="order-status delivered">Delivered</span>
-                                </div>
-                                <div class="order-items">
-                                    <div class="order-item">
-                                        <i class="fas fa-coffee" style="font-size: 32px; color: #46A358;"></i>
-                                        <div>
+                                    <div class="order-product">
+                                        <img src="https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=80&h=80&fit=crop" alt="Product">
+                                        <div class="product-info">
                                             <h4>Smart Coffee Maker Pro</h4>
-                                            <p>Quantity: 1</p>
+                                            <p>Qty: 1</p>
                                         </div>
-                                        <p class="order-price">$299.99</p>
+                                        <div class="product-price">$299.99</div>
                                     </div>
-                                </div>
-                                <div class="order-footer">
-                                    <p class="order-total">Total: $299.99</p>
-                                    <a href="#" class="btn btn-secondary">View Details</a>
-                                </div>
-                            </div>
-                            <div class="order-card">
-                                <div class="order-header">
-                                    <div>
-                                        <h3>Order #12344</h3>
-                                        <p>Placed on December 28, 2025</p>
-                                    </div>
-                                    <span class="order-status shipped">Shipped</span>
-                                </div>
-                                <div class="order-items">
-                                    <div class="order-item">
-                                        <i class="fas fa-broom" style="font-size: 32px; color: #46A358;"></i>
-                                        <div>
-                                            <h4>Robotic Vacuum Cleaner</h4>
-                                            <p>Quantity: 1</p>
+                                    <div class="order-footer-new">
+                                        <div class="order-total-new">Total: <strong>$299.99</strong></div>
+                                        <div class="order-actions">
+                                            <button class="btn-outline-sm">View Details</button>
+                                            <button class="btn-outline-sm">Reorder</button>
                                         </div>
-                                        <p class="order-price">$399.99</p>
                                     </div>
                                 </div>
-                                <div class="order-footer">
-                                    <p class="order-total">Total: $399.99</p>
-                                    <a href="#" class="btn btn-secondary">Track Order</a>
+                                <div class="order-card-new">
+                                    <div class="order-header-new">
+                                        <div class="order-id">
+                                            <span class="label">Order ID</span>
+                                            <span class="value">#TH-12344</span>
+                                        </div>
+                                        <div class="order-date">
+                                            <span class="label">Date</span>
+                                            <span class="value">Jan 10, 2026</span>
+                                        </div>
+                                        <div class="order-status-new shipped">
+                                            <i class="fas fa-truck"></i> Shipped
+                                        </div>
+                                    </div>
+                                    <div class="order-product">
+                                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=80&h=80&fit=crop" alt="Product">
+                                        <div class="product-info">
+                                            <h4>Robot Vacuum Cleaner X9</h4>
+                                            <p>Qty: 1</p>
+                                        </div>
+                                        <div class="product-price">$599.99</div>
+                                    </div>
+                                    <div class="order-footer-new">
+                                        <div class="order-total-new">Total: <strong>$599.99</strong></div>
+                                        <div class="order-actions">
+                                            <button class="btn-outline-sm">Track Order</button>
+                                            <button class="btn-outline-sm">View Details</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Addresses Section -->
+                    <div class="account-section-new" id="addresses">
+                        <div class="section-header-new">
+                            <h2>My Addresses</h2>
+                            <p>Manage your delivery addresses</p>
+                        </div>
+                        <div class="section-body">
+                            <div class="addresses-grid">
+                                <div class="address-card default">
+                                    <div class="address-badge">Default</div>
+                                    <h4><i class="fas fa-home"></i> Home</h4>
+                                    <p>John Doe</p>
+                                    <p>123 Main Street, Apt 4</p>
+                                    <p>Tashkent, 100000</p>
+                                    <p>+998 90 123 45 67</p>
+                                    <div class="address-actions">
+                                        <button class="btn-edit"><i class="fas fa-edit"></i> Edit</button>
+                                        <button class="btn-delete"><i class="fas fa-trash"></i> Delete</button>
+                                    </div>
+                                </div>
+                                <div class="address-card">
+                                    <h4><i class="fas fa-briefcase"></i> Office</h4>
+                                    <p>John Doe</p>
+                                    <p>456 Business Center, Floor 5</p>
+                                    <p>Tashkent, 100100</p>
+                                    <p>+998 90 987 65 43</p>
+                                    <div class="address-actions">
+                                        <button class="btn-edit"><i class="fas fa-edit"></i> Edit</button>
+                                        <button class="btn-delete"><i class="fas fa-trash"></i> Delete</button>
+                                    </div>
+                                </div>
+                                <div class="address-card add-new">
+                                    <i class="fas fa-plus"></i>
+                                    <span>Add New Address</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Membership Section -->
-                    <div class="account-section" style="margin-top: 40px;">
-                        <h2><i class="fas fa-medal"></i> Membership Status</h2>
-                        <div class="membership-card">
-                            <div class="membership-header">
-                                <i class="fas fa-medal" style="font-size: 48px; color: #FFD700;"></i>
-                                <div>
+                    <div class="account-section-new" id="membership">
+                        <div class="section-header-new">
+                            <h2>Membership</h2>
+                            <p>Your membership status and benefits</p>
+                        </div>
+                        <div class="section-body">
+                            <div class="membership-status-card gold">
+                                <div class="membership-icon">
+                                    <i class="fas fa-crown"></i>
+                                </div>
+                                <div class="membership-info">
                                     <h3>Gold Member</h3>
                                     <p>Member since January 2025</p>
                                 </div>
+                                <div class="membership-points">
+                                    <span class="points">2,450</span>
+                                    <span class="label">Points</span>
+                                </div>
                             </div>
-                            <div class="membership-benefits">
-                                <h4>Your Benefits:</h4>
-                                <ul>
-                                    <li><i class="fas fa-check"></i> 15% discount on all purchases</li>
-                                    <li><i class="fas fa-check"></i> Free same-day delivery</li>
-                                    <li><i class="fas fa-check"></i> Extended 5-year warranty</li>
-                                    <li><i class="fas fa-check"></i> Dedicated account manager</li>
-                                    <li><i class="fas fa-check"></i> Exclusive early access to new products</li>
-                                </ul>
+                            <div class="benefits-list">
+                                <h4>Your Benefits</h4>
+                                <div class="benefits-grid">
+                                    <div class="benefit-item">
+                                        <i class="fas fa-percent"></i>
+                                        <div>
+                                            <strong>15% Discount</strong>
+                                            <span>On all purchases</span>
+                                        </div>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-truck"></i>
+                                        <div>
+                                            <strong>Free Same-Day Delivery</strong>
+                                            <span>No minimum order</span>
+                                        </div>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <div>
+                                            <strong>5-Year Warranty</strong>
+                                            <span>Extended coverage</span>
+                                        </div>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-headset"></i>
+                                        <div>
+                                            <strong>Priority Support</strong>
+                                            <span>24/7 dedicated line</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                            <a href="membership.html" class="btn-upgrade">View All Membership Plans</a>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
+
+        <script>
+            // Account navigation
+            document.querySelectorAll('.account-nav-item').forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const section = this.dataset.section;
+                    if (!section) return; // logout button
+
+                    // Update active nav item
+                    document.querySelectorAll('.account-nav-item').forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Show selected section
+                    document.querySelectorAll('.account-section-new').forEach(s => s.classList.remove('active'));
+                    document.getElementById(section).classList.add('active');
+                });
+            });
+
+            // Orders filter
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        </script>
     </main>
 <footer>
         <div class="footer-main">

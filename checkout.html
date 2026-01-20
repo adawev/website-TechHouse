@@ -92,116 +92,300 @@
     <main>
         <div class="checkout-container">
             <h1><i class="fas fa-credit-card"></i> Checkout</h1>
+
             <!-- Progress Bar -->
-            <div class="progress-bar">
-                <div class="progress-step"><i class="fas fa-map-marker-alt"></i> Address</div>
-                <div class="progress-step"><i class="fas fa-truck"></i> Delivery</div>
-                <div class="progress-step"><i class="fas fa-credit-card"></i> Payment</div>
+            <div class="checkout-progress">
+                <div class="progress-step active" data-step="1">
+                    <div class="step-number">1</div>
+                    <span>Address</span>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="2">
+                    <div class="step-number">2</div>
+                    <span>Delivery</span>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="3">
+                    <div class="step-number">3</div>
+                    <span>Payment</span>
+                </div>
             </div>
+
             <!-- Checkout Form -->
-            <form class="checkout-form" action="order-success.html" method="get">
+            <form class="checkout-form" id="checkoutForm">
+
                 <!-- Step 1: Address Information -->
-                <div class="form-section">
-                    <h2><i class="fas fa-map-marker-alt"></i> 1. Shipping Address</h2>
-                    <div class="form-group">
-                        <label for="fullname"><i class="fas fa-user"></i> Full Name</label>
-                        <input type="text" id="fullname" name="fullname" required>
+                <div class="checkout-step active" id="step1">
+                    <div class="step-content">
+                        <h2><i class="fas fa-map-marker-alt"></i> Shipping Address</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullname">Full Name</label>
+                                <input type="text" id="fullname" name="fullname" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+998 90 123 45 67" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Street Address</label>
+                            <input type="text" id="address" name="address" placeholder="123 Main Street, Apt 4" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" name="city" placeholder="Tashkent" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="zip">ZIP Code</label>
+                                <input type="text" id="zip" name="zip" placeholder="100000" required>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="address"><i class="fas fa-home"></i> Street Address</label>
-                        <input type="text" id="address" name="address" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="city"><i class="fas fa-city"></i> City</label>
-                        <input type="text" id="city" name="city" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="state"><i class="fas fa-flag"></i> State</label>
-                        <input type="text" id="state" name="state" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="zip"><i class="fas fa-mail-bulk"></i> ZIP Code</label>
-                        <input type="text" id="zip" name="zip" required>
+                    <div class="step-buttons">
+                        <a href="cart.html" class="btn-step btn-back"><i class="fas fa-arrow-left"></i> Back to Cart</a>
+                        <button type="button" class="btn-step btn-next" onclick="nextStep(1)">Continue to Delivery <i class="fas fa-arrow-right"></i></button>
                     </div>
                 </div>
+
                 <!-- Step 2: Delivery Method -->
-                <div class="form-section">
-                    <h2><i class="fas fa-truck"></i> 2. Delivery Method</h2>
-                    <div class="form-group">
-                        <label>
-                            <input type="radio" name="delivery-method" value="standard" checked>
-                            <i class="fas fa-home"></i> Standard Delivery (3-5 business days) - Free
-                        </label>
+                <div class="checkout-step" id="step2">
+                    <div class="step-content">
+                        <h2><i class="fas fa-truck"></i> Delivery Method</h2>
+                        <div class="delivery-options-grid">
+                            <label class="delivery-option selected">
+                                <input type="radio" name="delivery-method" value="standard" checked>
+                                <div class="delivery-option-content">
+                                    <div class="delivery-icon"><i class="fas fa-box"></i></div>
+                                    <div class="delivery-info">
+                                        <strong>Standard Delivery</strong>
+                                        <span>3-5 business days</span>
+                                    </div>
+                                    <div class="delivery-price free">Free</div>
+                                </div>
+                            </label>
+                            <label class="delivery-option">
+                                <input type="radio" name="delivery-method" value="express">
+                                <div class="delivery-option-content">
+                                    <div class="delivery-icon"><i class="fas fa-shipping-fast"></i></div>
+                                    <div class="delivery-info">
+                                        <strong>Express Delivery</strong>
+                                        <span>1-2 business days</span>
+                                    </div>
+                                    <div class="delivery-price">$19.99</div>
+                                </div>
+                            </label>
+                            <label class="delivery-option">
+                                <input type="radio" name="delivery-method" value="same-day">
+                                <div class="delivery-option-content">
+                                    <div class="delivery-icon"><i class="fas fa-bolt"></i></div>
+                                    <div class="delivery-info">
+                                        <strong>Same-Day Delivery</strong>
+                                        <span>Today before 9 PM</span>
+                                    </div>
+                                    <div class="delivery-price">$39.99</div>
+                                </div>
+                            </label>
+                            <label class="delivery-option">
+                                <input type="radio" name="delivery-method" value="pickup">
+                                <div class="delivery-option-content">
+                                    <div class="delivery-icon"><i class="fas fa-store"></i></div>
+                                    <div class="delivery-info">
+                                        <strong>Store Pickup</strong>
+                                        <span>Ready in 2 hours</span>
+                                    </div>
+                                    <div class="delivery-price free">Free</div>
+                                </div>
+                            </label>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label>
-                            <input type="radio" name="delivery-method" value="express">
-                            <i class="fas fa-shipping-fast"></i> Express Delivery (1-2 business days) - $19.99
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label>
-                            <input type="radio" name="delivery-method" value="same-day">
-                            <i class="fas fa-bolt"></i> Same-Day Delivery - $39.99
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label>
-                            <input type="radio" name="delivery-method" value="pickup">
-                            <i class="fas fa-store"></i> In-Store Pickup - Free
-                        </label>
+                    <div class="step-buttons">
+                        <button type="button" class="btn-step btn-back" onclick="prevStep(2)"><i class="fas fa-arrow-left"></i> Back</button>
+                        <button type="button" class="btn-step btn-next" onclick="nextStep(2)">Continue to Payment <i class="fas fa-arrow-right"></i></button>
                     </div>
                 </div>
+
                 <!-- Step 3: Payment Information -->
-                <div class="form-section">
-                    <h2><i class="fas fa-credit-card"></i> 3. Payment Information</h2>
-                    <div class="form-group">
-                        <label for="payment-method"><i class="fas fa-wallet"></i> Payment Method</label>
-                        <select id="payment-method" name="payment-method" required>
-                            <option value="">Select payment method</option>
-                            <option value="credit">Credit Card</option>
-                            <option value="debit">Debit Card</option>
-                            <option value="paypal">PayPal</option>
-                            <option value="apple">Apple Pay</option>
-                            <option value="google">Google Pay</option>
-                        </select>
+                <div class="checkout-step" id="step3">
+                    <div class="step-content">
+                        <h2><i class="fas fa-credit-card"></i> Payment Information</h2>
+
+                        <div class="payment-methods">
+                            <label class="payment-method selected">
+                                <input type="radio" name="payment-type" value="card" checked>
+                                <i class="fas fa-credit-card"></i>
+                                <span>Credit/Debit Card</span>
+                            </label>
+                            <label class="payment-method">
+                                <input type="radio" name="payment-type" value="paypal">
+                                <i class="fab fa-paypal"></i>
+                                <span>PayPal</span>
+                            </label>
+                            <label class="payment-method">
+                                <input type="radio" name="payment-type" value="cash">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span>Cash on Delivery</span>
+                            </label>
+                        </div>
+
+                        <div class="card-details" id="cardDetails">
+                            <div class="form-group">
+                                <label for="card-number">Card Number</label>
+                                <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" maxlength="19">
+                            </div>
+                            <div class="form-group">
+                                <label for="card-name">Cardholder Name</label>
+                                <input type="text" id="card-name" name="card-name" placeholder="JOHN DOE">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="expiry">Expiry Date</label>
+                                    <input type="text" id="expiry" name="expiry" placeholder="MM/YY" maxlength="5">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="4">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Order Summary -->
+                        <div class="order-summary-box">
+                            <h3><i class="fas fa-receipt"></i> Order Summary</h3>
+                            <div class="summary-row">
+                                <span>Subtotal</span>
+                                <span id="summarySubtotal">$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Delivery</span>
+                                <span id="summaryDelivery">Free</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total</span>
+                                <span id="summaryTotal">$0.00</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="card-number"><i class="fas fa-credit-card"></i> Card Number</label>
-                        <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456">
-                    </div>
-                    <div class="form-group">
-                        <label for="card-name"><i class="fas fa-user"></i> Cardholder Name</label>
-                        <input type="text" id="card-name" name="card-name">
-                    </div>
-                    <div class="form-group">
-                        <label for="expiry"><i class="fas fa-calendar"></i> Expiry Date</label>
-                        <input type="text" id="expiry" name="expiry" placeholder="MM/YY">
-                    </div>
-                    <div class="form-group">
-                        <label for="cvv"><i class="fas fa-lock"></i> CVV</label>
-                        <input type="text" id="cvv" name="cvv" placeholder="123">
+                    <div class="step-buttons">
+                        <button type="button" class="btn-step btn-back" onclick="prevStep(3)"><i class="fas fa-arrow-left"></i> Back</button>
+                        <button type="submit" class="btn-step btn-complete"><i class="fas fa-check-circle"></i> Complete Order</button>
                     </div>
                 </div>
-                <!-- Order Summary -->
-                <div class="form-section">
-                    <h2><i class="fas fa-receipt"></i> Order Summary</h2>
-                    <p style="font-size: 16px; margin-bottom: 10px;">Subtotal: $949.96</p>
-                    <p style="font-size: 16px; margin-bottom: 10px;">Delivery: Free</p>
-                    <p style="font-size: 24px; font-weight: 700; color: #46A358; margin-top: 20px;">Total: $949.96</p>
-                </div>
-                <!-- Submit Button -->
-                <button type="submit" class="btn"><i class="fas fa-check-circle"></i> Complete Order</button>
             </form>
         </div>
+
+        <script>
+            let currentStep = 1;
+
+            function showStep(step) {
+                // Hide all steps
+                document.querySelectorAll('.checkout-step').forEach(s => s.classList.remove('active'));
+                // Show current step
+                document.getElementById('step' + step).classList.add('active');
+
+                // Update progress bar
+                document.querySelectorAll('.progress-step').forEach((s, index) => {
+                    s.classList.remove('active', 'completed');
+                    if (index + 1 < step) {
+                        s.classList.add('completed');
+                    } else if (index + 1 === step) {
+                        s.classList.add('active');
+                    }
+                });
+
+                // Update progress lines
+                document.querySelectorAll('.progress-line').forEach((line, index) => {
+                    if (index + 1 < step) {
+                        line.classList.add('completed');
+                    } else {
+                        line.classList.remove('completed');
+                    }
+                });
+            }
+
+            function nextStep(current) {
+                // Validate current step
+                const stepElement = document.getElementById('step' + current);
+                const inputs = stepElement.querySelectorAll('input[required]');
+                let valid = true;
+
+                inputs.forEach(input => {
+                    if (!input.value.trim()) {
+                        input.classList.add('error');
+                        valid = false;
+                    } else {
+                        input.classList.remove('error');
+                    }
+                });
+
+                if (valid && current < 3) {
+                    currentStep = current + 1;
+                    showStep(currentStep);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            }
+
+            function prevStep(current) {
+                if (current > 1) {
+                    currentStep = current - 1;
+                    showStep(currentStep);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            }
+
+            // Delivery option selection
+            document.querySelectorAll('.delivery-option').forEach(option => {
+                option.addEventListener('click', function() {
+                    document.querySelectorAll('.delivery-option').forEach(o => o.classList.remove('selected'));
+                    this.classList.add('selected');
+                    updateOrderSummary();
+                });
+            });
+
+            // Payment method selection
+            document.querySelectorAll('.payment-method').forEach(method => {
+                method.addEventListener('click', function() {
+                    document.querySelectorAll('.payment-method').forEach(m => m.classList.remove('selected'));
+                    this.classList.add('selected');
+
+                    const cardDetails = document.getElementById('cardDetails');
+                    const paymentType = this.querySelector('input').value;
+                    cardDetails.style.display = paymentType === 'card' ? 'block' : 'none';
+                });
+            });
+
+            // Update order summary
+            function updateOrderSummary() {
+                const cart = JSON.parse(localStorage.getItem('techHouseCart')) || [];
+                const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+                const deliveryMethod = document.querySelector('input[name="delivery-method"]:checked').value;
+                let deliveryFee = 0;
+                if (deliveryMethod === 'express') deliveryFee = 19.99;
+                if (deliveryMethod === 'same-day') deliveryFee = 39.99;
+
+                document.getElementById('summarySubtotal').textContent = '$' + subtotal.toFixed(2);
+                document.getElementById('summaryDelivery').textContent = deliveryFee === 0 ? 'Free' : '$' + deliveryFee.toFixed(2);
+                document.getElementById('summaryTotal').textContent = '$' + (subtotal + deliveryFee).toFixed(2);
+            }
+
+            // Form submission
+            document.getElementById('checkoutForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Clear cart
+                localStorage.removeItem('techHouseCart');
+                // Redirect to success page
+                window.location.href = 'order-success.html';
+            });
+
+            // Initialize
+            updateOrderSummary();
+        </script>
     </main>
 <footer>
         <div class="footer-main">
