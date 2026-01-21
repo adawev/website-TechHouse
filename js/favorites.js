@@ -342,4 +342,42 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.classList.add('active');
         }
     });
+
+    // Mobile menu toggle functionality
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const headerCategories = document.querySelector('.header-categories');
+
+    if (mobileMenuBtn && headerCategories) {
+        mobileMenuBtn.addEventListener('click', function() {
+            headerCategories.classList.toggle('mobile-open');
+            const icon = this.querySelector('i');
+            if (headerCategories.classList.contains('mobile-open')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close menu when clicking a link
+        headerCategories.querySelectorAll('.category-link').forEach(link => {
+            link.addEventListener('click', function() {
+                headerCategories.classList.remove('mobile-open');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!mobileMenuBtn.contains(e.target) && !headerCategories.contains(e.target)) {
+                headerCategories.classList.remove('mobile-open');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    }
 });

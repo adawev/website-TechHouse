@@ -240,7 +240,7 @@ optgroup {
 .search-no-results {
     padding: 20px;
     text-align: center;
-    color: #666;
+    color: #595959;
 }
 
 .search-no-results i {
@@ -259,14 +259,20 @@ optgroup {
     padding: 12px 20px;
     border: 2px solid var(--border-gray);
     font-size: 14px;
-    outline: none;
     font-family: inherit;
     border-radius: 25px 0 0 25px;
     background: #f8f9fa;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 3px rgba(70, 163, 88, 0.15);
 }
 
 .search-input::placeholder {
-    color: #999;
+    color: #6b6b6b;
 }
 
 .search-btn {
@@ -311,7 +317,7 @@ optgroup {
 
 .phone-label {
     font-size: 11px;
-    color: #999;
+    color: #6b6b6b;
 }
 
 /* Header Actions */
@@ -476,7 +482,7 @@ optgroup {
 }
 
 .catalog-category ul li a {
-    color: #666;
+    color: #595959;
     text-decoration: none;
     font-size: 14px;
     transition: all 0.3s;
@@ -607,6 +613,11 @@ main {
         font-size: 28px;
     }
 
+    /* Hide phone on mobile */
+    .header-phone {
+        display: none;
+    }
+
     .catalog-btn span {
         display: none;
     }
@@ -618,6 +629,7 @@ main {
     .header-search {
         max-width: none;
         flex: 1;
+        min-width: 120px;
     }
 
     .search-input {
@@ -637,8 +649,13 @@ main {
         padding: 6px;
     }
 
+    /* Hide text labels on action buttons - show only icons */
+    .header-action span:not(.action-badge) {
+        display: none;
+    }
+
     .header-action i {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .action-badge {
@@ -659,7 +676,45 @@ main {
     }
 
     .mobile-menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+    }
+
+    /* Hide navigation by default on mobile */
+    .header-categories {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        z-index: 999;
+    }
+
+    /* Mobile menu open state */
+    .header-categories.mobile-open {
         display: block;
+    }
+
+    .header-categories-container {
+        flex-direction: column;
+        padding: 10px 0;
+        gap: 0;
+    }
+
+    .category-link {
+        padding: 14px 20px;
+        border-bottom: 1px solid var(--border-gray);
+        width: 100%;
+        text-align: left;
+    }
+
+    .category-link:last-child {
+        border-bottom: none;
     }
 }
 
@@ -717,7 +772,7 @@ main {
 }
 
 .banner-content p {
-    color: #666;
+    color: #595959;
     font-size: 15px;
     margin-bottom: 25px;
 }
@@ -1130,7 +1185,7 @@ main {
 
 .old-price {
     font-size: 14px;
-    color: #999;
+    color: #6b6b6b;
     text-decoration: line-through;
 }
 
@@ -1197,7 +1252,7 @@ main {
 
 .promo-banner-content p {
     font-size: 14px;
-    color: #666;
+    color: #595959;
     margin-bottom: 15px;
 }
 
@@ -1311,7 +1366,7 @@ main {
 
 .membership-promo-content p {
     font-size: 16px;
-    color: #666;
+    color: #595959;
     margin-bottom: 25px;
 }
 
@@ -2591,7 +2646,7 @@ footer {
 .cart-table td[data-label="Price"] {
     font-size: 14px;
     font-weight: 500;
-    color: #666;
+    color: #595959;
 }
 
 .cart-table td[data-label="Total"] {
@@ -2686,7 +2741,7 @@ footer {
 .remove-btn {
     background: none;
     border: none;
-    color: #999;
+    color: #6b6b6b;
     font-size: 16px;
     cursor: pointer;
     padding: 8px;
@@ -6720,11 +6775,18 @@ footer {
     border: none;
     background: none;
     font-size: 16px;
+}
+
+.search-input-wrapper input:focus {
     outline: none;
 }
 
+.search-input-wrapper:focus-within {
+    box-shadow: 0 0 0 3px rgba(70, 163, 88, 0.15);
+}
+
 .search-input-wrapper input::placeholder {
-    color: #aaa;
+    color: #6b6b6b;
 }
 
 .clear-search,
@@ -6738,7 +6800,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #666;
+    color: #595959;
     transition: all 0.3s;
 }
 
@@ -6901,7 +6963,7 @@ footer {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     z-index: 2;
     font-size: 12px;
-    color: #999;
+    color: #6b6b6b;
     transition: all 0.2s;
 }
 
@@ -6965,7 +7027,7 @@ footer {
 }
 
 .empty-favorites p {
-    color: #666;
+    color: #595959;
     margin-bottom: 25px;
 }
 
@@ -7019,7 +7081,7 @@ footer {
 }
 
 .contact-card p {
-    color: #666;
+    color: #595959;
     font-size: 14px;
     margin-bottom: 5px;
 }
