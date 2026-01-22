@@ -4126,12 +4126,6 @@ footer {
         display: block !important;
     }
 }
-    font-size: 20px;
-    color: var(--dark-gray);
-    cursor: pointer;
-    padding: 5px;
-}
-
 .mobile-filter-btn {
     display: none !important;
 }
