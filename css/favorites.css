@@ -1,0 +1,233 @@
+/* ===== FAVORITES PAGE ===== */
+.favorites-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 40px;
+}
+
+.favorites-header {
+    margin-bottom: 25px;
+}
+
+.favorites-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
+.favorites-header h1 i {
+    color: #e74c3c;
+    margin-right: 10px;
+}
+
+.favorites-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.favorite-item {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border-gray);
+    position: relative;
+    transition: box-shadow 0.2s;
+}
+
+.favorite-item:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.remove-favorite {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 2;
+    font-size: 12px;
+    color: #6b6b6b;
+    transition: all 0.2s;
+}
+
+.remove-favorite:hover {
+    background: #fee;
+    color: #e74c3c;
+}
+
+.favorite-image {
+    height: 160px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.favorite-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.favorite-info {
+    padding: 12px;
+}
+
+.favorite-info h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark-gray);
+    margin-bottom: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.favorite-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 10px;
+}
+
+.empty-favorites {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.empty-favorites i {
+    font-size: 80px;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.empty-favorites h2 {
+    font-size: 24px;
+    color: var(--dark-gray);
+    margin-bottom: 10px;
+}
+
+.empty-favorites p {
+    color: #595959;
+    margin-bottom: 25px;
+}
+
+/* ===== CONTACT PAGE ===== */
+.contact-page {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.contact-container {
+    display: grid;
+    gap: 40px;
+}
+
+.contact-info-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.contact-card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.contact-card-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(70, 163, 88, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.contact-card-icon i {
+    font-size: 28px;
+    color: var(--primary-green);
+}
+
+.contact-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark-gray);
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    color: #595959;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.contact-form-section {
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.contact-form-section h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--dark-gray);
+    margin-bottom: 30px;
+}
+
+.contact-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--dark-gray);
+    margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--border-gray);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-green);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+

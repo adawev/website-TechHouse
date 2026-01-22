@@ -1,0 +1,133 @@
+/* Responsive for Landing Page */
+@media (max-width: 1200px) {
+    .hero-banner-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-side-banners {
+        flex-direction: row;
+    }
+
+    .featured-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .category-cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-main-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .banner-content {
+        max-width: 100%;
+    }
+
+    .banner-btns {
+        justify-content: center;
+    }
+
+    .banner-image {
+        max-width: 70%;
+        margin-top: 20px;
+    }
+
+    .benefits-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .featured-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .category-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .membership-promo-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .membership-tiers-mini {
+        justify-content: center;
+    }
+
+    .membership-promo-image {
+        order: -1;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-banner {
+        padding: 15px;
+    }
+
+    .hero-main-banner {
+        min-height: auto;
+        padding: 25px;
+    }
+
+    .banner-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-side-banners {
+        flex-direction: column;
+    }
+
+    .benefits-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .benefit-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .category-icons {
+        padding: 20px 15px;
+    }
+
+    .featured-products,
+    .promo-banners,
+    .category-cards {
+        padding: 20px 15px;
+    }
+
+    .featured-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .promo-banners-container {
+        grid-template-columns: 1fr;
+    }
+
+    .category-cards-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .cat-card {
+        height: 160px;
+    }
+
+    .membership-promo {
+        padding: 40px 15px;
+    }
+
+    .membership-promo-content h2 {
+        font-size: 26px;
+    }
+}
+

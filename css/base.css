@@ -1,0 +1,45 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-gray);
+    background-color: var(--white);
+}
+
+/* Ensure all elements use Poppins font */
+input,
+button,
+select,
+textarea,
+optgroup {
+    font-family: inherit;
+}
+
+/* Color Variables */
+:root {
+    --primary-green: #46A358;
+    --hover-green: #3a8a4a;
+    --dark-gray: #3D3D3D;
+    --light-gray: #F5F5F5;
+    --white: #FFFFFF;
+    --border-gray: #EAEAEA;
+}
+
+/* Container */
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+

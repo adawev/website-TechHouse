@@ -1,0 +1,82 @@
+/* Contact Page */
+.contact-container {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-container h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: var(--dark-gray);
+    text-align: center;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-info {
+    background-color: var(--primary-green);
+    color: var(--white);
+    padding: 40px;
+    border-radius: 32px;
+}
+
+.contact-info h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--white);
+}
+
+.contact-info p {
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 15px;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: var(--dark-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    margin-top: 30px;
+    border-radius: 30px;
+}
+
+.store-locations {
+    margin-top: 80px;
+}
+
+.store-locations h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--dark-gray);
+}
+
+.store-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.store-card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.store-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--primary-green);
+}
+
