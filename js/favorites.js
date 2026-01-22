@@ -380,4 +380,38 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Mobile Filter Sidebar Toggle
+    const mobileFilterBtn = document.getElementById('mobileFilterBtn');
+    const filtersSidebar = document.getElementById('filtersSidebar');
+    const filterOverlay = document.getElementById('filterOverlay');
+    const closeFiltersBtn = document.getElementById('closeFilters');
+
+    function openFilters() {
+        if (filtersSidebar && filterOverlay) {
+            filtersSidebar.classList.add('mobile-open');
+            filterOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    function closeFilters() {
+        if (filtersSidebar && filterOverlay) {
+            filtersSidebar.classList.remove('mobile-open');
+            filterOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
+
+    if (mobileFilterBtn) {
+        mobileFilterBtn.addEventListener('click', openFilters);
+    }
+
+    if (closeFiltersBtn) {
+        closeFiltersBtn.addEventListener('click', closeFilters);
+    }
+
+    if (filterOverlay) {
+        filterOverlay.addEventListener('click', closeFilters);
+    }
 });

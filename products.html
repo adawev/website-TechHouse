@@ -96,10 +96,13 @@
     <main>
         <div class="products-page">
             <!-- Filters Sidebar -->
-            <aside class="filters-sidebar">
+            <aside class="filters-sidebar" id="filtersSidebar">
                 <div class="filters-header">
                     <h2><i class="fas fa-sliders-h"></i> Filters</h2>
-                    <button class="clear-filters-btn" id="clearFilters">Clear All</button>
+                    <div class="filters-header-btns">
+                        <button class="clear-filters-btn" id="clearFilters">Clear All</button>
+                        <button class="close-filters-btn" id="closeFilters"><i class="fas fa-times"></i></button>
+                    </div>
                 </div>
 
                 <!-- Category Filter -->
@@ -201,8 +204,15 @@
 
             </aside>
 
+            <!-- Filter Overlay for Mobile -->
+            <div class="filter-overlay" id="filterOverlay"></div>
+
             <!-- Products Grid -->
             <div class="products-content">
+                <!-- Mobile Filter Button -->
+                <button class="mobile-filter-btn" id="mobileFilterBtn">
+                    <i class="fas fa-sliders-h"></i> Filters
+                </button>
                 <div class="products-header">
                     <h1><i class="fas fa-box-open"></i> All Products</h1>
                 </div>
