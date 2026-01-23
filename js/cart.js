@@ -1,15 +1,8 @@
-// Cart Management System for Tech House
-
-// Initialize cart from localStorage or create empty array
 let cart = JSON.parse(localStorage.getItem('techHouseCart')) || [];
-
-// Save cart to localStorage
 function saveCart() {
     localStorage.setItem('techHouseCart', JSON.stringify(cart));
     updateCartBadge();
 }
-
-// Update cart badge count
 function updateCartBadge() {
     const badges = document.querySelectorAll('.cart-badge-header');
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
@@ -17,11 +10,8 @@ function updateCartBadge() {
         badge.textContent = totalItems;
     });
 }
-
-// Add item to cart
 function addToCart(product, quantity = 1) {
     const existingItem = cart.find(item => item.id === product.id);
-
     if (existingItem) {
         existingItem.quantity += quantity;
     } else {
@@ -33,12 +23,9 @@ function addToCart(product, quantity = 1) {
             quantity: quantity
         });
     }
-
     saveCart();
     showNotification(`${product.name} added to cart!`);
 }
-
-// Remove item from cart
 function removeFromCart(productId) {
     cart = cart.filter(item => item.id !== productId);
     saveCart();
@@ -46,8 +33,6 @@ function removeFromCart(productId) {
         renderCart();
     }
 }
-
-// Update item quantity
 function updateQuantity(productId, quantity) {
     const item = cart.find(item => item.id === productId);
     if (item) {
@@ -62,8 +47,6 @@ function updateQuantity(productId, quantity) {
         }
     }
 }
-
-// Increase cart item quantity
 function increaseCartQty(productId) {
     const item = cart.find(item => item.id === productId);
     if (item && item.quantity < 99) {
@@ -72,8 +55,6 @@ function increaseCartQty(productId) {
         renderCart();
     }
 }
-
-// Decrease cart item quantity
 function decreaseCartQty(productId) {
     const item = cart.find(item => item.id === productId);
     if (item) {
@@ -86,20 +67,14 @@ function decreaseCartQty(productId) {
         }
     }
 }
-
-// Calculate cart total
 function getCartTotal() {
     return cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 }
-
-// Show notification
 function showNotification(message) {
-    // Remove existing notification if any
     const existingNotification = document.querySelector('.cart-notification');
     if (existingNotification) {
         existingNotification.remove();
     }
-
     const notification = document.createElement('div');
     notification.className = 'cart-notification';
     notification.innerHTML = `
@@ -107,24 +82,18 @@ function showNotification(message) {
         <span>${message}</span>
     `;
     document.body.appendChild(notification);
-
     setTimeout(() => {
         notification.classList.add('show');
     }, 100);
-
     setTimeout(() => {
         notification.classList.remove('show');
         setTimeout(() => notification.remove(), 300);
     }, 3000);
 }
-
-// Render cart items on cart page
 function renderCart() {
     const cartTableBody = document.querySelector('.cart-table tbody');
     const cartSummary = document.querySelector('.cart-summary');
-
     if (!cartTableBody) return;
-
     if (cart.length === 0) {
         cartTableBody.innerHTML = `
             <tr>
@@ -140,7 +109,6 @@ function renderCart() {
         }
         return;
     }
-
     cartTableBody.innerHTML = cart.map(item => `
         <tr>
             <td data-label="Product">
@@ -163,17 +131,12 @@ function renderCart() {
             </td>
         </tr>
     `).join('');
-
     if (cartSummary) {
         cartSummary.innerHTML = `<p class="subtotal">Total: $${getCartTotal().toFixed(2)}</p>`;
     }
 }
-
-// Initialize cart badge on page load
 document.addEventListener('DOMContentLoaded', function() {
     updateCartBadge();
-
-    // If on cart page, render cart items
     if (document.querySelector('.cart-table')) {
         renderCart();
     }

@@ -1,17 +1,13 @@
-// Favorites functionality
 function getFavorites() {
     return JSON.parse(localStorage.getItem('favorites')) || [];
 }
-
 function saveFavorites(favorites) {
     localStorage.setItem('favorites', JSON.stringify(favorites));
     updateFavoritesBadge();
 }
-
 function addToFavorites(product) {
     const favorites = getFavorites();
     const exists = favorites.find(item => item.id === product.id);
-
     if (!exists) {
         favorites.push(product);
         saveFavorites(favorites);
@@ -20,23 +16,19 @@ function addToFavorites(product) {
         showNotification('Already in favorites!');
     }
 }
-
 function removeFromFavorites(productId) {
     let favorites = getFavorites();
     favorites = favorites.filter(item => item.id !== productId);
     saveFavorites(favorites);
     showNotification('Removed from favorites');
 }
-
 function isInFavorites(productId) {
     const favorites = getFavorites();
     return favorites.some(item => item.id === productId);
 }
-
 function toggleFavorite(product, button) {
     const favorites = getFavorites();
     const exists = favorites.find(item => item.id === product.id);
-
     if (exists) {
         removeFromFavorites(product.id);
         if (button) {
@@ -51,7 +43,6 @@ function toggleFavorite(product, button) {
         }
     }
 }
-
 function updateFavoritesBadge() {
     const favorites = getFavorites();
     const badges = document.querySelectorAll('.favorites-badge');
@@ -59,24 +50,19 @@ function updateFavoritesBadge() {
         badge.textContent = favorites.length;
     });
 }
-
 function showNotification(message) {
     const existing = document.querySelector('.notification');
     if (existing) existing.remove();
-
     const notification = document.createElement('div');
     notification.className = 'notification';
     notification.textContent = message;
     document.body.appendChild(notification);
-
     setTimeout(() => notification.classList.add('show'), 10);
     setTimeout(() => {
         notification.classList.remove('show');
         setTimeout(() => notification.remove(), 300);
     }, 2000);
 }
-
-// Products data for search with stock information
 const allProducts = [
     { id: 'prod1', name: 'Smart Coffee Maker Pro', price: 239.99, image: 'https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=400&h=300&fit=crop', stock: 25 },
     { id: 'prod2', name: 'Professional Blender 1200W', price: 149.99, image: 'https://images.unsplash.com/photo-1570222094114-d054a817e56b?w=400&h=300&fit=crop', stock: 42 },
@@ -124,12 +110,9 @@ const allProducts = [
     { id: 'prod47', name: 'Electric Fireplace', price: 399.99, image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=300&fit=crop', stock: 4 },
     { id: 'prod49', name: 'Ceiling Fan with Light', price: 189.99, image: 'https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=400&h=300&fit=crop', stock: 13 }
 ];
-
-// Get stock status for a product
 function getStockStatus(productId) {
     const product = allProducts.find(p => p.id === productId);
     if (!product) return { status: 'in-stock', label: 'In Stock', stock: 99, icon: 'fa-check-circle' };
-
     if (product.stock === 0) {
         return { status: 'out-of-stock', label: 'Out of Stock', stock: 0, icon: 'fa-times-circle' };
     } else if (product.stock <= 5) {
@@ -138,27 +121,20 @@ function getStockStatus(productId) {
         return { status: 'in-stock', label: `${product.stock} in stock`, stock: product.stock, icon: 'fa-check-circle' };
     }
 }
-
-// Add stock indicators to product cards on page
 function initStockIndicators() {
     const productCards = document.querySelectorAll('.product-card');
-
     productCards.forEach((card, index) => {
         const productId = `prod${index + 1}`;
         const stockInfo = getStockStatus(productId);
         const productImage = card.querySelector('.product-image');
         const cartBtn = card.querySelector('.cart-icon-btn');
         const rating = card.querySelector('.product-rating');
-
-        // Add stock quantity indicator below rating
         if (rating && !card.querySelector('.stock-qty')) {
             const stockQty = document.createElement('div');
             stockQty.className = `stock-qty ${stockInfo.status}`;
             stockQty.innerHTML = `<i class="fas ${stockInfo.icon}"></i> ${stockInfo.label}`;
             rating.insertAdjacentElement('afterend', stockQty);
         }
-
-        // Add stock badge to image for out of stock
         if (stockInfo.status === 'out-of-stock' && productImage) {
             const existingBadge = productImage.querySelector('.stock-badge');
             if (!existingBadge) {
@@ -167,16 +143,12 @@ function initStockIndicators() {
                 badge.textContent = 'Sold Out';
                 productImage.appendChild(badge);
             }
-
-            // Disable add to cart button
             if (cartBtn) {
                 cartBtn.classList.add('disabled');
                 cartBtn.setAttribute('disabled', 'disabled');
                 cartBtn.title = 'Out of Stock';
             }
         }
-
-        // Add low stock badge
         if (stockInfo.status === 'low-stock' && productImage) {
             const existingBadge = productImage.querySelector('.stock-badge');
             if (!existingBadge) {
@@ -188,20 +160,13 @@ function initStockIndicators() {
         }
     });
 }
-
-// Add keyboard navigation support for product cards
 function initKeyboardNavigation() {
     const productCards = document.querySelectorAll('.product-card');
-
     productCards.forEach(card => {
-        // Make card focusable
         card.setAttribute('tabindex', '0');
         card.setAttribute('role', 'article');
-
-        // Add keyboard event for Enter/Space to navigate to product
         card.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
-                // Check if the event originated from a button inside the card
                 if (e.target === card) {
                     e.preventDefault();
                     window.location.href = 'product.html';
@@ -209,8 +174,6 @@ function initKeyboardNavigation() {
             }
         });
     });
-
-    // Make favorite buttons keyboard accessible
     document.querySelectorAll('.favorite-btn').forEach(btn => {
         btn.setAttribute('tabindex', '0');
         btn.addEventListener('keydown', (e) => {
@@ -220,8 +183,6 @@ function initKeyboardNavigation() {
             }
         });
     });
-
-    // Make cart buttons keyboard accessible
     document.querySelectorAll('.cart-icon-btn').forEach(btn => {
         if (!btn.classList.contains('disabled')) {
             btn.setAttribute('tabindex', '0');
@@ -234,36 +195,26 @@ function initKeyboardNavigation() {
         }
     });
 }
-
-// Search functionality
 function initSearch() {
     const searchInput = document.getElementById('headerSearchInput');
     const searchBtn = document.getElementById('searchBtn');
     const headerSearch = document.querySelector('.header-search');
-
     if (!searchInput || !headerSearch) return;
-
-    // Create dropdown element
     let dropdown = document.querySelector('.search-dropdown');
     if (!dropdown) {
         dropdown = document.createElement('div');
         dropdown.className = 'search-dropdown';
         headerSearch.appendChild(dropdown);
     }
-
-    // Search on input
     searchInput.addEventListener('input', (e) => {
         const query = e.target.value.trim().toLowerCase();
-
         if (query.length < 2) {
             dropdown.classList.remove('active');
             return;
         }
-
         const results = allProducts.filter(product =>
             product.name.toLowerCase().includes(query)
-        ).slice(0, 8); // Limit to 8 results
-
+        ).slice(0, 8);
         if (results.length > 0) {
             dropdown.innerHTML = results.map(product => `
                 <div class="search-dropdown-item" onclick="goToProduct('${product.id}')">
@@ -285,15 +236,11 @@ function initSearch() {
             dropdown.classList.add('active');
         }
     });
-
-    // Hide dropdown when clicking outside
     document.addEventListener('click', (e) => {
         if (!headerSearch.contains(e.target)) {
             dropdown.classList.remove('active');
         }
     });
-
-    // Navigate on Enter
     searchInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
             const query = searchInput.value.trim();
@@ -302,7 +249,6 @@ function initSearch() {
             }
         }
     });
-
     if (searchBtn) {
         searchBtn.addEventListener('click', () => {
             const query = searchInput.value.trim();
@@ -312,12 +258,9 @@ function initSearch() {
         });
     }
 }
-
 function goToProduct(productId) {
     window.location.href = 'product.html?id=' + productId;
 }
-
-// Update cart badge
 function updateCartBadge() {
     const cart = JSON.parse(localStorage.getItem('techHouseCart')) || [];
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
@@ -326,27 +269,20 @@ function updateCartBadge() {
         badge.textContent = totalItems;
     });
 }
-
-// Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
     updateFavoritesBadge();
     updateCartBadge();
     initSearch();
     initStockIndicators();
     initKeyboardNavigation();
-
-    // Mark favorite buttons as active if product is in favorites
     document.querySelectorAll('.favorite-btn').forEach(btn => {
         const productId = btn.dataset.productId;
         if (productId && isInFavorites(productId)) {
             btn.classList.add('active');
         }
     });
-
-    // Mobile menu toggle functionality
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const headerCategories = document.querySelector('.header-categories');
-
     if (mobileMenuBtn && headerCategories) {
         mobileMenuBtn.addEventListener('click', function() {
             headerCategories.classList.toggle('mobile-open');
@@ -359,8 +295,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 icon.classList.add('fa-bars');
             }
         });
-
-        // Close menu when clicking a link
         headerCategories.querySelectorAll('.category-link').forEach(link => {
             link.addEventListener('click', function() {
                 headerCategories.classList.remove('mobile-open');
@@ -369,8 +303,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 icon.classList.add('fa-bars');
             });
         });
-
-        // Close menu when clicking outside
         document.addEventListener('click', function(e) {
             if (!mobileMenuBtn.contains(e.target) && !headerCategories.contains(e.target)) {
                 headerCategories.classList.remove('mobile-open');
@@ -380,13 +312,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
-    // Mobile Filter Sidebar Toggle
     const mobileFilterBtn = document.getElementById('mobileFilterBtn');
     const filtersSidebar = document.getElementById('filtersSidebar');
     const filterOverlay = document.getElementById('filterOverlay');
     const closeFiltersBtn = document.getElementById('closeFilters');
-
     function openFilters() {
         if (filtersSidebar && filterOverlay) {
             filtersSidebar.classList.add('mobile-open');
@@ -394,7 +323,6 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = 'hidden';
         }
     }
-
     function closeFilters() {
         if (filtersSidebar && filterOverlay) {
             filtersSidebar.classList.remove('mobile-open');
@@ -402,15 +330,12 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = '';
         }
     }
-
     if (mobileFilterBtn) {
         mobileFilterBtn.addEventListener('click', openFilters);
     }
-
     if (closeFiltersBtn) {
         closeFiltersBtn.addEventListener('click', closeFilters);
     }
-
     if (filterOverlay) {
         filterOverlay.addEventListener('click', closeFilters);
     }

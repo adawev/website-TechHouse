@@ -12,7 +12,7 @@
 </head>
 <body>
             <header class="ecommerce-header">
-        <!-- Top Bar -->
+        
         <div class="header-top">
             <div class="header-top-container">
                 <div class="header-top-left">
@@ -41,7 +41,7 @@
                 </div>
             </div>
         </div>
-        <!-- Main Header -->
+        
         <div class="header-main">
             <div class="header-main-container">
                 <a href="index.html" class="header-logo">
@@ -82,7 +82,7 @@
                 </button>
             </div>
         </div>
-        <!-- Categories Nav -->
+        
         <nav class="header-categories">
             <div class="header-categories-container">
                 <a href="index.html" class="category-link">Home</a>
@@ -97,7 +97,7 @@
         <div class="checkout-container">
             <h1><i class="fas fa-credit-card"></i> Checkout</h1>
 
-            <!-- Progress Bar -->
+            
             <div class="checkout-progress">
                 <div class="progress-step active" data-step="1">
                     <div class="step-number">1</div>
@@ -115,10 +115,10 @@
                 </div>
             </div>
 
-            <!-- Checkout Form -->
+            
             <form class="checkout-form" id="checkoutForm">
 
-                <!-- Step 1: Address Information -->
+                
                 <div class="checkout-step active" id="step1">
                     <div class="step-content">
                         <h2><i class="fas fa-map-marker-alt"></i> Shipping Address</h2>
@@ -157,7 +157,7 @@
                     </div>
                 </div>
 
-                <!-- Step 2: Delivery Method -->
+                
                 <div class="checkout-step" id="step2">
                     <div class="step-content">
                         <h2><i class="fas fa-truck"></i> Delivery Method</h2>
@@ -214,7 +214,7 @@
                     </div>
                 </div>
 
-                <!-- Step 3: Payment Information -->
+                
                 <div class="checkout-step" id="step3">
                     <div class="step-content">
                         <h2><i class="fas fa-credit-card"></i> Payment Information</h2>
@@ -258,7 +258,7 @@
                             </div>
                         </div>
 
-                        <!-- Order Summary -->
+                        
                         <div class="order-summary-box">
                             <h3><i class="fas fa-receipt"></i> Order Summary</h3>
                             <div class="summary-row">
@@ -287,12 +287,8 @@
             let currentStep = 1;
 
             function showStep(step) {
-                // Hide all steps
                 document.querySelectorAll('.checkout-step').forEach(s => s.classList.remove('active'));
-                // Show current step
                 document.getElementById('step' + step).classList.add('active');
-
-                // Update progress bar
                 document.querySelectorAll('.progress-step').forEach((s, index) => {
                     s.classList.remove('active', 'completed');
                     if (index + 1 < step) {
@@ -301,8 +297,6 @@
                         s.classList.add('active');
                     }
                 });
-
-                // Update progress lines
                 document.querySelectorAll('.progress-line').forEach((line, index) => {
                     if (index + 1 < step) {
                         line.classList.add('completed');
@@ -313,11 +307,9 @@
             }
 
             function nextStep(current) {
-                // Validate current step
                 const stepElement = document.getElementById('step' + current);
                 const inputs = stepElement.querySelectorAll('input[required]');
                 let valid = true;
-
                 inputs.forEach(input => {
                     if (!input.value.trim()) {
                         input.classList.add('error');
@@ -326,7 +318,6 @@
                         input.classList.remove('error');
                     }
                 });
-
                 if (valid && current < 3) {
                     currentStep = current + 1;
                     showStep(currentStep);
@@ -342,7 +333,6 @@
                 }
             }
 
-            // Delivery option selection
             document.querySelectorAll('.delivery-option').forEach(option => {
                 option.addEventListener('click', function() {
                     document.querySelectorAll('.delivery-option').forEach(o => o.classList.remove('selected'));
@@ -351,50 +341,41 @@
                 });
             });
 
-            // Payment method selection
             document.querySelectorAll('.payment-method').forEach(method => {
                 method.addEventListener('click', function() {
                     document.querySelectorAll('.payment-method').forEach(m => m.classList.remove('selected'));
                     this.classList.add('selected');
-
                     const cardDetails = document.getElementById('cardDetails');
                     const paymentType = this.querySelector('input').value;
                     cardDetails.style.display = paymentType === 'card' ? 'block' : 'none';
                 });
             });
 
-            // Update order summary
             function updateOrderSummary() {
                 const cart = JSON.parse(localStorage.getItem('techHouseCart')) || [];
                 const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-
                 const deliveryMethod = document.querySelector('input[name="delivery-method"]:checked').value;
                 let deliveryFee = 0;
                 if (deliveryMethod === 'express') deliveryFee = 19.99;
                 if (deliveryMethod === 'same-day') deliveryFee = 39.99;
-
                 document.getElementById('summarySubtotal').textContent = '$' + subtotal.toFixed(2);
                 document.getElementById('summaryDelivery').textContent = deliveryFee === 0 ? 'Free' : '$' + deliveryFee.toFixed(2);
                 document.getElementById('summaryTotal').textContent = '$' + (subtotal + deliveryFee).toFixed(2);
             }
 
-            // Form submission
             document.getElementById('checkoutForm').addEventListener('submit', function(e) {
                 e.preventDefault();
-                // Clear cart
                 localStorage.removeItem('techHouseCart');
-                // Redirect to success page
                 window.location.href = 'order-success.html';
             });
 
-            // Initialize
             updateOrderSummary();
         </script>
     </main>
 <footer>
         <div class="footer-main">
             <div class="footer-grid">
-                <!-- Column 1: Logo & About -->
+                
                 <div class="footer-col">
                     <a href="index.html" class="footer-logo">
                         <i class="fas fa-home"></i>
@@ -402,7 +383,7 @@
                     </a>
                     <p class="footer-desc">Your trusted destination for modern home appliances. Quality products, competitive prices, and exceptional service since 2020.</p>
                 </div>
-                <!-- Column 2: Quick Links -->
+                
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
@@ -413,7 +394,7 @@
                         <li><a href="account.html">My Account</a></li>
                     </ul>
                 </div>
-                <!-- Column 3: Customer Service -->
+                
                 <div class="footer-col">
                     <h4>Customer Service</h4>
                     <ul>
@@ -423,7 +404,7 @@
                         <li><a href="#">Track Your Order</a></li>
                     </ul>
                 </div>
-                <!-- Column 4: Contact -->
+                
                 <div class="footer-col">
                     <h4>Get In Touch</h4>
                     <div class="footer-contact">
