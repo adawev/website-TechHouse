@@ -1056,7 +1056,7 @@
 
     /* Touch-Friendly Improvements */
     .btn {
-        min-height: 48px;
+        min-height: 25px;
     }
 
     .filter-option {
